@@ -1,0 +1,385 @@
+* Ideas
+** experimentation
+-- multivariate testing
+-- beginning, no statistics background, logic, understanding the terminology
+-- designing the work flow of a session within the system
+-- responding within SLA with all the computation - clojure!
+-- state, a bottleneck
+-- postgres/datomic
+-- cache non-runtime data
+-- huge database - slows down runtime, async writes as much as possible
+-- reporting, querying
+-- what to do with all the data
+-- archiving, deleting data
+-- oh wait, the whole splitting the traffic at the top doesn't work - Google's multilayer experimentation desgin
+
+** Nid misuderstanding multithreaded programming and concurrency
+-- first touch - jetty, multiple threads handling the requests, threadlocal connections to database
+-- second touch - use futures
+-- next - why don't you create your own threadpool which handles run
+-- core.async - what happended there?
+-- everything as an assembly line
+
+** simulation testing
+** core.async something
+** carnatic music synthesis something
+
+* Proposals
+
+Link to brief gist: https://gist.github.com/ssrihari/1cad915e7ef22ce61b54
+Link to detailed gist: https://gist.github.com/ssrihari/b0c57438e1d9c69b505d
+
+** Talk Title
+Don't know yet
+
+** Abstract
+Over the last year and half at Staples SparX, we built a multivariate
+testing platform as a service. It satisfies an SLA of 10ms (99.9th
+percentile), services all of Staples' experimentation from a single
+machine, is simulation tested, and is written completely in Clojure!
+
+We'll give an introduction to the Experimentation domain, design of
+experiments and our battle in attaining statistical significance wth
+constrained traffic. We will share our experiences in loading and
+memory profiling datomic, reporting over months of data, growing our
+own postgres cluster, super weird network issues, and OLAP
+solutions. Expect to see references to google white papers, latency
+and network graphs, histograms, comparison tables and an eyeful of
+clojure code.
+
+** What will the attendee learn?
+
+Note: We understand that this is probably too much to cover in a
+single talk. We'll run time checks of the talk and cut it down to the
+most interesting sections that we can cover in the time we have. It's
+been a rather eventful year, and we have much to share.
+
+*** Experimentation
+
+***** Brief version
+- How do we provide statistically sound testing of hypotheses for
+  complex multi-variable systems?
+- What are non-overlapping and overlapping experiments?
+- What is the tradeoff between precise measurement and splitting
+  traffic between experiments?
+- How do 'Overlapping Experiments' work?
+We'll get into the guts of these concepts because they are central to
+the service.
+[link to full version]
+
+***** Full version
+How do we provide statistically sound testing of hypotheses for
+complex multi-variable systems? The system has a strong emphasis on
+multi-variate testing in an online e-commerce context: click streams,
+funnels, purchases and conversions are all first class. We'll explain
+these things in brief.
+
+Experiments can be non-overlapping and overlapping. What does it mean
+for measurements to be side effect free? What is the tradeoff between
+precise measurement and splitting traffic between experiments? We'll
+get into the guts of these concepts because they are central to the
+service.
+
+How do we ensure treatment stickiness when a user is a part of
+multiple experiments that are scheduled independently? How do
+'Overlapping Experiments' work? Is there a limit to the extent we can
+nest experiments and still get meaningful results?
+
+Here are some sample representations of the nested and overlapping experiment structures:
+[link to nested.png and overlapping.png]
+
+*** Datomic
+**** Loading datomic
+***** Brief version
+If you've tried to profile your application that uses
+datomic, chances are you wanted to load it with data first. There
+isn't first class support for this. So we wrote the plumbing to do
+this effectively. We'll go through how we approached this problem and
+discuss the solutions in code.  [link to more]
+
+***** Full version
+In the absence of first class support to do a bulk import into
+datomic, we needed to handroll a way to write data into datomic as
+fast as possible.
+
+At first, we naively used an application load driver. This was slow
+because it went through the cruft of the domain logic first.
+https://github.com/StaplesLabs/Eccentrica/blob/79f70461fa2b78ec6f28170bc03934f0a0de810a/src/eccentrica/scripts/load_test.clj#L110-L124
+
+Then we quickly switched to writing only datoms. This was much faster,
+but looking at CloudWatch, we weren't leveraging the transactor's full
+power.
+
+We consulted a datomic team member and he suggested using txAsync, and
+1000 (the magic number) datoms per transaction. Here's the plumbing we
+ended up building.
+https://github.com/StaplesLabs/Eccentrica/blob/82bbbcda64b3fc784ba00fcf84d5b78c2f606ceb/src/eccentrica/scripts/load_test.clj#L135-L173
+
+Looking at cloudwatch metrics gave us the necessary feedback that we
+could work into our plumbing. Note that core.async's pipeline, and
+pipeline-async are better mechanisms of doing this plumbing now.
+
+**** Reporting on datomic
+***** Brief version
+Unlike on an relational database, there aren't established practices
+on reporting on datomic. How to write optimized datalog query plans
+for large datasets? Does it make a difference if these are spread over
+many months? Do we use the datoms api? We'll discuss the plethora
+solutions we tried and the one that worked for us.
+[link to full version]
+
+***** Full version
+Being relatively new, there weren't established ways to read and
+report on large amounts and large timespans of data in datomic.
+
+So we tried a these things:
+
+1. A single big query, and daily aggregates
+https://github.com/StaplesLabs/Eccentrica/blob/f99ad152ce20ed2cb0a1120672f4b3a463625a6b/src/eccentrica/reporting/reports/lift_report.clj
+The latency curve for this along with database size was exponential.
+
+2. Optimize datalog query plans
+Given deep knowledge of the domain, we were able to rerarrange datalog
+expressions to narrow down the datoms at the earliest in the
+query. The problem still remained. We were holding on to the whole
+dataset in memory while the query was being run.
+
+3. The datoms approach
+https://github.com/StaplesLabs/Eccentrica/blob/88e09206037e14417c1824237df4fd9039184267/src/eccentrica/db/session.clj#L175-L211
+We leveraged the datoms api to get a lazy sequence of datoms that we
+can filter so that we don't consume much memory. This resulting in
+reimplementing joins/merges in clojure which are best done by a
+database. The latency curve for this approach was linear, but the
+timings weren't still good.
+
+In the end, we went with a mixture of the approaches above. Using the
+database to do merges/joins effectively, and clojure to do build
+reports from raw data.
+
+*** The "Out Of Memory" story
+***** Brief version
+The application would crash randomly with out-of-memory
+errors. Profiling it showed the datomic objects consuming most of the
+memory! We tried tweaking the GC config, the datomic config but to no
+avail. What really happened? Did we do something utterly stupid? Or is
+it something that any clojure dev can be bitten by? Thriller finish
+guaranteed.
+[link to full version]
+
+***** Full version
+The application would crash randomly with out-of-memory
+errors. Profiling it showed the datomic objects consuming most of the
+memory. We tried tweaking the GC config, the datomic config but to no
+avail.
+
+We were using an application cache to store recently accessed entities
+from DB to help with latencies in reaching datomic. Given that each
+datom holds the root the 4 indices (aevt), we had good reason to
+suspect that we were holding on to this somehow.
+
+We suspected that datomic was keeping indices in cache and not
+flushing to disk often enough, but the Cloudwatch metrics cleared those
+suspiscions. The entire team went through the entire codebase line by
+line to find such an instance. Finally, Stuart Halloway found it and
+fixed it with a simple `map` to `mapv` conversion. We were putting
+lazy seqs in caches!
+
+Here's the commit that fixed it:
+https://github.com/StaplesLabs/Eccentrica/commit/c5730986e64bd4c56cbe3b7c390e539bdcfb202b
+
+*** The super weird network issue
+***** Brief version
+We had odd looking spikes of 40ms, when our application was normally
+at 2ms or 3ms. A really weird latency graph. And TCP resets! We ended
+up spending a week looking at the 10 lines of HTTP client code written
+in Clojure. What was wrong? We worked around the problem in the end,
+but it's a story worth sharing.
+
+***** Full version
+
+Here's a summary of what was happenning:
+- Our application received the request 40ms after the `post-json` fn started in the client.
+- TCP RSTs happen immediately (a few microseconds) after the application responds.
+- The ACK numbers seem to be 1 off just before the RST.
+
+[links to the 2 graphs and tcpdump screenshot]
+
+We took a tcpdump and recorded the elapsed times at the same time.
+The histogram of elapsed times is this:
+
+0     1791 /  4422    40.50%  40.50%
+5       10 /  4422    00.23%  40.73%
+10    1307 /  4422    29.56%  70.28%
+15       8 /  4422    00.18%  70.47%
+20       2 /  4422    00.05%  70.51%
+25       1 /  4422    00.02%  70.53%
+30       2 /  4422    00.05%  70.58%
+35     399 /  4422    09.02%  79.60%
+40     856 /  4422    19.36%  98.96%
+45      20 /  4422    00.45%  99.41%
+50       4 /  4422    00.09%  99.50%
+55       3 /  4422    00.07%  99.57%
+60       2 /  4422    00.05%  99.62%
+65       2 /  4422    00.05%  99.66%
+75       2 /  4422    00.05%  99.71%
+80       1 /  4422    00.02%  99.73%
+85       3 /  4422    00.07%  99.80%
+90       1 /  4422    00.02%  99.82%
+95       2 /  4422    00.05%  99.86%
+105      6 /  4422    00.14%  100.00%
+
+So the faulty 35ms to 45ms totals up to 28.38%.
+
+And we got this info looking at the TCP Dump:
+| total packets | 30491 |
+| RST packets   |  1296 |
+| POST methods  |  4400 |
+| RST-%         | 29.18 |
+
+This looked like conclusive evidence that it's the TCP RSTs that are
+leading to these latencies.  We tried using non persistent connections
+to see if the problem persisted. It didn't. And it takes just about
+200us to establish a new connection. Who knew? So we just didn't do
+persistent connections and went about doing other pressing things.
+
+*** A homegrown JDBC driver
+***** Brief version
+We wrote our own database driver in clojure because clojure/jdbc
+wasn't fast enough for us. We'll explain why, give code samples of the
+driver, how we use it, and compare timings with clojure/jdbc.
+
+***** Full version
+This is fully tailored to Postgres & this application's use case (Not a generic library).
+
+The core ideas are:
+- Use PreparedStatment(s) to run all queries (create, update,
+  select,...). Intent is to store PreparedStatement(s) in some kind of
+  thread local storage.
+- Use index based getters on the ResultSet : significantly faster than
+  the column based ones for the Postgres jdbc driver.
+https://github.com/StaplesLabs/Eccentrica/blob/master/src/eccentrica/db/zippy_pg.clj#L65-L69
+
+*** Postgres:
+***** Brief version
+Depending on time availability, we'll answer the following questions:
+- What were the compelling arguments for us to move to Postgres?
+- How were loading, querying, and reporting different?
+- What were the difficulties we faced in migrating our code to Postgres?
+
+***** Full version
+**** Why
+Turns out Dynamo DB takes 5ms at best for a single write! We then
+switched to use Datomic on postgres, but we still saw rather large GCs
+that caused spikes in the application latencies, and that wasn't acceptable.
+
+**** Loading, querying, reporting
+Loading was fast because of bulk load commands - COPY.  Postgres has
+an amazing query planner and we had the established relational
+database patterns that gave us an unfair advantage. We had to
+hand-write the query plans in datalog.  We narrowed our DB writes to a
+few stored procs, each of which took no more than 3ms.  This was fast
+enough that we could read/write to the DB in realtime and we didn't
+need an application cache.
+
+
+
+*** Simulation testing
+***** Brief version
+This is probably an entire talk by itself. But again, it's a talk that
+already been given by other team members ;) Without going into details
+of how we did simulation testing, we'll explain what tests we wrote
+and how it helped discover critical bugs in our domain logic.
+
+***** Full version
+[incomplete]
+We have a simulation testing tool that runs various scenarios to test
+the integrity of the experimentation platform. Like, ensure the
+stickiness of treatment, unbiased allocation of treatments,
+correctness of reports, etc. This helped discover some critical bugs
+in our domain logic, and in ensuring that the system behaved correctly
+despite implemtation changes (like moving to postgres).
+
+*** Other things we can talk about
+**** Replication
+Because of the nature of our application (experimentation), it was
+crucial for us to protect the integrity and prevent against loss of
+data. Hence, we needed a quick failover mechanism in place.
+
+There isn't any out of the box postgres cluster management solution
+that fit our need. RDS at that time didn't have read replica support
+for postgres. We built this mechanism ourselves using repmgr [link].
+
+Here are a few things we did around this:
+- Evaluated postgres latencies on the same box and different box.
+- Set up a postgres cluster using repmgr on vagrant.
+- We built multiple lines of defence in case of a failover
+  1. Repmgr runs a script to notify applications (all running instances) about failover.
+  2. Application polls to check if it can write to the master DB. And
+     attemps to find the master from the cluster if not
+- We load tested this, and were able to achieve a maximum downtime of 5s.
+https://raw.githubusercontent.com/StaplesLabs/Eccentrica/master/doc/failover-scenario-load-test.org?token=ABP5t3UCrTRHUpfqJpliUDpl-59IpgpDks5VPO-1wA%3D%3D
+
+**** Optimizations
+- Changed the query's boolean where clause to match the index's
+  definition. 30x reduction in query time.
+https://github.com/StaplesLabs/Eccentrica/commit/31e3d9f1de29dd028a4190a7e54a2fdcd7c88108
+- Trade off memory vs performance on indices. Because our DB was huge, and so were our indexes.
+- We thought of trying different indices for reporting, but as of
+  postgres 9.5, there isn't a way to do this.
+- Tweaking postgres configs for 95th percentile.
+- Tweaking os and file system configs for 99th percentile
+- Using postgres arrays to denormalize, remove a join.
+- Community was amazing. freenode#postgres rocks!
+
+
+** links to code
+
+
+Loading datomic:
+=====================
+The first, quick and dumb way:
+https://github.com/StaplesLabs/Eccentrica/blob/79f70461fa2b78ec6f28170bc03934f0a0de810a/src/eccentrica/scripts/load_test.clj#L110-L124
+
+The load script that pumped datoms into datomic:
+https://github.com/StaplesLabs/Eccentrica/blob/82bbbcda64b3fc784ba00fcf84d5b78c2f606ceb/src/eccentrica/scripts/load_test.clj#L135-L173
+
+
+Reports:
+=====================
+Daily aggregates with prismatic graph using d/as-of, d/since:
+https://github.com/StaplesLabs/Eccentrica/blob/f99ad152ce20ed2cb0a1120672f4b3a463625a6b/src/eccentrica/reporting/reports/lift_report.clj
+
+Cool mtnygard stuff:
+https://github.com/StaplesLabs/Eccentrica/commit/40e6a3ff73ebe41d54d25366de1864b51500877b
+
+One big query method:
+https://github.com/StaplesLabs/Eccentrica/blob/88e09206037e14417c1824237df4fd9039184267/src/eccentrica/db/session.clj#L143-L164
+
+The datoms approach:
+https://github.com/StaplesLabs/Eccentrica/blob/88e09206037e14417c1824237df4fd9039184267/src/eccentrica/db/session.clj#L175-L211
+
+After move to Postgres:
+https://github.com/StaplesLabs/Eccentrica/blob/77e44348c45efcc20c9ad3eeb17f9925efa9397e/src/eccentrica/reporting/reports/lift_report.clj
+
+
+Out of memory issue:
+=====================
+The memory problem solving commit:
+https://github.com/StaplesLabs/Eccentrica/commit/c5730986e64bd4c56cbe3b7c390e539bdcfb202b
+
+Stu's notes:
+https://github.com/StaplesLabs/Eccentrica/blob/4c9908a87a0698e2b4b8d7fdf522db572f47e9bf/doc/datomic-q-and-a.org
+
+Postgres:
+=====================
+Datastore comparison:
+https://github.com/StaplesLabs/Eccentrica/blob/master/doc/datastore-comparison.org
+
+Super weird network issue:
+=====================
+Mail with subject: "Of the behaviour of post-json"
+
+** Talk history
+- None
+
+** Speaker Bio

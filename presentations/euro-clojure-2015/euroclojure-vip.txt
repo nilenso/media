@@ -1,0 +1,43 @@
+
+Title:
+Option #1: Unroll the loop: your brain is a meta-circular evaluator
+Option #2: Eval/Apply for your brain: What is vipassana meditation?
+
+Abstract:
+Many of us love Clojure because it is the first opportunity we've had to write day-job software in a homoiconic ("turtles all the way up") language. This talk will reverse the focus from building up language abstractions to tearing them down -- specifically, the language and imagery of consciousness. We will look at the mechanics of vipassana meditation and then dive into some observations: from the relationship between time, immutability, and observation in the real world, to dissecting our biology as both program and data, to viewing the brain as a branch-predicting meta-circular evaluator built of much simpler instructions yet capable of resolving recursive paradoxes. Is it turtles all the way down? This talk won't necessarily have the answer but it will ask some thought-provoking questions -- and suggest ways to answer those questions.
+
+Attendee Learnings:
+Clojure's meta-circular nature means we can create core.async without altering the compiler. Upon inspection, biology also appears meta-circular in nature: Vipassana is simply observation of one's own nervous system. But throughout this observation, it becomes clear the nervous system also plays an important role in awareness -- the object of observation is also the observer.
+
+Vipassana meditation has recently received quite a bit of press, particularly from the spiritually adventurous and from the field of neuroscience. However, researching how vipassana actually works can prove difficult. Descriptions like "complete, unbiased attention to the present moment" don't provide us any insight. There are plenty of YouTube videos and blog posts from people who have practiced vipassana, but these tend to be incoherent descriptions of the experience rather than factual observations.
+
+Harkening back to the earlier Clojure days, we'll re-open Whitehead's "Process and Reality" and try to make sense of the "occasion of experience" in a context we all understand (Clojure) and a context which may be a theoretical sandbox for some (vipassana). The imagery for the latter will be aided by similar environments: sensory deprivation tanks and anechoic chambers.
+
+We will do a quick tour of the history and mythology of Buddhist meditation (simply so we can set it aside) before discussing related meditation techniques, such as Zazen, and the mechanics of the vipassana technique. There isn't much to the mechanics of any meditation, so a discussion of its observable effects will form the bulk of the talk.
+
+Attendees will see that "free will" is something not to be believed, nor denied, nor pondered -- but a specimen we can examine. We will take a look at the etymology of the words which seem simultaneously intrinsic to every person's understanding, and yet difficult to teach, using concrete examples from the English and Hindi lessons given in the Nilenso office. Using language, we will explore the dichotomy between choosing the right words for building software and the utter absence of words necessary to describe our own consciousness. Vipassana and Clojure both attack the problem of time and observable truth, and attendees will see by example how language plays a key role in both concepts and in both environments.
+
+Without taking the analogy too far (we hope), we will look at the relationship between the brain and the nervous system as an execution environment and storage medium. We will look at examples of stored data (memories) acting as instructions (emotions/thought) and vice-versa. Standing on this foundation, we'll lastly take a look at the implications of our brain as an execution environment: virtual reality is increasingly convincing; is there a way to know we are not already in the Matrix?
+
+
+
+
+
+
+
+
+
+The talk will close with pointers to additional material and an explanation of the benefits of meditation outside of the curious little analytical bubble of .
+
+
+
+- not just the domain of neuroscience
+- focus exercises
+
+
+Talk History:
+- nervous system plays a much more important role than we usually envision
+- clojure's meta-circular nature means we can create core.async without altering the compiler; biology's meta-circular nature means human consciousness can exist from a pile of cells
+
+
+Organizer Comments:

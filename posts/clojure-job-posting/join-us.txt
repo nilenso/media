@@ -1,0 +1,22 @@
+
+Nilenso is not your average Clojure consultancy: As an employee-owned cooperative, we are building a home for hackers.
+
+The landscape of software companies is changing. Ten years ago, we all longed for a challenging job with purpose that paid well. In 2014, this is the new normal. We all have our pick of jobs. The work is exciting. The technology is powerful. Software, and the networks on which it is built, are forever evolving. Technology companies need to evolve in parallel.
+
+So what's next?
+
+An employee-owned cooperative corporation brings the democratic structure we expect from governments to our entrepreneurial ventures. We transparently compensate our employees in a true meritocracy. We collectively decide the direction of the company. This collective direction transcends lip service diversity and employs variety as an essential part of our business. As a team, we've agreed our raison d'etre is to 
+
+Together, we're learning from our mistakes. Together, we're trying to build a company for life.
+
+==
+
+It's one thing for a company to tell you they build low-latency, distributed, highly-concurrent machine learning systems. It's another thing entirely for a company to invite you to pick your own buzzwords.
+
+Coops aren't just for stoner baristas anymore. Come pick your buzzwords with us.
+
+==
+
+
+
+These days, it's easy to find a challenging job. Most of us are building software with a global reach. We all enjoy a healthy salary.  This is the new normal. So what next?

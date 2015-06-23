@@ -1,0 +1,41 @@
+
+Cruddy Robots
+
+* Why do we write software?
+* automation
+** Reserving a cab => Ola / Uber
+** Talking to people => Twitter, Hangouts
+** Shopping => Flipkart / Amazon
+** Travel agent => cleartrip (refund example) / kayak
+** SIM recharge => paytm / no american equiv
+** Paper => forms (Access, dBase, FoxPro)
+
+* These are all businesses
+* Why do we start businesses?
+* Serving human needs
+** food, water (bigbasket)
+** clothing, shelter (fab.com, housing.in, homeshickari.com)
+** safety (police)
+** health (ambulance, hospitals)
+** love (okc)
+
+* "Job Creation"
+** automation is the opposite of this: a boring, manual, repetetive human "job" becomes the "job" of a computer.
+** automation is about creating free time
+** most necessary jobs are those found in Richard Scary books (quote)
+** if your "automation" requires a human, you're doing it wrong
+** automation necessarily implies ubiquitious computing
+
+* CRUD
+** human => computer
+** push model
+** can be satisfied with a script
+* "Robots"
+** computer => computer => human
+** pull model
+** requires a long-running service
+** human intervention is automation failure
+** examples: booking a flight, deciding a price
+*** can these not be automated?
+*** my time is more valuable than my money; I'd rather a smart computer booked my flight tickets.
+*** machine learning is getting us there.

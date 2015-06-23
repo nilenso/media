@@ -1,0 +1,32 @@
+
+Nilenso is an employee-owned technology cooperative in Bangalore. We have built our business on an "experiment culture"; we take calculated risks and measure outcomes. This post has a title suffix of "again" because we have had some fantastic luck with the HasJob board in the past, due in part to peoples' interest in the existence of a completely transparent "technology cooperative". Here are the two key points:
+
+1) Every employee (including you!) owns an equal share of the company. Hence, you will own nilenso.
+
+2) Every employee (including you!) helps run the company. Hence, you will run nilenso.
+
+First, a little about us: nilenso is a profitable consultancy and product incubator. People working on products are 100% on products. People doing consulting are 100% on consulting. We try to rotate people through projects so they don't get bored. None of our projects are very boring, though: we've built open source products, worked with non-profits and for-profits alike in multiple domains (startups, health, e-commerce, "the enterprise", news media, climate change awareness, and event management). We have Haskell classes in the evening. We love riding bicycles, bird-watching, and playing guitar. There are a thousand ways we can do better and we're going to try.
+
+We would love it if you can help us be better.
+
+Nilenso has a culture of constant improvement; we expect it from ourselves, from each other, and from everyone we consider hiring. An extensive library and frequent conference attendence act as our baseline, but the greatest lever we have is pushing each other to do better. Some recent topics: Could we use big data to help solve Bangalore's infrastructural challenges? Could we become a purely open source consultancy? How can we ensure that even our hardest projects always have a sustainable pace?
+
+Our backend code is almost entirely in Clojure, with a dash of Javascript, C++, Java, Ruby, and Objective-C in the five places those five languages make sense. We've spent significant time scaling and squeazing runtime performance out of Postgres and analytics performance out of HBase and Redshift. Sometimes we use code to make music or poetry. Most of our code is on the backend, and it makes a lot of sense to us to write backend code in a LISP on the JVM, but we're not wedded to it. "Best tool for the job" applies at nilenso -- but the "best" tool needs to be quantified with facts. We love facts. We might be knee-deep in Swift or Rust or Go or Haskell or C or .NET (who knows) next year and we're looking for other open-minded developers to share their curiosity with us.
+
+As part of a consultancy, you will be talking to your customer. A lot. We have daily meetings with our clients every morning or every evening (depending on their timezones). More and more we're finding clients in India/Asia, which we like. However, the past year has sent everyone from our staff overseas to meet their clients face-to-face; we're more than the far side of a Skype conversation.
+
+
+JOB PERKS
+=========
+
+Perks at nilenso are defined by everyone. We have parking for your bicycle, motorbike, and car. We provide health insurance to everyone on staff. Kitty or Abhinav might make you a delicious Aeropress coffee if you ask nicely... otherwise we get Kumbakonum Degree Filter Coffee delivered and masala chai made in-house. Don't like masala chai? We have a mountain of other tea. We have free lunch. We try to host as many educational events as we can at the office. We want you to meet your client and attend conferences, whether that's a bicycle ride to Jayanagar or a flight around the world. This year, we attended a ton of conferences: JSFoo, rootconf, Clojure/conj, RubyConf San Diego, React Conf SF, StrangeLoop, GCRC, Clojure/West, RubyConf India, Fifth Elephant, and probably one or two we've forgotten. We have company outings sometimes and sometimes we just lounge around the office and watch movies on the projector. If there's a way we can make the office more comfortable or fun, we'll do it.
+
+We'll give you all the standard junk to get your job done: a comfy chair and desk, a laptop of your choice (most of us have 15" MacBook Pros but we don't discriminate) and a full workstation. We'll get you software licenses and a 4G data dongle if you need to work from the train. If we can help you with something else, just ask. We'll try.
+
+Some perks aren't selfish. We try to contribute collectively to charities. We have a composter for our wet waste, a leaf composter for the neighbourhood, and recycling for everything else. We host daily English lessons. You can help with any or none of these, as you like, but they'll make you feel good, which is the ultimate perk, isn't it?
+
+
+APPLY
+=====
+
+Just tell us about yourself! What experience do you have? Will nilenso be your first job, or would you like to join as a senior technologist? If you are young, what do you want from your career? If you are more experienced, how large were the teams you lead? What are your greatest achievements and most educational failures?

@@ -1,0 +1,73 @@
+* similar envionments
+** sensory deprivation tank
+** anechoic chamber
+* is the world mutable or immutable?
+** immutability is a property of observers, not the state itself
+** vipassana will make one question the nature of time
+** how does cause and effect work?
+*** I change something at time A
+*** it remains changed at time B (now, where A is its filtered history)
+*** the filtered history has become the future where B either remains or affects events at C
+* an external observer (martin thompson perf measurements) vs the observed being the observer
+** for introspection, the latter is necessary
+** requires tight feedback loop
+* different meditation techniques:
+** yogic sleep
+** thich naht han
+** thai forest
+** zazen
+** vipassana
+* paradox in itself, resolving paradoxes
+** causing pain, resolving pain
+** how can everything be simultaneously true and untrue?
+** "how can you stop the sound"? -- koan practice
+** truly turtles all the way down (no JVM underneath)
+** free will; a pure exercise of will that
+* need to suspend disbelief x 3:
+** the tight connection between nervous system and brain in the brain's behaviour (the futurama head-in-a-jar seems unlikely or impossible)
+** focused attention (meditation) is a thing
+** dissolution of the body
+* language
+** english classes: notion of "self" (identity)
+** clojure talks on words & meaning
+* domain of thought:
+** visual
+** auditory
+** logic
+** abstract
+** what happens here when all the input is just nervous system => brain and back?
+* physical observations within the body
+** bad-mouthing steve jobs after 1st vipassana
+** observing the cycle of fear after 2nd vipassana (chai walla?)
+* michael abrash talk at F8
+** the matrix paradox: cannot know that our senses are not being tricked, especially given that they already are
+* what can be thrown out
+** history
+** future-prediction
+** kalapas
+** sankharas
+** reincarnation
+* the brain's capacity for branch prediction is its own worst enemy (JVM optimization)
+** study showing participants' decisions can be predicted 5 minutes beforehand?
+* free will
+** the treadmill exercise
+** Hofstadter's potato chips observation (StrangeLoop)
+** http://en.wikipedia.org/wiki/Neuroscience_of_free_will
+* emotions
+** lizard brain
+** control: nervous system => emotions => thoughts - triangle
+** intellectualizing the facts does not improve the situation (lack of free will)
+* patterns
+** hmm
+** program vs. data
+* paths to exploring neurology
+** up in the air
+** fight club
+** drugs?
+** futurama head-in-a-jar unlikely w/o nervous system
+* "truth" and honesty
+* "magic" in computers disolves with exploration, in consciousness "magic" appears with exploration
+* nervous sytem + brain observed by "attention", self-defined as the nervous system + brain in the next slide
+* buddhist ideas of "craving", "aversion", and "attachment" can be framed in the 5 - 8 sense system:
+** normal 5: sight, sound, smell, taste, touch
+** expanded: "touch" of nerves, thoughts (a) participatory, and (b) observed

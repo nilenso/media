@@ -1,0 +1,58 @@
+
+How To Recycle
+==============
+
+
+If we look around Bangalore, we see a city with enormous potential. Businesses thrive here. Technology, design, food, and music are all finding a cosmopolitan home in 2015 Bangalore. It is not hard to imagine the Bangalore of the future: a thriving metropolis of modernity built in the centre of the southern subcontinent. The city is already growing quickly -- in many ways, outgrowing itself.
+
+One such way is waste management.
+
+The future Bangalore is clean. Electric vehicles, bicycles, and a bustling metro will spell the end of inner-city air pollution. Modern clean-water infrastructure and waste water facilities will end water-borne disease. One can visit the world's most sophisticated cities today to witness these features. However, humanity's attitude toward garbage still limps along, across the globe. As I visit cities and towns in Canada, the approach to garbage is almost ubiquitious: landfills. There is a bit of paper, plastic, and glass recycling here and there... but it's not front-and-centre, and it's often [http://www.cbc.ca/news/canada/saskatchewan/city-of-regina-hasn-t-been-recycling-glass-food-containers-1.2761004] not even certain that the recycling is really happening. Canada is a big country, and it would take millenia at our current population density to recognize our bad habit.
+
+Bangalore is more fortunate. The consequences of poor waste management are immediate, and they frequently make the news. The landfills around Bangalore are poisoning nearby villages, and when those villages revolt garbage piles up in the city, poisoning the very people who produced it. The necessary pressure exists for Bangalore to leapfrog other major cities across Earth and tackle waste with a vision of the Long Now.
+
+
+Step 0: E-Waste
+---------------
+
+Never, *never* throw electronics or batteries in the garbage. They are extremely poisonous. Thanks to their value, they're also incredibly easy to recycle. Bangalore has [http://lmgtfy.com/?q=bangalore%20e-waste] many e-waste recycling options.
+
+
+Step 1: Compost
+---------------
+
+The clearest distinction between types of waste is compostable (organic) waste vs. Everything Else. Thus far, the <a href="http://bbmp.gov.in/web/guest/swm">BBMP Solid Waste Management</a> doesn't offer compost services. But it's very easy to compost in any size of home. Composting doesn't stink and doesn't attract vermin.
+
+Composting requires very few tools, and they are easily obtained:
+
+- Daily Dump: http://www.dailydump.org/
+- Smartbin: http://www.greentechlife.in/smartbin/
+
+
+Step 2: Segregate Dirty/Clean
+-----------------------------
+
+Recycling in Bangalore is done at a variety of stages. There are BBMP waste segregation facilities all over the city, and even if you can't actively recycle yet, separating soiled waste from clean waste will keep your home and office clean and discourage pests like cockroaches.
+
+The rules for this are simple: Is there food waste that can't be cleaned off? That's soiled waste. If you can clean the waste, do that!
+
+Examples of soiled waste are dirty napkins, greasy pizza boxes, and aluminum foil with burnt food on it. Examples of garbage that can be cleaned: dahi containers, tetrapacks, plastic bottles, aluminum cans. Clean these by washing and rinsing them in your kitchen sink. Throw soiled/dirty waste out regularly, since it attracts bugs. Clean waste, even if not recycled, will never rot or stink since it's nothing but glass/plastic/metal/paper. I often go an entire month without throwing out my clean dry waste.
+
+
+Step 3: Recycle
+---------------
+
+Once you have started segregating clean waste from soiled waste, full recycling is just a short jump away! Segregate paper/cardboard, plastic, glass, and metal. Those four categories comprise most non-organic material of anything you might purchase. If your neighbourhood offers recycling services for any of these materials, use them! There is a [http://218.248.45.169/download/engineering/Dry%20waste%20collection%20Center.pdf] list of dry waste collection centres available on the BBMP website, even if it's a bit difficult to read.
+
+If your neighbourhood doesn't offer dry waste collection and recycling yet, you can contact the BBMP's [http://bbmp.gov.in/web/guest/commissioner] Commissioner and [http://bbmp.gov.in/web/guest/administrator] Administrator.
+
+
+Step 4: Reuse!
+--------------
+
+This step should probably come before Steps 1 through 3, but it's not as frequent, since the items tend to be larger. There are dry waste collection services in Bangalore which will also happily pick up large quantities of dry waste: furniture, tools, appliances, linens and clothing. They will separate reusable items from recyclable items and deal with each appropriately. In particular, Hasirudala is a non-profit which works in conjunction with the BBMP to collect large quantities of dry waste: http://www.hasirudala.in/ (contact: +919742112362 or contact@hasirudala.in or nalini@hasirudala.in directly).
+
+
+As Bangalore grows and matures, so will its services. Every aspect of this simple process will become smoother and more ubiquitous. Waste will, sooner or later, transform from Bangalore's most visible social problem into a valuable resource. The growth process will of course experience its ups and downs, so don't be discouraged. Persist. Your integrity will become the integrity of your home, your workplace, your neighbhourhood, your city.
+
+Have fun!

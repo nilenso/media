@@ -1,0 +1,121 @@
+56248010
+
+* THOUGHTS
+
+** blog posts: don't forget the narrative!
+
+
+* REAL WORLD
+** pay land tax
+** file canadian income tax
+** open land co-op
+
+* THE LAST
+** 1) babies
+** 2) cycles
+** 3) self-awareness
+** an absence of difference in previous religions
+** the general need for order and belief
+
+* SOFT WORLD
+** remote dev env sanity script
+** againstsoftwarepatents.com
+
+* NILENSO
+** redraw the lines: news/comedy, neil degrass tyson & sagan, _why's art
+** -- read "patterns of software"
+** do rosetta stone (english & hindi) in office - nagaraju / kala
+** nilenso as a vc
+*** could we support kijani grows?
+*** could we support education or side software firms?
+** floss at nilenso standups
+** nilenso idea wall
+*** kijani grows
+*** local solar tower
+*** healthy indian food truck
+
+
+* BLOG POSTS
+** blog: coop
+** nerd culture and the gentle nerds.
+** blog: plan z
+*** originally: c42 => c43 => c44
+*** now, can we let go of nilenso?
+** meaningfulness of career
+*** richard scarry
+*** an ophthalmologist is still just a mechanic
+*** automation is key
+*** automating meaningfull tasks (restoring eyesight)
+
+** blog: the self-importance disease (opthalm) and dissolution for software
+
+** ophthalmological eyeball maps for patients
+*** date
+*** question / observation
+*** viewable field
+*** description
+
+** fibonacci-by-5 meditation sequence
+** blog: nilenso's corporate structure
+*** cake diagram
+*** neena's earth diagram
+** thai butt-washers for north america
+** militant vegetarianism
+*** removing meat abstractions would disgust north americans into removing meat from diet
+** "now is best"
+*** change is only possible in the present moment
+*** imagine being alive at the beginning of the dark ages
+** greed is global
+*** specific instances from canada, usa, uk, india
+** the desire exercise
+*** imagine the wealth of bill gates
+*** wealth leading to overwhelming guilt and desire to help
+** anger
+*** "getting things done" - neil gaiman's post?
+** "tell, don't ask" across software... win95+
+** blog: keys (method table, clojure, airport, hotel, bank)
+** blog: purpose (graph)
+*** yellow nilenso tables
+*** preferences (letter from bodhi zendo)
+*** a system for drawing a system of meaning (yellow & white examples)
+** tweet: elimination > automation > documentation > etc.
+** "the whole" - the timeless way, all this crap.
+** white baba concepts
+*** excess is poison & poison is excess
+**** water
+**** cyanide occurs naturally within the body
+*** God: venn diagrams prove a choice of belief system is irrelevant
+*** whitebaba.com - personal bible
+** education as currency and the burgeoning middle class of genius
+
+** living as kings: the financial middle class of the 20th century and what
+                    to do about endless possibility
+
+** automation, "in praise of idleness", Sagan
+** 5 whys: apply to business, beyond revenue
+
+** what each culture has taught me
+*** india
+*** usa
+*** philippines
+*** japan
+*** brits
+
+** environment; projection of current habits across cultures
+** Earth, The Village: everything that we build must be for all humanity
+*** waste, recycling, and energy use in the village
+
+** Rationality: in opposition to all emotion
+*** irrationality - anger at religions
+
+
+* WAT
+** distributed clean fresh water
+*** bottled water not sustainable
+** process map
+** education: basics
+*** math, literacy, food production, construction, waste management
+** timeless way: "how does it make you feel?"
+** persistence: continue to DO, never give up.
+** journalism: letting go of our own ideas in the search for global truth
+** evolution and the end of natural selection: tech and intellectual evo

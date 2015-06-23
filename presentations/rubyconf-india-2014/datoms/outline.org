@@ -1,0 +1,59 @@
+Datomic - Fully transactional, immutable database - datomic.com
+
+* Not an RDBMS
+
+** also not a document database or a graph database
+   
+** Nothing more than facts (datoms) of this shape: [e a v t]
+*** e: Entity
+*** a: attribute
+*** v: value
+*** t: txn / time
+*** your database can be indexed by any of these [eavt] [aevt] [veat]
+
+
+** txn = time because they are one and the same
+*** how? the database is completely immutable
+*** it's a set of datoms which can only be added to, not changed
+*** the db is made of facts and facts never change
+*** an immutable database is good for all the reasons Charles mentioned in his keynote
+
+
+* architecture
+** Peers - reads, data management, caching -- all in your process
+*** the query language and physical cache are all within the datomic library
+    inside your app
+** Transactor - another process, which writes to storage
+** Storage - can be in-memory, postgres, dynamodb, couchbase, riak, cassandra, and others.
+** cloud-based: multiple peers can talk to one transactor
+
+   
+* queries
+** written in a datomic dialect Datalog, a logical query language
+** Datalog is, you guessed it, just datoms
+** a query looks like this:
+** [:find ?e
+   :where
+   [?e :person/name "John Doe" _]]
+** [?e :person/name "John Doe" _] is just another datom with variables
+** only constraint: because the query engine is entirely in-process,
+   you need to be smart about intermediate sets of datoms created in the query
+   process (cite EP queries)
+
+   
+* transactions
+** addition and retraction of datoms is done with, you guessed it, datoms!
+** [:db/add entity-id attribute value]
+
+
+* schema
+** minimal
+** nothing but transactions with predefined attributes
+** {:db/id #db/id [:db.part/db]
+   :db/ident :user/name
+   :db/doc "Name of the user"
+   :db/valueType :db.type/string
+   :db/cardinality :db.cardinality/one
+   :db/unique :db.unique/identity}
+
+** [:user/name :db/valueType :db.type/string tid]

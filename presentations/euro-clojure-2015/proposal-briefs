@@ -1,0 +1,111 @@
+# Building an Experimentation Platform in Clojure
+
+## Abstract
+Over the last year and half at Staples SparX, we built a multivariate
+testing platform as a service. It satisfies an SLA of 10ms at 99.9th
+percentile, services all of Staples' experimentation from a single
+machine, is simulation tested, and is written in Clojure.
+
+We'll give an introduction to the Experimentation domain, design of
+experiments and our battle in attaining statistical significance with
+constrained traffic. We will share our experiences in loading and
+reporting over months of data in Datomic, using Clojure to grow a
+resilient postgres cluster, using a homegrown jdbc driver, interesting
+anecdotes, and OLAP solutions with ETL built in Clojure using
+core.async. Expect to see references to google white papers, latency
+and network graphs, histograms, comparison tables and an eyeful of
+clojure code.
+
+## What will the attendee learn?
+
+Note: We understand that this is probably a lot to cover in a single
+talk. We'll cut it down to the most interesting sections that we can
+cover in the time we have.
+
+We also have a more detailed version of this content, and each section
+here has links to relevant portions of that version.
+
+### Introduction to Experimentation
+- How do we provide statistically sound testing of hypotheses for
+  complex multi-variable systems?
+- What are non-overlapping and overlapping experiments?
+- How do we tradeoff between precise measurement and splitting traffic
+  between experiments?
+- How do 'Overlapping Experiments' work?
+
+We'll get into the guts of these concepts because they are central to
+the service.
+
+More: https://gist.github.com/nid90/5a5be8586b41949e811a#experimentation
+
+### Loading datomic
+If you've tried to profile your application that uses
+datomic, chances are you wanted to load it with data first. There
+isn't first class support for this. So we wrote the plumbing to do
+this effectively. We'll go through how we approached this problem and
+discuss the solutions in code.
+
+More: https://gist.github.com/nid90/5a5be8586b41949e811a#loading-datomic
+
+### Reporting on datomic
+Unlike on an relational database, there aren't established practices
+on reporting on datomic. How to write optimized datalog query plans
+for large datasets? Does it make a difference if these are spread over
+many months? Do we use the datoms api? We'll discuss the plethora of
+solutions we tried and the one that worked for us.
+
+More: https://gist.github.com/nid90/5a5be8586b41949e811a#reporting-on-datomic
+
+### A homegrown JDBC driver
+We wrote our own database driver in clojure because clojure/jdbc
+wasn't fast enough for us. We'll explain why, give code samples of the
+driver, how we use it, and compare timings with clojure/jdbc.
+
+More: https://gist.github.com/nid90/5a5be8586b41949e811a#a-homegrown-jdbc-driver
+
+### Simulation testing
+We have a simulation testing tool written in Clojure using Datomic,
+Simulant and Causatum that runs various scenarios to test the
+integrity of the experimentation platform. This is probably an entire
+talk by itself. But again, it's a talk that has already been given by
+other team members ;) Without going into details of how we did
+simulation testing, we'll explain what tests we wrote and how it
+helped discover critical bugs in our domain logic.
+
+More: https://gist.github.com/nid90/5a5be8586b41949e811a#simulation-testing
+
+### On postgres
+Depending on time availability, we'll answer the following questions:
+- What were the compelling arguments for us to move to Postgres?
+- How were loading, querying, and reporting different?
+- What were the difficulties we faced in migrating our code to Postgres?
+
+More: https://gist.github.com/nid90/5a5be8586b41949e811a#on-postgres
+
+### Anecdotes
+
+#### The "Out Of Memory" story
+The application would crash randomly with out-of-memory
+errors. Profiling it showed the datomic objects consuming most of the
+memory! We tried tweaking the GC config, the datomic config but to no
+avail. What really happened? Did we do something utterly stupid? Or is
+it something that any clojure dev can be bitten by? Thriller finish
+guaranteed.
+
+More: https://gist.github.com/nid90/5a5be8586b41949e811a#the-out-of-memory-story
+
+#### The weird network issue
+We had odd looking spikes of 40ms, when our application was normally
+at 2ms or 3ms. A really weird latency graph. And TCP resets! We spent
+almost a week diagnosing the network issue which was basically around
+10 lines of HTTP client code written in Clojure. What was wrong? We
+worked around the problem in the end, but it's a story worth sharing.
+
+More: https://gist.github.com/nid90/5a5be8586b41949e811a#the-weird-network-issue
+
+### Other things we can talk about
+- How we built a postgres cluster using repmgr
+- How we reduced report times 30x by making a non-obvious change to a single clause
+- ETL written using core.async
+
+More: https://gist.github.com/nid90/5a5be8586b41949e811a#other-things-we-can-talk-about
