@@ -1,4 +1,23 @@
 
-* How to co-op: Reviews
+* How to co-op: Salaries & Reviews
 
 Today, I'm a wifi parasite in the uSwitch [ http://www.uswitch.com/ ] office. Over lunch, Tom Hall [ http://www.thattommyhall.com/ ] pointed out that nilenso doesn't pay bonuses, instead opting for transparent salaries, chosen on merit to the degree possible [ http://blog.deobald.ca/2014/11/huh-software-cooperative.html ]. His question is one we get often: How *do* you decide salaries?
+
+Our first stab at this was a model we'd inherited from other companies we'd worked at: have salary bands which match up to the skill and experience of the current staff, match that to the available cash, and set salaries accordingly. At first, we actually started off with an approach that was even more naive -- rather than salary bands, we had "levels". To improve one's salary beyond the usual bump provided for inflation, it was really a huge leap from "college kid" to "junior" to "intermediate" to "senior". Under this model, we also had no real vision for future "levels".
+
+[ levels.png ]
+
+This system is very obviously broken when graphed this way, but there are a number of little firms in Bangalore which still operate this way. The inevitable conclusion is the introduction of "Level 2.5" and other confused ideas which make a broken system even worse.
+
+Incrementing on this inherited model, we tried to smooth out the curve and divide up each "level" into ten increments. The old integer levels (now L1.0, L2.0, and so on) now represented concrete, documented responsibility changes and the new incremental levels (L2.2, L4.3) were a sort of tweened [ https://en.wikipedia.org/wiki/Inbetweening ] into thirds. Some concrete examples: L2.0 is a intermediate developer who is capable of driving design decisions (and a pair, if pair programming). L3.0 is an intermediate developer who can mentor, architect individual systems, and drive hiring decisions. L2.1 to 2.3, L2.4 to 2.6, and L2.7 to 2.9 give us three junior-to-senior tiers to play with when describing the growth of a developer from a "solid intermediate pair" to "mentor".
+
+Once we had the incremental model in place, we tried to iterate on our previous experience of "behind closed doors" reviews, as well. The goals were transperency, fairness, and comfort. Big all-hands referendums could be emberassing -- and had proven inefficient for all sorts of other decisions, which caused us to elect a small "Executive" (two people), similar to an elected Board of Directors in a large corporate co-operative. The Executive drove the review process. We kept track of each review on a whiteboard, so everyone could see what was going on as it happened. Each review included the two people from the Executive, the person being reviewed, that person's "sponsor" (another vestige of other companies we'd worked for - namely, ThoughtWorks), and their closest coworkers/team members. The sponsor presented a proposed salary, and the review discussion worked backward from there. The process worked reasonably well, but as we discovered this year, we were a bit too liberal with salary jumps.
+
+Once we'd finished the review cycle, we took a step back and tried to answer the "what does the future look like?" question. Working with "explicit is better than implicit" [ http://c2.com/cgi/wiki?PythonPhilosophy ] as a foundational rule, one is forced to visualize a _complete_ salary framework. This implies a couple of things:
+
+1) "complete" inherently means "global"
+2) "complete" inherently means "lifelong"
+
+Therefore, our salary bands had to map a curve from the lowest-paid, straight-out-of-college hacker to the most talented and experienced computer scientist money can hire. The former is easy enough to imagine; we've all hired dozens of those folks. But the best of the best, near the end of her career? I'm not even sure I've met such a person.
+
+So, for the sake of argument, let's assume we're hiring Leslie Lamport, assuming he makes a high salary at Microsoft Research. Or perhaps a senior-most computer programmer from Google. A little asking around, Glassdoor [ http://www.glassdoor.com/Salary/Microsoft-Researcher-Salaries-E1651_D_KO10,20.htm ], and that infamous secret.ly thread tell us that our ballpark figure of $500,000 USD isn't too far off. Maybe a little higher or a little lower, but something so far away from nilenso's present reality need not be too precise. It's just a helpful stake in the ground. A $500,000 salary represents Level 10.0 -- someone who's about to retire and has turned the industry upside down over the course of their career.
