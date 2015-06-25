@@ -54,8 +54,28 @@ Second, Deepa facilitated the "review meetings". After scheduling and planning e
 
 [ levels-line.png ]
 
-A small consulting company has a fixed amount of money to spend on annual raises. By working through the entire review process without discussing money, we were free to be completely honest with one another with feedback and conversation. Certainly some conversations were harder than others, but on the whole the process went very smoothly. Once everyone's reviews were complete, Deepa took away a Level Curve (really more of a straight line with dots on it, like above) which she could retrofit our earnings onto. That became the proposed Salary Curve, which we discussed one last time and then finalized.
+A small consulting company has a fixed amount of money to spend on annual raises. By working through the entire review process without discussing money, we were free to be completely honest with one another with feedback^ and conversation. Certainly some conversations were harder than others, but on the whole the process went very smoothly. Once everyone's reviews were complete, Deepa took away a Level Curve (really more of a straight line with dots on it, like above) which she could retrofit our earnings onto. That became the proposed Salary Curve, which we discussed one last time and then finalized.
+
+^ It's worth noting that we expect feedback to be a continuous, daily process. If soeone is giving you new constructive criticism for the first time in the review process, they've failed you miserably. Since reviews take the form of "feedback" the terms are sometimes used interchangeably. Though we may muddle terminology, we try not to muddle intent.
 
 ** Unsolved Problems
 
-We are yet to figure out
+Though we have a smooth, meaningful Level/Salary Curve for developers, we are yet to figure out what this will look like for administrators, executives, project managers, designers, accountants, or operations staff. We only have one desiger, executive, and PM on-staff at the moment, so our best approach is to find some middle ground between industry averages and the developer curve. But that's vague.
+
+A meaningful salary curve for operations staff is even murkier. Though we have 3 people who do operations (security & operations, cleaning, operations & basic accounting) and their salaries are similar, the industry average for these positions is unfairly low in India. We're also less sure what the growth path for each of these folks will be in the coming 2 or 3 years. Mintu will certainly get bored of working security at some point, and we need to make sure the Salary/Level Curve for Operations makes sense in light of that.
+
+Though nilenso has a very liberal paid leaves policy (unlimited sick leave and plenty of vacation), we do not have sabbaticals (unpaid leave) figured out. Sabbaticals present a number of difficulties: Does a senior employee have more access to sabbaticals than a junior employee? Someone senior undoubtedly makes more money and has longer vacations in any company, but most companies don't offer sabbaticals. Is one's salary based on a 12-month working year, or 12 months less any sabbatical months? How can we plan sabbaticals far enough in advance that they're comfortable for both us and the client? How many sabbaticals can a consulting firm support in one year? At one time?
+
+Nilenso has expenses. An office, non-billable staff, food, travel, books/classes/conferences, and a couple of internet connections. While everyone would love to take a sabbatical whenever they like, it is damaging to a company if the company isn't 100% remote and overhead-free.
+
+** Other Approaches
+
+Discussing salaries-in-a-coop always leads to the peripheral topics: performance reviews, bonuses, reinvestment, paycheques, and sabbaticals. I was excited to find that talking with Tom Hall [ twitter.com/thattommyhall ] and Hakan Raberg [ blog or github? ] the conversation was almost entirely focused on sabbaticals. Juxt [ juxt.pro] and MavenHive [ mavenhive.in ] take a similar approach: you get paid for the hours you work. A company could take this idea to either extreme: either by hiring subcontractors rather than full-blown employees or by laying out basic salaries and adjusting them every month.
+
+Tom hasn't chosen a model yet, and I'm guessing it will evolve with his co-op. His key issue is the ability for employees to take sabbaticals (he describes the need for sabbaticals as a "founding principle"), which for a consultancy implies salaries will swell and shrink with billable hours. At nilenso, we've had varying success with mixing hourly billing rates and monthly retainers. Depending on one's billing model, the process of taking sabbaticals could shift. Once Tom's co-op Gets Huge(tm), it will require operations, admin, and accounting staff. Those folks still need to get paid even if all the developers are off at HillHacks [ hillhacks.in ] for a month, so I'm excited to see what solution he and his team opt for.
+
+** tl;dr
+
+For us, decoupling performance reviews from both feedback and salaries has worked really well. Feedback should be a daily occurrence, not a yearly ceremony. Salaries should be a consequence of financial planning, not evaluation. We will definitely use Tim's Review App [ https://github.com/nilenso/reviews ] again next year since we found it a great tool for getting things done and for discussions.
+
+We will keep publishing our experiments, failures, and learnings. And we'd love to hear from you at hello@nilenso.com if you have a suggestion!
