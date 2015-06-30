@@ -32,7 +32,7 @@ Our first pass was difficult, uncomfortable, and (of course) incorrect.
 
 [ deepa's curve visualization from 2014 ]
 
-Fast forward one year to nilenso's 2015 review cycle, and it was apparent our 2014 curve didn't really fit. We'd made a few mistakes: high-end salaries (L4.x and L5.x) were too high, some jumps had been too big, the L1 salary band didn't fit on a smooth curve. However, being completely honest about the data is only step #1. Step #2 is to be completely honest with _ourselves_: we'd made some mistakes in 2014 and we needed to correct them. We jiggled the L1 salary band a bit, some L2.x salaries didn't jump as much as expected, L4.x and L5.x salaries came way down.
+Fast forward one year to nilenso's 2015 review cycle, and it was apparent our 2014 curve didn't really fit. We'd made a few mistakes: high-end salaries (L4.x and L5.x) were too high, some jumps had been too big, the L1 salary band didn't fit on a smooth curve. (You can see this from the graph: the L1-L2 salary band has a steeper slope than L2-L3 and the inflection at L4-L5 is also obviously incorrect.)  However, being completely honest about the data is only step #1. Step #2 is to be completely honest with _ourselves_: we'd made some mistakes in 2014 and we needed to correct them. We jiggled the L1 salary band a bit, some L2.x salaries didn't jump as much as expected, L4.x and L5.x salaries came way down.
 
 Our second pass was difficult, uncomfortable, and (will likely be) incorrect.
 
