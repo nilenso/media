@@ -1,0 +1,47 @@
+* Introduction to Experimentation
+- Cox and Reid definition of Experimentational Research
+- History?
+- Usage (much more mature?) in other fields
+
+- Experimentation as we use it
+- Coverage
+- Reports
+- Events
+- http://research.google.com/pubs/pub36500.html (call out that the most disruptive paper came out 5 years ago, so it's a relatively new subject, and needs a lot of whiteboarding before jumping in. There aren't established tools/practices out there).
+- Google, Bing, LinkedIn & Netflix
+- https://github.com/StaplesLabs/HeartofGold/blob/4205a588cdef9abc9d5739ce168532b4560d34a7/docs/hog-api-documentation.org#great-material-on-experimentation-infrastructure
+
+# E A B
+# E A B C
+# E A A
+# E1 E2 (messy)
+# E1 E2 (precise)
+# messy and precise (old ep style)
+# nested trees
+# shared bucket
+
+* Magnitude - clojure/jvm?
+- let's us focus on the actual problem
+- expressiveness
+
+- examples (dispatch table, report-graphs vs figure-graphs, current get-buckets/mutual-recursion?)
+#+begin_src clojure
+(def dispatch-table
+  {[c/precise c/messy]        :default
+   [c/precise c/precise]      :precise
+   [c/precise c/unrestricted] :unrestricted
+   [c/messy   c/messy]        :messy
+   [c/messy   c/precise]      :default
+   [c/messy   c/unrestricted] :unrestricted})
+#+end_src
+
+* Persistence? - postgres
+
+-- The following vars and their curves with increasing db size
+- single write - SLA
+- cold/warm read - SLA
+- report without aggregates - changing data, drill down analysis
+- bulk import - profiling
+- backup and restore - for archival, safety
+
+(redis, datomic/ddb, datomic/pg, pg)
