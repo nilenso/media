@@ -1,9 +1,10 @@
-* Introduction to Experimentation
+* Introduction to Experimentation (7-8 mins - aim for 10)
 - Cox and Reid definition of Experimentational Research
 - History?
 - Usage (much more mature?) in other fields
 
 - Experimentation as we use it
+- Treatments
 - Coverage
 - Reports
 - Events
@@ -20,9 +21,19 @@
 # nested trees
 # shared bucket
 
-* Magnitude - clojure/jvm?
+- Why not use the tools available for experimentation? (Say it in passing as a conclusion of the first segment may be)
+  - There were features of our client's business that made experimentation more involved than a regular change of a button color.
+  - SLA, EP sits in the path of all the calls.
+  - Raw data analysis.
+
+** Segway: SLA (low latency)
+
+* Implementation (6-8 mins)
+** why clojure/jvm? (3-4 mins)
 - let's us focus on the actual problem
 - expressiveness
+- low latency
+- established languauge of choice amongst the teams
 
 - examples (dispatch table, report-graphs vs figure-graphs, current get-buckets/mutual-recursion?)
 #+begin_src clojure
@@ -34,8 +45,10 @@
    [c/messy   c/precise]      :default
    [c/messy   c/unrestricted] :unrestricted})
 #+end_src
+- the actual computation functions are in-memory higher order functions whichg are evaluated during runtime.
+- using pure, uniformly distributed allocation function for bucketing.
 
-* Persistence? - postgres
+** Persistence? - postgres (3-4 mins)
 
 -- The following vars and their curves with increasing db size
 - single write - SLA
@@ -44,4 +57,46 @@
 - bulk import - profiling
 - backup and restore - for archival, safety
 
-(redis, datomic/ddb, datomic/pg, pg)
+(redis(?), datomic/ddb, datomic/pg, pg)
+
+** Segway : eveyrthing worked perfectly
+
+* Simulation Testing (7-8 min - aim for 10)
+- Take inspiration from mtnygard's talk at Strangeloop 2014
+
+** Good
+- test a complicated system. In our case, ensure the stickiness of treatment, unbiased allocation of treatments, correctness of reports
+- <architecture diagram>
+- state machine for simulant
+- Simulant and Causatum
+- diagnostics
+- helped us uncover some critical bugs
+
+** difficult parts
+- adding simulation testing as part of CI
+  - so many moving parts
+  - mostly a failure on our part
+
+
+
+
+Notes:
+- watch out sub-section in each section?
+
+* Reporting (10-12 mins)
+- datomic
+
+** reporting on postgres (5-6 mins)
+- tried using postgres as a reporting db
+  - indices
+  - optimized queries
+  - different config between olTp and olAP
+- as db size increases, beyond a certain point it becomes unreasoable to expect postgres to work
+  - work arounds are there which we don't use, different schema, no continuous streaming
+- still works for live reporting
+- <cluster architecture diagram>
+
+** ETL + OLAP (5-6 min)
+- event streams
+- core.async
+- Redshift
