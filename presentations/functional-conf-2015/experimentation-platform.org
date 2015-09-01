@@ -84,8 +84,19 @@
   - Simulation testing is the extension of property based testing to whole systems
   - testing a system or a collection of systems as a whole
   - definitely some non-determinism
+- Structure of our simulation testing system
+  - setting up the test, state machine to create streams of actions
+  - setting up target system
+  - run the simulation, record the data
+  - get reports from the target system
+  - validate the recorded data
 - Things we test
   - are all our requests are returning non-500 responses under the given SLA.
+  - stickiness (use better words)
+  - the reports returned by the target system match the numbers we recorded when running teh simulation
+- Tools:
+  - Simulant
+  - Causatum
 
 
 Notes:
