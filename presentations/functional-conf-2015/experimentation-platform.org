@@ -77,7 +77,15 @@
   - so many moving parts
   - mostly a failure on our part
 
-
+** content for slides
+- Why simulation testing?
+  - generating confidence that your system will behave as expected during runtime
+  - humans can't possibly think of all the test cases
+  - Simulation testing is the extension of property based testing to whole systems
+  - testing a system or a collection of systems as a whole
+  - definitely some non-determinism
+- Things we test
+  - are all our requests are returning non-500 responses under the given SLA.
 
 
 Notes:
