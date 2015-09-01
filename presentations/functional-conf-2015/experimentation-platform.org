@@ -85,11 +85,11 @@
   - testing a system or a collection of systems as a whole
   - definitely some non-determinism
 - Structure of our simulation testing system
-  - setting up the test, state machine to create streams of actions
+  - setting up the test, state machine to create streams of actions <code snippet here>
   - setting up target system
-  - run the simulation, record the data
+  - run the simulation, record the data <one example code snippet>
   - get reports from the target system
-  - validate the recorded data
+  - validate the recorded data <example query>
 - Things we test
   - are all our requests are returning non-500 responses under the given SLA.
   - stickiness (use better words)
@@ -97,6 +97,7 @@
 - Tools:
   - Simulant
   - Causatum
+  - Datomic
 
 
 Notes:
