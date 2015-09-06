@@ -92,8 +92,13 @@
   - validate the recorded data <example query>
 - Things we test
   - are all our requests are returning non-500 responses under the given SLA.
-  - stickiness (use better words)
-  - the reports returned by the target system match the numbers we recorded when running teh simulation
+  - invalidity checks
+     - no two buckets of same experiment
+     - if precise, one experiment
+     - if messy, all experiments
+  - stickiness at multiple levels (use better words)
+  - traffic distribution
+  - the reports returned by the target system match the numbers we recorded when running the simulation
 - Tools:
   - Simulant
   - Causatum
