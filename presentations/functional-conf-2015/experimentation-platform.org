@@ -45,7 +45,7 @@
    [c/messy   c/precise]      :default
    [c/messy   c/unrestricted] :unrestricted})
 #+end_src
-- the actual computation functions are in-memory higher order functions whichg are evaluated during runtime.
+- the actual computation functions are in-memory higher order functions which are evaluated during runtime.
 - using pure, uniformly distributed allocation function for bucketing.
 
 ** Persistence? - postgres (3-4 mins)
