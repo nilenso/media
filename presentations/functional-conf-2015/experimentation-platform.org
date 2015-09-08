@@ -112,6 +112,12 @@ Notes:
 - datomic
 
 ** reporting on postgres (5-6 mins)
+- kind of like an OLAP db
+- optimized for large reads
+- streams data from master -> real time reports
+- crazy postgres optimizations
+- ETL - event streams + core.async assembly line + redshift
+
 - tried using postgres as a reporting db
   - indices
   - optimized queries
