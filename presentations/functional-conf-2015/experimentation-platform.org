@@ -1,0 +1,133 @@
+* Introduction to Experimentation (7-8 mins - aim for 10)
+- Cox and Reid definition of Experimentational Research
+- History?
+- Usage (much more mature?) in other fields
+
+- Experimentation as we use it
+- Treatments
+- Coverage
+- Reports
+- Events
+- http://research.google.com/pubs/pub36500.html (call out that the most disruptive paper came out 5 years ago, so it's a relatively new subject, and needs a lot of whiteboarding before jumping in. There aren't established tools/practices out there).
+- Google, Bing, LinkedIn & Netflix
+- https://github.com/StaplesLabs/HeartofGold/blob/4205a588cdef9abc9d5739ce168532b4560d34a7/docs/hog-api-documentation.org#great-material-on-experimentation-infrastructure
+
+# E A B
+# E A B C
+# E A A
+# E1 E2 (messy)
+# E1 E2 (precise)
+# messy and precise (old ep style)
+# nested trees
+# shared bucket
+
+- Why not use the tools available for experimentation? (Say it in passing as a conclusion of the first segment may be)
+  - There were features of our client's business that made experimentation more involved than a regular change of a button color.
+  - SLA, EP sits in the path of all the calls.
+  - Raw data analysis.
+
+** Segway: SLA (low latency)
+
+* Implementation (6-8 mins)
+** why clojure/jvm? (3-4 mins)
+- let's us focus on the actual problem
+- expressiveness
+- low latency
+- established languauge of choice amongst the teams
+
+- examples (dispatch table, report-graphs vs figure-graphs, current get-buckets/mutual-recursion?)
+#+begin_src clojure
+(def dispatch-table
+  {[c/precise c/messy]        :default
+   [c/precise c/precise]      :precise
+   [c/precise c/unrestricted] :unrestricted
+   [c/messy   c/messy]        :messy
+   [c/messy   c/precise]      :default
+   [c/messy   c/unrestricted] :unrestricted})
+#+end_src
+- the actual computation functions are in-memory higher order functions which are evaluated during runtime.
+- using pure, uniformly distributed allocation function for bucketing.
+
+** Persistence? - postgres (3-4 mins)
+
+-- The following vars and their curves with increasing db size
+- single write - SLA
+- cold/warm read - SLA
+- report without aggregates - changing data, drill down analysis
+- bulk import - profiling
+- backup and restore - for archival, safety
+
+(redis(?), datomic/ddb, datomic/pg, pg)
+
+** Segway : eveyrthing worked perfectly
+
+* Simulation Testing (7-8 min - aim for 10)
+- Take inspiration from mtnygard's talk at Strangeloop 2014
+
+** Good
+- test a complicated system. In our case, ensure the stickiness of treatment, unbiased allocation of treatments, correctness of reports
+- <architecture diagram>
+- state machine for simulant
+- Simulant and Causatum
+- diagnostics
+- helped us uncover some critical bugs
+
+** difficult parts
+- adding simulation testing as part of CI
+  - so many moving parts
+  - mostly a failure on our part
+
+** content for slides
+- Why simulation testing?
+  - generating confidence that your system will behave as expected during runtime
+  - humans can't possibly think of all the test cases
+  - Simulation testing is the extension of property based testing to whole systems
+  - testing a system or a collection of systems as a whole
+  - definitely some non-determinism
+- Structure of our simulation testing system
+  - setting up the test, state machine to create streams of actions <code snippet here>
+  - setting up target system
+  - run the simulation, record the data <one example code snippet>
+  - get reports from the target system
+  - validate the recorded data <example query>
+- Things we test
+  - are all our requests are returning non-500 responses under the given SLA.
+  - invalidity checks
+     - no two buckets of same experiment
+     - if precise, one experiment
+     - if messy, all experiments
+  - stickiness at multiple levels (use better words)
+  - traffic distribution
+  - the reports returned by the target system match the numbers we recorded when running the simulation
+- Tools:
+  - Simulant
+  - Causatum
+  - Datomic
+
+
+Notes:
+- watch out sub-section in each section?
+
+* Reporting (10-12 mins)
+- datomic
+
+** reporting on postgres (5-6 mins)
+- kind of like an OLAP db
+- optimized for large reads
+- streams data from master -> real time reports
+- crazy postgres optimizations
+- ETL - event streams + core.async assembly line + redshift
+
+- tried using postgres as a reporting db
+  - indices
+  - optimized queries
+  - different config between olTp and olAP
+- as db size increases, beyond a certain point it becomes unreasoable to expect postgres to work
+  - work arounds are there which we don't use, different schema, no continuous streaming
+- still works for live reporting
+- <cluster architecture diagram>
+
+** ETL + OLAP (5-6 min)
+- event streams
+- core.async
+- Redshift
