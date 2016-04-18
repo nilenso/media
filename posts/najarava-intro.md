@@ -1,0 +1,17 @@
+
+# Hello, Najarava
+
+It's 2016. After 20 years on the internet, I sometimes feel overwhelmed by the various communication channels available to me. The level of connectivity which was once afforded only research physicists is now reaching even the illiterate. Messages, documents, images, songs... ideas and media of all sorts inundate me on a daily basis and I am, of course, not special in this regard. Much has been written about the ocean of modern data -- signals and noise -- drowning us. Our stifled gasps define our increasingly narrow attention spans. Replacing essays, whitepapers, and books with YouTube clips doesn't necessarily represent an issue of outcomes. The outcomes of our media consumption are up to us. What matters? What sticks? How do we detect signal in all the noise?
+
+A month ago, my friend Preethi sent a message about a message: On our just-for-fun Telegram [1] group, she posted a screenshot of a Facebook page she had received from a friend. The original message was multiple media deep at this point, but the message really stuck: An orphanage with 12 children desperately needed basic resources: food, beds, soap. This orphanage, as it turns out, is right in Cox Town where most of us live.
+
+Where fifty years ago this situation might have been communicated at the local coffee shop or tea stall, this Facebook post reached many of us simultaneously. The irony, of course, was that the original message required that someone walk around, find the orphanage, and take an interest in it in the physical world. Very little of significance _starts_ on the web.
+
+A small troupe of us made our way to the orphanage a week later. It was the weekend of Holi, and we were cheerily greated by a giggling army of rainbow-coloured young boys. A few volunteers were playing Holi with the kids, themselves covered in colour. We chatted with them briefly and they gave us a digest of what they had learned over the previous two weeks: The "orphanage" is actually a home for children of physical labourers, scattered throughout the city. They were fed and slept there and attended school during the day. The volunteers had already filled immediate needs: ensuring the kids had enough to eat, beds to sleep on, and clothes for school. Only a few weeks in, they had already kicked off the project of assisting with the children and picked a name for the volunteer organization. Nijarava means <X> and <Y> in Kannada, the local language for most of the children.
+
+Plans have moved quickly in the following weeks. The end goal is a completely transparent trust, run largely through the nijarava.in website. Prioritization begins, of course, with what has already been handled: budgeting, planning, and funding of essentials such as food and clothing. Next up was covering the kids' school fees, which we closed together last week. Longer-term plans include Math, Science, Computer Basics, English, and Ethics classes for the kids, conducted by Nijarava on weekends -- once the boys are comfortable with us as friends and companions, not just a new set of teachers or tutors.
+
+This month, most of the boys are back with their parents or back in their native villages for summer holidays. The few kids who remain in the city we plan to take out for movies or other field trips. The exciting work with Nijarava will begin when the rest of the kids return. We will get to spend the monsoon with them, begin teaching them lessons we know will be valuable, and possibly expand to other groups of kids.
+
+
+[1] A feature-parity open source WhatsApp alternative.
