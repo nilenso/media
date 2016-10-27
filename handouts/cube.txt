@@ -1,0 +1,132 @@
+Cube Side 1:
+============
+
+से ना ली ली ली ना ना ना ली
+
+ली ना ना ना ना ली ली ली ली
+
+न ली ना ली ली ले ना ली ना
+
+ली ली ली ना ना ना ना ना ली
+
+- रुद्रट
+
+
+Cube Side 2:
+============
+
+« inutile, sa gratuité étant l'unique garantie de sa rigueur, le projet se détruirait lui-même au fur et à mesure qu'il s'accomplirait ; sa perfection serait circulaire : une succession d'événements qui, en s'enchaînant, s'annuleraient »
+
+
+Cube Inside:
+============
+
+The allusion is simply within the title of the nineteenth. Farbrausch has constructed far more beautiful monuments to the discipline and we were originally particularly enamoured with .the .product though never entirely clear if it was a reference to the mathematics which made endeavours in artificially restricted kilobyte count possible -- _une spectacle membre effrité_ -- or to society's constant groping for entertainment. Our academic preference would be for the former.
+
+Answer: "Farbraush's 64kb demo, f-019: A Poem To a Horse"
+
+There are three components to this puzzle. You must correctly identify all three. The second can be found through Pāṇini. Though, once again, one is likely to be fascinated by his work on formal systems and generative grammars, that is a distraction from your aim. Here, we are concerned with the 2400-year-old "Victory Over the Netherworld". Although humanity has lost this document, it has been used to comment on the work which is the Second Key.
+
+Answer: "Rudrata's Kavyalankara" (Poetic example of a Knight's Tour)
+
+The third, and last, is a void. The author originally used a different title. And a different book. Mathematical constraints on one's prose are far more impressive in two languages though we can't help but feel the English must lack the panache of the original.
+
+Answer: "La Vie mode d'emploi" (Mathematically constrained writing style, employing the Knight's Tour to tell 99 stories/chapters on a 10x10 grid of apartments.)
+
+The improbable Fourth Key to our triple-keyed door hinges on the thrill of an uncertain future which may usher us into a new era of machine dignity. What we refer to, of course, are the events of March 13th. Given that this date probably represents the last and final victory of man over machine, the Fourth Key is the final move of that particular battle which positioned the machine as leader. Commentary on such moves often cite 摩訶大大将棋 (Maka Dai Dai Shogi) at greater width and although some mistake the reference for the battlefield itself, rather than the tactic, that would be an off-by-one error. Do note that we have not deviated from our theme, though this Fourth Key is perhaps the farthest afield. Mathematics are intrinsic to all things but this Key points to probability and trees of a different sort. It was shortly after that the tree told the machine "less than twenty percent" and its dignity was upheld.
+
+Answer: "Black 69, a knight's move" (AlphaGo's last leading move in the 4th game against Lee Sedol -- the only game it lost.)
+
+The first three players to bring us the three Keys will receive a book for their troubles.
+
+
+======
+NOTES:
+======
+
+Rudrata's Knight's Tour in Kavyalankara:
+
+Third: Life: A User's Manual
+
+Pāṇini: Pātāla Vijaya
+
+http://www.pouet.net/prod.php?which=5569 - poem to a horse
+https://www.youtube.com/watch?v=PEHp3D2vPJs
+
+
+============
+EXPLANATION:
+============
+
+The Knight's Tour
+-----------------
+
+The central theme of this handout is the "Knight's Tour", a math exercise of traversing all the spaces of a standard chess board using only a knight and valid knight moves. Noopur gave me "The Magic of Lewis Caroll" and I was quite amused by this trick, which he employs in some writing. I actually haven't referred to Alice in Wonderland in any of the puzzle hints... which I realize, in retrospect, is a bit odd.
+
+The Knight's Tour makes a nice conversation piece for Computer Scientists. It is simultaneously a compression algorithm (fit precisely *this* data outcome in 8x8 units of storage) and a search space amenable to logic programming and game solvers. It's referenced in a lot of places relevant to Computer Science, many of which are comfortable for Clojure programmers. The concepts are not restricted to Clojure, though, and no where have I specifically referenced Clojure or anything which would be hung up on that particular tool.
+
+
+Cube Side 1
+-----------
+
+Cube Side 1 is an excerpt from Rudrata's "Kavyalankara", which roughly translates to "The ornaments of poetry", though Rudrata's Kavyalankara is probably as much readily identified as a grammar text... at least moreso than Bhamaha's text by the same name. Rudrata's work is from the 9th Century. This particular excerpt is, in fact, a poem but the rhythm actually describes chess moves outlining a Knight's Tour in printed Sanskrit. It's the earliest known reference to the Knight's Tour and the earliest reference to chess from India. Nilenso is (so far) based in India. So.
+
+
+Cube Side 2
+-----------
+
+This is a direct quote from Georges Perec's "La Vie mode d'emploi". The quote (Google) translates to:
+
+The third matter over aesthetics: "useless, its gratuitousness is the only guarantee of its rigor, the project would destroy itself as and when it would be finished; his perfection would be circular: a succession of events which, merging, would cancel" at the same Bartlebooth creative cycle whose purpose is the destruction of the work on the spot where it was created.
+
+Only the quoted portion has been kept. While a beautiful bit of prose in itself, even in broken English, this quote describes the use of mathematics in the book to define the book's overall structure. The book is part of the Oulipo movement and uses mathematical constraints and recursion. Specifically, the main character's behaviour in teh book is one component of the overarching Knight's Tour which describes each resident of a 10x10 grid of apartments. His aims are never achieved, nor is the Knight's Tour -- it falls short at 99 moves of 100. The character (Bartlebooth) desctroys his own art in an overly complex sequence of carving it into jigsaw puzzles and then eliminating the paint so only the jigsaw shapes remain. This is the "perfect, rigorous, circular cancellation of events."
+
+It's almost as if Perec is describing the latter chapters of SICP or the original McCarthy whitepaper. Not surprisingly, Donald Knuth describes the book as "perhaps the greatest 20th century novel."
+
+Both Cube Sides are actually referenced in the Knight's Tour wikipedia page: https://en.wikipedia.org/wiki/Knight%27s_tour ...so if someone can work their way back to that, they should easily find two keys to the puzzle.
+
+Even googling these two sides directly should get a person very close to finding two of the keys. Googling the Sanskrit wouldn't require much more creativity than simply looking up a Sanskrit dictionary and copy-pasting the right glyphs.
+
+
+Cube Inside Paragraph 1
+-----------------------
+
+"Farbrausch" is a German hacker group famous for creating absolutely bonkers demos in the high-compression challenges for the demo scene. Their first really spectacular demo was "fr-08: .the .product", a 64kb Direct3D "demo" (basically, a music video for hacker nerds) which lasts over 10 minutes. They employed a lot of really creative compression tools they rolled themselves (a lot of which they did with Assembler) to cram a lot of music, text, and graphics into 64k. fr-08 is very... German... and pokes a little at privileged consumerism with quotes like ".the .product will make you .happy" and ".the .product will make you .beautiful" -- hence our particular reference to the double ententre they've employed.
+
+The blurb of French is just to sound pretentious. Farb-rausch is about as pretentious as it gets when it comes to privileged, scarf-wearing hacker nerds mocking themselves with their own art... and the puzzle could always use a little more self-reference why not. The last bit of pretense is to fill the demo with unnecessary text in the credits at "The Party", where fr-08 was released, with each hacker taking a turn at the keyboard. They go so far as to comment on the other demos they're watching while waiting for their turn to take the stage. Honestly, the Clojure community is also full of that sort of arrogant bullshit which is utterly lovely in its own way.
+
+".the .product" was also full of visual OOP self-refrence, as each physical object was bizarrely labelled with its own name (".hund", for example) within the video... which, at first, seems like a glitch or oversight.
+
+Because the Knight's Tour can be interpreted as a compression algorithm, scenester compression demos are a weak reference. "A Poem to a Horse" is another weak referenceto the Knight's Tour. Googling "Farbrausch" alone should get someone within a couple clicks of solving this key to the puzzle.
+
+
+Cube Inside Paragraph 2
+-----------------------
+
+Pāṇini was a Sanskrit grammarian and morphologist. Referenced here because of his work on formalized language, which actually reflects our construction of computer languages much more closely than modern language. Modern logicians, mathematicians, and linguists identify Pāṇini's grammar as "the world's first formal system". We're again playing on the India/Sanskrit reference but also spreading the hook with Sanskrit from mathematics to poetry to formal grammar by referencing the reference to Pāṇini's "Pātāla Vijaya", in a commentary on the Kavyalanakara made by Namisadhu.
+
+The value of formal systems and formal grammars are not lost on Computer Scientists. Not least of which, LISPers:
+
+"In designing his grammar, Pāṇini used the method of "auxiliary symbols", in which new affixes are designated to mark syntactic categories and the control of grammatical derivations. This technique, rediscovered by the logician Emil Post, became a standard method in the design of computer programming languages."
+
+...to think that the process for codifying computer languages came 2400 years ago is kind of nice.
+
+To be fair, I think we'd probably also take "Pātāla Vijaya" as a good-job-close-enough key to the second puzzle piece... though that won't really help the person, since they'd be missing out on the reference to the Knight's Tour.
+
+
+Cube Inside Paragraph 3
+-----------------------
+
+"La Disparition" is another title by Perec, which has been translated to English (and other languages) multiple times under multiple different names. The most popular English translation is "A Void". Our use of "panache" is a hint at the fact that this paragraph references the French quote on the other side of the cube. The quote should be enough to find this key to the puzzle.
+
+
+Cube Inside Paragraph 4
+-----------------------
+
+In the way Perec uses recursion to describe the characters, who themselves describe characters, who in turn describe the story, which in turn describes its own structure (and vice-versa) the recurring theme of brokenness and incompleteness from "La Vie mode d'emploi" is used in reverse here, as we employ an off-by-one error to provide 4 potential keys to a 3-key problem.
+
+The notion of "machine dignity" is that of the 20% (or lower) probability rule for AlphaGo in which it concedes a game if its search tree determines its probability of winning to be 20% or less.
+
+March 13th, 2016 was the 4th game of AlphaGo vs. Lee Sedol. Maki Dai Dai Shogi is a huge version of chess played on a 19x19 grid in ancient Japan, and is the earliest Japenese reference to the game of chess. The "Knight's Move" (Keima) in Go is made along the same 1x2 shape, but on the lines rather than in the squares. Go also has a "Large Knight's Move" (1x3), a "Very Large Knight's Move" (1x4), and a "Very, Very Large Knight's Move" ("maka dai dai") which is where our reference to "Maha Dai Dai Shogi" (Very Very Large Chess) comes from. As a cute bit of "whoa maaaaan, this works on so many levels", a Maka Dai Dai Shogi board is _almost_ the same size as a Go-Ban, but not quite: a Go-Ban is 19x19 lines and a Maka Dai Dai Shogi board is 19x19 squares. To use one for the other ("the battlefield itself") would constitute an off-by-one error. By pointing the player back to "the tactic" we draw them back to looking for the "Knight's Move", which was, in fact, the last significant move made by AlphaGo before Sedol took the lead and won the game. It is almost certainly the last Go game to be one by a human against the most advanced AI opponent, so this is quite a significant move. That game was our last stand and evidence enough that although AI has taken over, we were literally watching it take over in real time. We were straddling the border: humans not entirely defeated, robots not entirely victorious. Yet.
+
+Between Go, Chess, Clojure, LISP, language, math, logic, and horses... we have plenty in this key to back-reference other aspects of the puzzle.
