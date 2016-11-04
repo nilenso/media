@@ -15,3 +15,5 @@
 - nijarava
   - finances
   - getting help
+
+- incorporate concept of time? t-1 something is untrue, t it is true, t+1 untrue again
