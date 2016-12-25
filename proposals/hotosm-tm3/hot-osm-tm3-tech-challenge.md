@@ -219,14 +219,71 @@ See: "Goals" 3. A significantly improved UI/UX
 
 ## Development ##
 
+### Documentation, Automation, Testing, Deployment ###
 
+We will describe our development team and our successful history of project delivery in more detail at the bottom of this document, under "Who/What is nilenso?" However, to address the development-specific concerns from the TM3TC:
 
-- development
-  sow: [2], 3, 4, 5 - development, docs, tests
-  goals: 5 - apis
-  proposal: 5, 7 (testing) - stack & testing
-  evaluation: [4, 6] - scalable, sustainable
-  shiny vs. new
+All of our software is thoroughly documented. We not only create user documentation (which is then validated by users as each individual new feature is continuously delivered into production) and developer documentation in the form of in-repository documents, in-line comments (where the domain, abstractions, or algorithms may be confusing), and thorough test suites. We also strive for self-documenting code, verbose and meaningful commit messages on atomic (transactional) commits, short-lived branches, a master branch which is always green and deployable, and a continuous integration (CI) system which not only alerts developers to broken builds but provides proactive insight into deployment and environmental failures. Major architectural decisions will be captured within the version control system as Architectural Decision Records (ADRs: http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions) in an immutable, linear fashion. Every software project should contain a README which serves as the _only_ point of entry required for a user, sysadmin, or new developer. Where documentation is not possible (for passwords, keys, and other secrets) the team members responsible are called out explicitly in either documentation -- preferably within the README itself -- or through automation tools at the point where interjection is necessary. A new user (playing a "sysadmin" role) should be able to install any piece of software with a single package or script for installation. With respect to operations in canonical environments (say, http://hotosm.org) this automation should include provisioning and orchestration.
+
+Comprehensive load, integration, acceptance, and unit tests are a good indication of a healthy software project. In recent years, we've started to grow away from these practices to some degree. Load testing can often be completely automated and with small, simple, custom tools load testing can become a part of CI or even Contiuous Deployment (CD). Integration tests should not be a one-way street and within an integrated service architecture, client-driven service contracts provide integration tests which not only ensure narrowly-defined API correctness but facilitate communication and provide early alerts to both parties when API contracts are accidentally violated. Complex systems, such as the Data Science Experimentation Platform (EP) we have built for Staples for over 3 years, can be integration tested with much higher fidelity using simulation-based testing. Simulation tests combine the power of generative testing, explicit system state transitions, and system-wide integration testing. Less expensive than full-blown simulation testing is component-level generative testing using tools like Clojure's `test.check` to replace hand-written unit tests with dynamic and automatically generated tests. Unit tests and TDD still serve to refine component design and test very specific edge cases. You can watch Nivedita and Srihari discuss the EP architecture and simulation testing strategy in their Functional Conf 2015 talk, here: https://www.youtube.com/watch?v=YjfXhhxw9Bs
+
+All of the above of course assumes not just a high level of automation but _complete_ automation. To comprehensively test entire architectures with dynamically generated scenarios and interaction simulations, it must be possible to instrument and script the entire set of services. Often, this means that services are built "API first" to accomodate testing infrastructure in the way that object-oriented systems tended to be built "interface first" in the 90's and early 2000's when TDD and unit testing really ook developer mindshare. Though some projects we deliver continue to leave provisioning of hardware to the sysadmin team, absolutely everything else (orchestration, down) must be completely automated and scriptable or high-functioning testing strategies are impossible. The yin and yang in this situation is again reflective of bad modeling corrected by TDD and unit testing: If we try to write a test and get hung up on a manual process, the first thing we'll do is automate it.
+
+See: "Scope of Work" 3. Develop and deploy the TM3 software
+See: "Scope of Work" 4. Developer and user documentation
+See: "Scope of Work" 5. Tests
+See: "How to Participate" 7. Testing (not user testing)
+
+### APIs ###
+
+For over two years, the majority of nilenso's software delivery has been on systems with API front-ends. We are very familiar with growing APIs, managing API versions, defining "easy" APIs alongside "performant" APIs, and API-first development. We all appreciate a line of code is expensive to change, a database schema is much more expensive, and an API schema much, much more expensive than that. Particularly for APIs with unknown clients, "up-front design" is not a dirty term in any sensible agile team.
+
+We see there are five major APIs pending in the existing TM2 software:
+
+1. task details
+2. validate/invalidate
+3. lock/unlock a task
+4. create task by position
+5. create task by geography
+
+None of these implementations looks particularly difficult and if we were to extend the TM2 codebase as-is, implementing draft versions of these APIs may be a good way to familiarize ourselves with the TM2 build/deploy process and overall design.
+
+As mentioned above with regard to integration and simulation testing, it is often necessary in modern service architectures to design APIs "outside-in" for the sake of facilitating testing, even before the API has any clients.
+
+In our experience, one major quality of well-designed APIs is a clear and explicit awareness of where and how state transitions occur. Objects and data structure instances are inherently state machines. Entire systems are no different, though it is extremely difficult (and inefficient) to make an entire system immutable, which means state transitions across systems are mutative and it is all the more important to capture state transitions for every API call which writes to a service.
+
+It has only been implied until this point, but to make the point absolutely explicit: We will create APIs early with clear definitions, with the intention of facilitatingboth testing and integration with other HOT software products.
+
+See: "Goals" 5. API
+See: "Scope of Work" 5. Tests
+
+### Stack ###
+
+We propose building TM3 in Clojure. We are not wedded to this idea.
+
+The existing software (TM2) is built in Python and has serviced the community capably. However, we see a few issues with the existing architecture. After reviewing the Python/JavaScript TM2 codebase we found that there was no layering to the web architecture. All server-side components are built into "views", which perform most of the domain logic and manage state transitions through user workflows. We certainly don't insist that MVC, MVP, MVVM, or any other goofy acronym is the only way to build web applications or web services. However, at least one separation of server-side layers is often wise and TM2 would benefit from a more modular design. Because of the conflation of different responsibilities in the server-side view code, the test suite is quite cumbersome (though, thankfully, very thorough!). Reading the Python unit tests for TM2 do not give a clear sense of test intent and many even lack proper assertions. These problems can, of course, be addressed in Python by refactoring the existing codebase. However, we are not Python experts and we would venture a guess that it would take us longer to become fully proficient in the Python ecosystem than it would take us to rewrite the fairly thin 4000 lines of Python in TM2's server-side code.
+
+The incidental complexity of the Python code led us to run Radon over the codebase to get concrete metrics on cyclomatic complexity. 286 of the Python methods receive a grade of "A", 15 receive a "B", and only 2 receive a "C". Granted, we would consider a "B" from Radon a failing grade. `osmtm/views/tasks.py#send_invalidation_message`, for example, receives a "B" with a CC score of 7, which we would consider very high. Still, the entire codebase is certainly amenable to refactoring and we are not recommending a rewrite in Clojure because the software is poorly designed.
+
+We would leave the JavaScript as-is to begin with, though at 1000 lines of code, it's likely that some of the JavaScript behaviour belongs on the server side as well.
+
+Clojure is now a widespread and commonly accepted language. Though relatively new (at 7 years old) the development model is 60 years old and the Java/JVM ecosystem have been familiar to many for decades. Resources for learning Clojure are widely available and it's now easy for anyone at any skill level to get started quickly. We recommend Clojure as it is our fastest language for delivery of software services and we have been building software in Clojure for over 6 years. Our entire team has primarily been doing Clojure development for over 2 years.
+
+It is unlikely that the JVM is to be surprassed as a platform, virtual machine, or suite of GCs anytime soon. Millions of person-hours have hardened it as a platform. Clojure itself is also quite hardened. Since Clojure 1.3, very few significant language-level changes have occurred. With Clojure 1.8, we are now mostly seeing small performance enhancements and refinements to the language. Breaking changes rarely happen and are increasingly unlikely with future versions of the langugage. Although it's a much broader topic, Clojure's language design itself limits and discourages breaking changes in library interfaces, making a relatively new ecosystem surprisingly stable. Where the Clojure ecosystem is lacking, Java libraries can be consumed with no abstraction layer and no performance costs. REPL development is faster than Test-Driven Development and Design (though we tend to use both). A broad and mature approach to testing (including Simulant+Causatum for aforementioned simulation testing), proof, and documentation is standard in the Clojure community; a user base of LISP-come-JVM hackers or Java-come-LISP hackers means very few community members are distracted by shiny toys.
+
+Thanks to the JVM, Clojure affords its users quite a few "free" advantages: monitoring, runtime inspection, profiling, performance tuning, swappable GCs, highly performant libraries, and a multitude of runtime environments. Monitoring, in particular, seems like a big issue for the Task Manager community... we noticed quite a few production issues even recently from the HOT Slack.
+
+Python will of course be faster to start, since the very first commit will be an improvement and growth upon what has already been built. The OSM/HOT community appears to be very familiar with Python and that support could easily outweigh the many technical advantages of Clojure or our speed of delivery with it. We would be comfortable delivering this projet on Python to continue refining the existing codebase if our proposal is otherwise attractive to the evaluation team. We are not a language-specific company and it is always our aim to build the best software we can for our customers -- that doesn't always involve using our preferred technologies.
+
+Regardless of language and stack, our infrastructure, automation, and deployment approach is always built abstractly on top of an OSS toolchain. Last year, for political reasons, we had to move all of our services for one client from AWS to a "private cloud". Had we built anything AWS-dependent, this process would have been impossible. Monitoring is essential. We own our software in production from our first deployment, and we try to make that first deployment happen as early in our involvement as possible. Operations ("devops", these days) is a group effort but we are often even the first or second point of contact for services we build exclusively.
+
+Unit, integration, functional, and acceptance testing is a part of the development process and a story isn't complete (or even deployable) until it is fully covered by automated tests. Simulation testing is a bit different and does not necessarily happen in lock step with development. User testing obviously cannot happen until a story is deployed to a testing or staging environment. This is generally also true of cafe testing, to avoid having new users test software that hasn't been proved deployable on the true infrastructure.
+
+See: "How to Participate" 5. Proposed software stack
+See: "How to Participate" 7. Testing
+See: "Evaluation of Proposals" 4. Proposed design and stack
+See: "Evaluation of Proposals" 6. Community engagement strategy
+See: "Make Shiny or Make New?"
 
 - achievement of goals
   goals: 1 - 4
