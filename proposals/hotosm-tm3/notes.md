@@ -40,7 +40,7 @@ distills to:
 - collaboration
   sow: 1, 2 - collaboration, proposal / approval
   proposal: 1 - company + community, [2], 3 - sow, 7 (feedback)
-  evaluation: 4, [5], 6 - sustainability, community strategy (features)
+  evaluation: 4, [5], 6 - sustainability (comm/lang), community strategy (features)
 
 - skillsets: dev, design, pm
   evaluation: 2 - "reuse" (modularity, SoA)
@@ -58,7 +58,7 @@ distills to:
   sow: [2], 3, 4, 5 - development, docs, tests
   goals: 5 - apis
   proposal: 5, 7 (testing) - stack & testing
-  evaluation: [4, 6] - scalable, sustainable
+  evaluation: [4, 6] - scalable, sustainable (tech)
   shiny vs. new
 
 - achievement of goals
