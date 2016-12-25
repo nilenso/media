@@ -199,10 +199,27 @@ The nilenso office is around the corner from the Mapbox Bangalore office. We wou
 
 See: "How to Participate" 4. Working with community members / Feedback
 
+## Design ##
 
-- design
-  sow: [2], 6 - ux "tests"
-  goals: 3 - ui/ux
+The nilenso Design team will participate in the development of TM3 with the aim of answering all 4 major user-facing goals laid out in the TM3TC, but Goal 3 is of utmost importance: "a significantly improved UI/UX" means progressively working toward the core of the Task Manager by first eliminating any pain experienced by users. Once the periphery of pain, discomfort, and confusion are eliminated we can then find the real heart of TM3 and its ecosystem and bring this to the surface.
+
+What does this mean? We all remember our first HOT mapping party. Though OSM is relatively easy to get moving with for a technical user, it was never the case that a first-time HOT Mapper would sit down with her laptop, download all the required software, create the required account(s), and immediately begin working on a tile. Every time a new Mapper hits a snag, feels confused, experiences a bug, or has to ask the resident mapping expert for help, the process has failed her. Because these difficulties are repeated and well known, they will be easy to codify as a natural part of the user experience. This is the low-hanging fruit.
+
+Next, we can move on to the core of what HOT and volunteer OSM contributions represent: relentless improvement. The quality of this improvement spans two spectrums. The first is, of course, the data in OSM itself. Humanitarian aide workers, governments, and citizens on the ground are better off for every single accurate node entered into the OSM database. But the spectrum relevant to TM3 is that of _individual_ improvement. Once a new Mapper is up and running, how can we make her a master of the craft as quickly as possible? Designing for a multitude of technical proficencies, time committments, and learning styles means designing an _educational_ system for these individuals. This is no trival task, and our Design team relishes the opportunity to solve problems in the education space using data, analytics, simpler UIs, and intelligent feedback to users.
+
+Perhaps somewhat unintuitively, the most substantial major shift in computer usage of recent decades to influence such an environment is mobile. As designers have had a chance to work with limited hardware and limited input, these constraints have taught us, as an industry, to build better user experiences which offload as much of the "thinking" as possible to the system itself. This may be a lofty goal for HOT infrastructure and OSM in general, but it's a challenge we would love to take on.
+
+Our designers will be key in ensuring the development team is building what users need and what the community wants. They will participate in discussions about improving experiences, like those mentioned above for Mappers, for all HOT roles. The proposal and approval process will involve designers early on, from Inception to the fleshing out of each user story. During the Inception, designers will facilitate discussions around a cohesive, overarching design. When defining each user story, designers will describe the specifics of all physical aspects of the software: appearance, interaction, and time.
+
+Designers will own the conducting of user experience testing, whether that happens in the HOT testing environment online or in offline testing such as cafe tests for new users who are completely unfamiliar with HOT, OSM, and their respective software ecosystems. Discoveries will be documented alongside the Architecture Decision Records (described below, under "Development") and maintained as part of version control history.
+
+See: "Scope of Work" 2. Proposal / Approval
+See: "Scope of Work" 6. Usability testing
+See: "Goals" 3. A significantly improved UI/UX
+
+## Development ##
+
+
 
 - development
   sow: [2], 3, 4, 5 - development, docs, tests
