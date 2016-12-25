@@ -40,7 +40,7 @@ distills to:
 - collaboration
   sow: 1, 2 - collaboration, proposal / approval
   proposal: 1 - company + community, [2], 3 - sow, 7 (feedback)
-  evaluation: 4, 5, 6 - sustainability, community strategy (features)
+  evaluation: 4, [5], 6 - sustainability, community strategy (features)
 
 - skillsets: dev, design, pm
   evaluation: 2 - "reuse" (modularity, SoA)
