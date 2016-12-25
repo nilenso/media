@@ -163,6 +163,8 @@ The sample story list is as follows. Non-functional requirements are prefixed wi
 * Mapper receives a "Welcome to HOT mapping" email upon first login
 * Mapper receives a buffer around tile area when beginning work on a new tile
 
+Those unfamiliar with User Stories and their place in XP or lean methodologies should be aware that a story is not a requirement or a feature. The best description of the one-liners above is that they are each a "promise of a conversation". Stakeholders and developers will both understand what each one means at a high level but delivery will require that they development team engages directly with the stakeholder(s) with the most expertise on any particular topic to ensure they are building the software everyone wants. This is then validated and refined through a user-owned QA testing process in the HOT/OSM testing environment before features are released into production.
+
 ### Timeline ###
 
 Prioritizing stories and NFRs (collectively, "cards") will be a collaborative effort with key stakeholders. If high-level feature groups interleave priorities, "milestones" may simply be markers showing overall progress. Only if priorities and groups of features line up will thematic milestones emerge; we would recommend against forcing the concept of milestones into the delivery schedule as they only provide observers with emotional satisfaction but do nothing to structure a project more effectively. Prefer continuous delivery.
@@ -183,11 +185,20 @@ With that said, it appears there are a few areas which would be quite impactful:
 
 3. The most direct and TM3-specific feature-set will be interfaces for project/group creation and administration. Though much of the Mapper- and Validator-facing functionality will hopefully move to tools on the edge of HOT/OSM architecture via TM3 APIs, projects and groups of projects are concepts which are rooted in the Task Manager and the unified UI is likely to continue as a feature of the web app. While the primary goal of the user experience for Mappers will be ease and elimination of friction, the goal for Administrators and Project Managers will be power and flexibility. Administrators are not new to OSM and do not require "conversion" to the process; the PM interface of TM3 may forsake time-consuming investment in slick UIs and an easy user experience for richer, heavily-documented features.
 
+See: "How to Participate" 2. A timeline overview
+See: "How to Participate" 6. Specific feature addition(s) proposed
+See: "Evaluation of Proposals" 5. Clear examples supporting HOT projects
 
-- project management
-  proposal: 2, 6 - timeline & feature list
-  proposal: 4 - discovery process
-  evaluation: 5 - features (community strategy)
+### Discovery ###
+
+Beyond an Inception (or other form of project kickoff), the discovery process will be daily and continuous. We could run weekly Iteration Planning Meetings with stakeholders or speak to them day-to-day, depending on what works best for various community members' availability. Because of nilenso's offshore and distributed history, we are very familiar with asynchronous communication channels, discussing issues and ideas over a multitude of channels. Even on commercial software projects in a full-time, proprietary environment it is highly unlikely that any two individuals will communicate in the same way. Though an increasing number of our customers prefer Slack (or IRC, or another equivalent) to email, many forums and mailing lists remain much more active than their semi-asynchronous counterparts. We've found for discussing specifics of a particular implementation, it's often best to negotiate a date and time for a video chat with shared screens. Our team works a long and staggered workday starting from 7:00am IST with the last folks usually closing the office around 8:00pm. Everyone makes room in their schedule for calls from home in the early morning or late evening to accomodate the "worst of all timezones" (at 11.5 or 12.5 hours difference) for collaboration with India: California. All other timezones are slightly easier to find compatible call times on one end of the day or the other.
+
+What will potentially make the discovery process difficult is not the communication channels themselves but identifying authority figures in the community, facilitating conversation across more than two timezones, and quick turnaround with volunteer community members where availability won't be consistent. We look forward to charting and documenting the graph of stakeholders and community members as early as possible to identify challenges, dependencies, and blockers. For example, if a medium-priority card is best discussed with an expert volunteer who is only available sporadically (say, twice a month), we may increase the priority of the card to engage with them earlier in the process. Alternatively, such conversations could be managed up-front, eschewing some of the real-time preferences baked into lean and agile principles in favour of resolving blockers in the dependency graph.
+
+The nilenso office is around the corner from the Mapbox Bangalore office. We would plan to lean on our relationship with (and proxmity to) the Mapbox team to resolve issues quickly. Value would always be dictated by the community, collectively, and an authoritative voice may need to come from the community at a later date (or even the next day) but we feel the Mapbox team's realtime expertise would be invaluable.
+
+See: "How to Participate" 4. Working with community members / Feedback
+
 
 - design
   sow: [2], 6 - ux "tests"
