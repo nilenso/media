@@ -96,7 +96,9 @@ We have intentionally _excluded_ most of the nearly 300 Github issues for this e
 
 Instead, the high-level requirements from the TM3TC and the ToR (as well as conversations from #task_manager_3 in Slack) provide a handy sample-sized story list which is still representative of the project goals on the whole. A few Github issues have been included in story format. It should be noted that this list is in no way exhaustive and does not assume build-out of TM2 or a from-scratch server-side rewrite. Therefore, a reader may notice some stories which describe functionality TM2 already provides.
 
-The sample story list is as follows:
+### Stories ###
+
+The sample story list is as follows. Non-functional requirements are prefixed with "[NFR]".
 
 > _NB: Since one of the Github issues listed is "Consistency in terminology: tasks,
 > tiles, and squares" (https://github.com/hotosm/osm-tasking-manager2/issues/912),
@@ -160,6 +162,26 @@ The sample story list is as follows:
 * Any User can subscribe to notifications for all comments made on a tile
 * Mapper receives a "Welcome to HOT mapping" email upon first login
 * Mapper receives a buffer around tile area when beginning work on a new tile
+
+### Timeline ###
+
+Prioritizing stories and NFRs (collectively, "cards") will be a collaborative effort with key stakeholders. If high-level feature groups interleave priorities, "milestones" may simply be markers showing overall progress. Only if priorities and groups of features line up will thematic milestones emerge; we would recommend against forcing the concept of milestones into the delivery schedule as they only provide observers with emotional satisfaction but do nothing to structure a project more effectively. Prefer continuous delivery.
+
+The cards in the above list are not of a consistent size. "TM3 should provide an API for custom analytics queries", for example, is marked "[EPIC]" because it is substantially larger than all the other cards in the list. Before delivering such a card, it would need to be broken down into relatively similar-sized cards (to each other and to all other cards in the list). If the team finds it difficult to apportion cards in roughly similar sizes, cards may be given relative estimates, in abstract points: 1, 2, and 3. "1" describes a nearly-trivial task. "2" is the preferred difficulty for most cards. "3" represents work which cannot be subdivided into cards of size 1 or 2.
+
+For this exercise, let's assume we were able to apportion cards of roughly equivalent size for all 58 cards above. The aforementioned API epic, "Validator can mark a tile validated in JOSM", "TM3 should support 100,000 simultaneous users", and "[NFR] TM3 must support i18n" are all obviously larger cards. Let's assume these 4 cards are broken down into 16 smaller cards we consider roughly equivalent to the rest of the list. If we provide the prioritized list to the software team, they can then plug cards into the first few weeks of development to estimate their week-on-week accomplishments. Say the first week fits 5 cards, the second week 7, and the third week 6. The sizing of effort in this exercise is fine-grained enough to be possible for a human being to estimate but coarse-grained enough to be meaningful on the 4-month project timeline. Our 70 cards will take 12 weeks to complete, leaving 4 weeks buffer for scope creep, underestimation, manual QA, and inefficiencies in the overall feedback process.
+
+Obviously the real Inception exercise will be much more involved and collaborative. We hope this provides some insight as to how we would go about it, however.
+
+Regarding "How to Participate" 6. ("At least one specific feature addition you propose...that would have the largest impact..."), given that it is our aim to break features down into actionable tasks as early as possible in the process, it becomes difficult to identify one particular feature-set which has the "largest impact." As previously mentioned, it's possible key stakeholders would prioritize individual cards in such a way which interleaves overarching feature-sets.
+
+With that said, it appears there are a few areas which would be quite impactful:
+
+1. Exposing all TM3 behaviour by auth-based APIs, first and foremost, will allow all participants to to manage projects & groups and execute tile-level work from outside of TM3 and within their preferred OSM editing environment. Though elided from the cards above, new authenticated mutative APIs will require significant work from the development team in tools like JOSM to ensure a full spike through the system, from the user's tool, through TM3's APIs, into project data. The best user interface feels like none at all.
+
+2. User- and Project-level analytics/reporting for Project Managers and Validators will help greatly in informing their workflow and making management of projects more efficient both by improving meaningful (informed) communication with Mappers and helping to smooth the Validation process. The Github issues list contains much low-hanging fruit in this regard and the community's pain points should be our starting position for quick development.
+
+3. The most direct and TM3-specific feature-set will be interfaces for project/group creation and administration. Though much of the Mapper- and Validator-facing functionality will hopefully move to tools on the edge of HOT/OSM architecture via TM3 APIs, projects and groups of projects are concepts which are rooted in the Task Manager and the unified UI is likely to continue as a feature of the web app. While the primary goal of the user experience for Mappers will be ease and elimination of friction, the goal for Administrators and Project Managers will be power and flexibility. Administrators are not new to OSM and do not require "conversion" to the process; the PM interface of TM3 may forsake time-consuming investment in slick UIs and an easy user experience for richer, heavily-documented features.
 
 
 - project management
