@@ -77,19 +77,90 @@ Last is the more positive spin on the possibility of writing TM3 in a LISP on th
 
 Nilenso is a unique technology consultancy. While many corporations admire or actively contribute to open source and open data, they often lack an ethos which is itself compatible with the fundamental principles which make open source a wise choice in the first place. Open source has become the default mode of operation for much of the software industry, and many of us have begun to take "openness", in the form of source code at least, for granted.
 
-Our unique position is that we are an employee-owned co-operative. While we are still a profit-making corporation, as a knowledge worker co-op we have a vision and direction which is collectively and collaboratively defined by our employees (members). Collaboration and cooperative decision-making are at the very genesis of our organization. Thus, when nilenso states that we want to spend all our time building open source software in a collaborative environment, an observer can be certain that participation in Open Culture is not just a means to an end, but the organization's modus operandi.
+Our unique position is that we are an employee-owned co-operative. While we are still a profit-making corporation, as a knowledge worker co-op we have a vision and direction which is collectively and collaboratively defined by our employees (members). Collaboration and cooperative decision-making were the very genesis of our organization. Thus, when nilenso states that we want to spend all our time building open source software in a collaborative environment, an observer can be certain that participation in Open Culture is not just a means to an end, but the organization's modus operandi.
 
 Nilenso offers a collections of skills which will all dovetail nicely on this project. Though we are primarly a software development company, and the majority of our members are software developers, we also have a decade of project management experience and a skilled design team. All aspects of our team's skillset influence, and are influenced by, open systems: Our project management strategy is entirely about transparency, open communication, and reducing risk by failing fast. Our design team is not only familiar with the OSM ecosystem, participants of HOT, and dedicated tree mappers of Bangalore -- but they understand and have worked with open data systems for many years. Openness and progress go hand-in-hand, and designing instruction-free, intuitive systems are their passion.
 
-Our software developers are the reason for the majority of our acclaim, however. Though nilenso has only existed for 3 years, we have decades of experience delivering modular and abstract code which has evolved with the industry over the past two decades. "Reuse" for us is much more about clean design -- well-defined service boundaries, appropriate library usage, and logical abstration -- than it is an goal unto itself. Our recent technical achievements can be read about here: http://nilenso.com/recent-tech.html
+Our software developers are the reason for the majority of our acclaim, however. Though nilenso has only existed for 3 years, we have decades of experience delivering modular and abstract code which has evolved with the industry over the past two decades. "Reuse" for us is much more about clean design -- well-defined service boundaries, appropriate library usage, and logical abstration -- than it is an goal unto itself. Software and team performance both are consequences of a clean design, not the other way around. Our recent technical achievements can be read about here: http://nilenso.com/recent-tech.html
+
+We'll next take a look at these three disciplines in order of increasing specificity: Project Management, Design, and Development.
 
 See: "Evaluation of Proposals" 2. Reuse of Code
 
 
+## Project Management ##
 
+Though the TM3TC requests "A timeline overview of the expected major activities and milestones over the 4 month period" ("How to Participate" 2.), this isn't really a viable approach without a project kickoff of some sort. As an alternative, we'll provide a sample set of stories from the requirements we've gathered from the TM3TC and the ToR.
 
-- skillsets: dev, design, pm
-  evaluation: 2 - "reuse" (modularity, SoA)
+We have intentionally _excluded_ most of the nearly 300 Github issues for this exercise. Though the Github issues list provides some fantastic examples of work the project will want to prioritize, particularly given those very incisive and clearly defined issues (ex. "Prevent editing until 'instructions' page is read": https://github.com/hotosm/osm-tasking-manager2/issues/890), the list is not consistent in its entirety. The Github issues contain many duplicates, wide-ranging size and difficulty, submissions from users and administrators of all experience levels, and it is difficult to know which issues are fresh/stale/old-but-very-important. Scrubbing all 300 issues in an attempt to come up with an exhaustive list of stories without any stakeholder participation will quickly provide diminishing returns.
+
+Instead, the high-level requirements from the TM3TC and the ToR (as well as conversations from #task_manager_3 in Slack) provide a handy sample-sized story list which is still representative of the project goals on the whole. A few Github issues have been included in story format. It should be noted that this list is in no way exhaustive and does not assume build-out of TM2 or a from-scratch server-side rewrite. Therefore, a reader may notice some stories which describe functionality TM2 already provides.
+
+The sample story list is as follows:
+
+> _NB: Since one of the Github issues listed is "Consistency in terminology: tasks,
+> tiles, and squares" (https://github.com/hotosm/osm-tasking-manager2/issues/912),
+> we will use "tiles" below to mean all three._
+
+* Validator can query list of hints in TM3 of tiles where OSMA anticipates an error/mistake
+* Mapper will be automatically notified when OSMA anticipates a common mistake on the tile the Mapper is currently editing
+* PM/Validator can see # of changesets for a Mapper
+* PM/Validator can see # of complete tiles for a Mapper
+* PM/Validator can see days since account activation for a Mapper
+* PM/Validator can see # of days of active mapping for a Mapper
+* PM can view an aerial map of historicaly, current, and new project space by geography
+* PM can view a map displaying active and historical projects
+* PM can clone a project to create a new project with defaults
+* PM/Validator can observe changes made by a Mapper in real time to provide early feedback
+* Mapper can self-assign a tile to herself
+* PM can assign a Mapper to a tile
+* PM can mark a Mapper with a "Validator" role for a project
+* PM can create a project group
+* PM can add/remove projects to/from a project group
+* PM can see current and historical project groups
+* PM can mark a project group completed
+* PM can mark a project completed
+* PM can see nearby/intersecting projects on the project creation screen
+* PM can see nearby/intersecting projects on the project summary screen
+* Mapper can provide in-app feedback about aspects of mapping they find confusing
+* Mapper can make a generic request for help to a Validator
+* Validator is notified when a Mapper is identified by OSMA as needing help
+* Validator can see a prioritized list of tiles requring validation
+* Validator sees likely error-prone tiles highlighted by OSMA in the prioritized list of tiles requiring validation
+* Validator can send Mapper quick feedback from a predefined set of common issues
+* Validating a tile acknowledges the Validator for that task
+* Validator can mark a tile validated in JOSM (implies corresponding API)
+* Mapper can optionally add an email id to her profile
+* Validator feedback is sent to Mapper's email, if available
+* [EPIC] TM3 should provide an API for custom analytics queries (See ToR note "Laura O'Grady 12:38 PM Nov 24")
+* PM can set expiration period on a tile; tile auto-expires at the end of the period
+* PM can assign a difficulty to a tile
+* PM will see auto suggestions from OSMA when assigning difficulty to a tile
+* Any User can see aggregate analytics on tiles for all of OSM
+* Any User can see aggregate analytics on tiles for a project group
+* Any User can see aggregate analytics on tiles for a project
+* Any User can see aggregate analytics on tiles for a user
+* PM can see a list of Mappers for a project
+* TM3 should support 100,000 simultaneous users on XYZ hardware (this card may be defined in terms of N users per M hardware nodes, assuming performance tests are published displaying linear horizontal scalability and the failure conditions for horizontal scaling)
+* [NFR] Any API user can read a live data stream of activity from TM3
+* PM can view a summary of projects & statuses by geographical area
+* PM can adjust tile size to accommodate varying complexity/difficulty
+* [NFR] Finish pending TM3 API endpoints for existing features (See TM3TC "Goals" 5.)
+* Validator can ask a question of a Mapper for tile she is validating
+* Mapper can view a TODO/checklist for her current tile
+* Mapper can see a prioritized list of task squares available to work on
+* [NFR] TM3 must support i18n
+* [NFR] Any user can submit a translation or update to a translation for review
+* [NFR] Mutating API calls must be authenticated
+* Mapper/Validator can request access to a private project
+* Mapper can mark a tile as "too cloudy to complete"
+* Mapper can mark a tile as "imagery insufficient to complete"
+* Mapper must review & certify TODO/checklist complete to mark tile as "done"
+* Mapper can stop working on a tile to unlock it without marking it "done"
+* Any User can subscribe to notifications for all comments made on a tile
+* Mapper receives a "Welcome to HOT mapping" email upon first login
+* Mapper receives a buffer around tile area when beginning work on a new tile
+
 
 - project management
   proposal: 2, 6 - timeline & feature list
