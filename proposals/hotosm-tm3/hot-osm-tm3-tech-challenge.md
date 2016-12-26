@@ -283,10 +283,71 @@ See: "Evaluation of Proposals" 4. Proposed design and stack
 See: "Evaluation of Proposals" 6. Community engagement strategy
 See: "Make Shiny or Make New?"
 
-- achievement of goals
-  goals: 1 - 4
-  goals 5 under "development"
+## Who is nilenso? ##
 
-- who/what is nilenso?
-  proposal: 8 - our qualifications
-  evaluation: 1, [2], 3 - nilenso, reuse, familiarity
+Permit us a brief recounting of our history.
+
+Nilenso began over 3 years ago as a small web development shop. Our experience before starting nilenso was varied -- and broad. Major languages included Java, Ruby, Python, C#, JavaScript, C/C++, Clojure, Haskell. Collectively, we had substantial contributions to major open source projects like The GIMP and GNOME. Our industry experience also spanned a wide range of verticals: from defense and policing to healthcare and climate change. Our initial projects were humbling; to begin with, we primarily built CRUD web applications for startups.
+
+Very quickly, however, we moved away from web applications and began contributing to larger teams with more substantial architectures. Clojure became our language of choice, and our team began to include JVM hackers, PostgreSQL experts, and developers skilled in infrastructure automation. In our last year, we've grown both design and project management practices in addition to our core engineering team.
+
+The software community in Bangalore found our story interesting enough to ask us to speak at Fifth Elephant, India's premiere big data conference: https://www.youtube.com/watch?v=b7K3E1Q_MBk
+
+We have written about our most recent technical accomplishments:
+
+http://nilenso.com/recent-tech.html
+
+We will try to avoid repeating content from that document here, but we do have specific experience which is relevant to HOT, OSM, and the Task Manager Challenge.
+
+### Our Experience ###
+
+We have built services and infrastructure within the Staples SparX machine learning team for over 3 years. Staples' Experimentation Platform (EP), in particular, is entirely designed, built, and operated by nilenso. EP handles many terrabytes of streaming data at a rate of 500 requests per second under a Service Level Agreement (SLA) of <10ms in the 99.9th percentile. Akshay Gupta (@kitallis, on Twitter/IRC/Slack) currently leads the EP team and would be our tech lead for Task Manager 3.
+
+We have presented on the Experimentation Platform architecture at Functional Conf 2015:
+
+https://www.youtube.com/watch?v=YjfXhhxw9Bs
+
+EP also involves nontrivial database clustering techniques, which have evolved with the lifespan of the project. Synchronous replication, failover to standby databases, ZFS snapshots, custom PostgreSQL MVCC AUTOVACUUM configurations, WAL streaming, realtime (non-star-schema) reporting replicas, db and I/O monitoring, partitioning, logical replication, load balancing, and multi-mode failure detection all must be understood by every member of our team working on database clusters.
+
+We have presented on building a PostgreSQL db cluster at Rootconf 2016:
+
+https://www.youtube.com/watch?v=sGJDg5ba0iI
+
+We have contributed substantially to monitoring infrastructure in many recent software projects. This includes system-level, JVM-level, application-level, and db-level monitoring on all of our projects. We have been allowed to release some of the db and db monitoring work as open source. All of these repositorires are focused on PostgreSQL:
+
+https://github.com/nilenso/honeysql-postgres (not monitoring specific)
+https://github.com/staples-sparx/Wonko
+https://github.com/staples-sparx/wonko-client
+https://github.com/staples-sparx/pg-cluster-setup
+https://github.com/staples-sparx/repmgr-to-zk
+https://github.com/nilenso/postgresql-monitoring
+
+Unfortunately, although we have implemented internationalization (i18n) and built or extended translation tools on a number of projects, very little of this work is open source.
+
+Similarly proprietary is our most recent legacy replacement work on the driver allocation service for Go-Jek Indonesia: We rewrote this service in Clojure with an extensive generative testing suite (and minimal unit tests for single-value edge cases). Thanks to generative testing and developer discipline, the service was released with zero production issues and completely replaced the legacy software on its first day in production. Ours was Go-Jek's first Clojure code.
+
+This was not our first Clojure rewrite, however. We also rewrote Staples' configuration management, legacy data feed integration, and reporting tools in Clojure. This work involved a different style of testing. First, these services were built with large and comprehensive unit test suites for all known use cases. Then the new services were delivered alongside the legacy (Ruby) services in all environments and validated for multiple months. Once the Clojure services produced results consistent with the legacy services (as confirmed by automated validation software provided by us to the QA team), 3rd party services were redirected to new APIs and the legacy services were turned off. This process was slow but not expensive and finished without a single interruption to existing clients.
+
+We don't believe there is one perfect solution to writing correct software. We value strict type systems (like Haskell's), heavy external testing, test-driven development, generative testing, and mathematical proof differently based on the needs of each project. Correct, thoroughly tested software always makes project delivery faster, whatever the path taken.
+
+Developers from nilenso have run training and courses in React, Haskell, and Clojure. We also speak regularly at conferences and the talks we haven't mentioned can be found here:
+
+http://nilenso.com/talks.html
+
+### Our Future ###
+
+The first few years of nilenso's existence have allowed us to walk the path from technical competence to technical excellence. We are very good.
+
+But that isn't enough, is it?
+
+Everyone wants to master their craft and we know this is a decades-long process. We all have a long way to go. But as each of us looks back on the work which brought us this far, the third axis becomes clearer and clearer, carved out against the first two axes of time and skill: meaning.
+
+If mastery of a craft takes tens of thousands of focused hours, meaningful and impactful work takes lifetimes. We are all grateful for our position of privilege, given to us by uncountable predecessors, relentless and hardworking.
+
+What does progress look like? How can we contribute positively?
+
+We ask this question routinely, explicitly and implicitly, at nilenso. We know this is the goal we must move toward as a company and constantly evaluating exactly what it means to all of us is how we will find the way. For some of us, this work is the Arts. For some, international development. For others, childhood education. For some, Artificial Intelligence. As opportunities arise to contribute to these disciplines, we do our best to engage them. We have designed mobile user interfaces for India's rural hospitals with Samanvay. We have built citizen education platforms for fighting climate change with Fact0ry and mobile apps for detecting water quality metrics with Akvo.
+
+We want to work with the Humanitarian OpenStreetMap Team.
+
+Task Manager 3 is a wonderful opportunity. It is the first well-funded project we have had an opportunity to apply for in the mapping space. Free maps operate at a very high level in humanity's global progress: countless new tools can be built on OpenStreetMap. Individuals and software teams around the globe are completely unfettered when such systems and data exist. HOT pushes this one step further by specifically targetting rapid improvement of maps for the areas which need them most. The Task Manager, by providing coordination and orchestration of teams, will bring efficiency to a global effort that would be otherwise impossible. TM3 is unlike many humanitarian software efforts we have previously evaluated, which don't involve a lot of data, infrastructure, or domain knowledge. Our experience makes us a good match for the management, design, and development challenges TM3 presents and we believe we will make this project a success.

@@ -73,14 +73,12 @@ distills to:
 TODO:
 
 - add index
-- mention nilenso's experience w postgres (section: nilenso? development?)
-  - mention oss: https://github.com/nilenso/honeysql-postgres
-                 https://github.com/nilenso/postgresql-monitoring
+- neena & govind to add geo work from Go-Jek
 - noopur to flesh out user testing in "design"
 - reference ToR notes
 - kitty & deepa to make more positive
 - kitty & deepa to make less unctuous/arrogant
-- i18n, monitoring, reporting, DB clustering (nilenso section)
+- update http://nilenso.com/recent-tech.html to include GoJek, design projects, recent EP work
 - blake's comments on bulk validation should be captured as stories
 - use blake's comments on authority to tweak introduction of Inceptions
 - mention availability
