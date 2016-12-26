@@ -84,3 +84,4 @@ TODO:
 - blake's comments on bulk validation should be captured as stories
 - use blake's comments on authority to tweak introduction of Inceptions
 - mention availability
+- mention prototyping (noopur & varun)
