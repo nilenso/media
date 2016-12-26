@@ -72,6 +72,7 @@ distills to:
 
 TODO:
 
+- clean up Markdown so PDF looks better
 - add index
 - neena & govind to add geo work from Go-Jek
 - noopur to flesh out user testing in "design"
