@@ -68,3 +68,19 @@ distills to:
 - who/what is nilenso?
   proposal: 8 - our qualifications
   evaluation: 1, [2], 3 - nilenso, reuse, familiarity
+
+
+TODO:
+
+- add index
+- mention nilenso's experience w postgres (section: nilenso? development?)
+  - mention oss: https://github.com/nilenso/honeysql-postgres
+                 https://github.com/nilenso/postgresql-monitoring
+- noopur to flesh out user testing in "design"
+- reference ToR notes
+- kitty & deepa to make more positive
+- kitty & deepa to make less unctuous/arrogant
+- i18n, monitoring, reporting, DB clustering (nilenso section)
+- blake's comments on bulk validation should be captured as stories
+- use blake's comments on authority to tweak introduction of Inceptions
+- mention availability
