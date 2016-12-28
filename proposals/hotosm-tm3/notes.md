@@ -84,3 +84,8 @@ TODO:
 - use blake's comments on authority to tweak introduction of Inceptions
 - mention availability
 - mention prototyping (noopur & varun)
+- add these links:
+  - http://ocsidlab.github.io/earthmap/#4/21.15/79.08
+  - https://en.wikipedia.org/wiki/File:Schematic_Tourist_Map_of_Uttarakhand.jpg
+  - https://drive.google.com/drive/folders/0B7vW_nVEsPoiX3UwaXNaVnpoWTQ?usp=sharing
+  - https://drive.google.com/drive/folders/0B7vW_nVEsPoiWkhjeGVhSkdwZ1U?usp=sharing
