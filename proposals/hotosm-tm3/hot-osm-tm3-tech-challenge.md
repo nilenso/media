@@ -22,7 +22,7 @@ What matters most in our collaboration with customers is not the particular stra
 
 Planning and projection demands a heartbeat of some sort, and even when using a kanban pull queue to prioritize work, some period (often one week) must be used to measure progress and project into the future with the same metric. Progress on individual features/stories/cards would be updated in real time (daily) so stakeholders can watch work in-flight. The one-week period would be a summarization window for work accomplished, since daily progress is usually too narrow a window to make meaningful predictions.
 
-See: TM3TC "Scope of Work" 1. Collaboration
+*See: TM3TC "Scope of Work" 1. Collaboration*
 
 [1] We are intimately familiar with most of the project management tools out there: Pivotal Tracker, Mingle, JIRA, Trello, paper-stickies-on-a-wall, and of course, Github.
 
@@ -38,14 +38,14 @@ While not every project we execute begins with an Inception, there should be som
 
 During the project, new feature requests can come from the stakeholders through the various channels into a structured approval and prioritization process. If all cards/stories are ordered by priority from the beginning, it will be easy for the team to collectively prioritize (or for an authority to individually prioritize) individual stories against that total ordering.
 
-See: TM3TC "Scope of Work" 2. Proposal / Approval of feature implementation
+*See: TM3TC "Scope of Work" 2. Proposal / Approval of feature implementation*
 
 Another important aspect of collaboration will be that of nilenso with any other contributors from within the community. As TM3TC encourages individual community contributors to apply, we similarly want to encourage a mixed-mode award of the contract. We would be more than happy to work with a contributor(s) who has more experience with HOT or OSM in general, either as an active community member or active contributor to HOT tools.
 
 While we are applying for the entire Scope of Work (SoW), we happily acknowledge that this may not be possible or optimal.
 
-See: TM3TC "Scope of Work"
-See: TM3TC "How to Participate" 1. Identification, 3. SoW Fit
+*See: TM3TC "Scope of Work"*  
+*See: TM3TC "How to Participate" 1. Identification, 3. SoW Fit*
 
 
 Our collaboration strategy involves user testing and user feedback of new features, solidifcation of existing features, User Experience, and design in general. While known stakeholders can be actively communicated with, one of the most important goals of TM3 is the onboarding of new Mappers. The design for a new Mapper begins outside the scope of the project itself: How did they hear about OSM? How did they learn about HOT? What do they hope to achieve? How easy/difficult is it for them and how long does it take? How can we make that entire transition smoother from the very beginning?
@@ -56,8 +56,8 @@ User Experience feedback from experienced Mappers, Validators, and Project Manag
 
 One consideration for this latter case is how such an open feedback system will work once the 4 months of the TM3 project have ended. If the feedback mechanisms are too open or too ad-hoc for the community to manage, we may need to consider a more structured approach, such as a single-channel "report an issue" feature within the app itself or Github issues (though these can be offputting for less technical users).
 
-See: TM3TC "How to Participate" 7. UI Testing and UI Feedback
-[ Note: "UI Testing" and "QA Testing" are separate, and largely unrelated, topics and we address the latter below, under "Development" ]
+*See: TM3TC "How to Participate" 7. UI Testing and UI Feedback*  
+*[Note: "UI Testing" and "QA Testing" are separate, and largely unrelated, topics and we address the latter below, under "Development"]*
 
 
 The last topic to address within the scope of Collaboration is scalability, sustainability, and community engagement. Scalability from an architecture perspective we will leave until the "Development" section, below. However, scalability and sustainability are also questions of collaboration with respect to language, environment, and ecosystem choices.
@@ -83,8 +83,7 @@ Our software developers are the reason for the majority of our acclaim, however.
 
 We'll next take a look at these three disciplines in order of increasing specificity: Project Management, Design, and Development.
 
-See: "Evaluation of Proposals" 2. Reuse of Code
-
+*See: "Evaluation of Proposals" 2. Reuse of Code*
 
 ## Project Management ##
 
@@ -183,9 +182,9 @@ With that said, it appears there are a few areas which would be quite impactful:
 
 3. The most direct and TM3-specific feature-set will be interfaces for project/group creation and administration. Though much of the Mapper- and Validator-facing functionality will hopefully move to tools on the edge of HOT/OSM architecture via TM3 APIs, projects and groups of projects are concepts which are rooted in the Task Manager and the unified UI is likely to continue as a feature of the web app. While the primary goal of the user experience for Mappers will be ease and elimination of friction, the goal for Administrators and Project Managers will be power and flexibility. Administrators are not new to OSM and do not require "conversion" to the process; the PM interface of TM3 may forsake time-consuming investment in slick UIs and an easy user experience for richer, heavily-documented features.
 
-See: "How to Participate" 2. A timeline overview
-See: "How to Participate" 6. Specific feature addition(s) proposed
-See: "Evaluation of Proposals" 5. Clear examples supporting HOT projects
+*See: "How to Participate" 2. A timeline overview*  
+*See: "How to Participate" 6. Specific feature addition(s) proposed*  
+*See: "Evaluation of Proposals" 5. Clear examples supporting HOT projects*
 
 ### Discovery ###
 
@@ -195,7 +194,7 @@ What will potentially make the discovery process difficult is not the communicat
 
 The nilenso office is around the corner from the Mapbox Bangalore office. We would plan to lean on our relationship with (and proxmity to) the Mapbox team to resolve issues quickly. Value would always be dictated by the community, collectively, and an authoritative voice may need to come from the community at a later date (or even the next day) but we feel the Mapbox team's realtime expertise would be invaluable.
 
-See: "How to Participate" 4. Working with community members / Feedback
+*See: "How to Participate" 4. Working with community members / Feedback*
 
 ## Design ##
 
@@ -211,9 +210,9 @@ Our designers will be key in ensuring the development team is building what user
 
 Designers will own the conducting of user experience testing, whether that happens in the HOT testing environment online or in offline testing such as cafe tests for new users who are completely unfamiliar with HOT, OSM, and their respective software ecosystems. Discoveries will be documented alongside the Architecture Decision Records (described below, under "Development") and maintained as part of version control history.
 
-See: "Scope of Work" 2. Proposal / Approval
-See: "Scope of Work" 6. Usability testing
-See: "Goals" 3. A significantly improved UI/UX
+*See: "Scope of Work" 2. Proposal / Approval*  
+*See: "Scope of Work" 6. Usability testing*  
+*See: "Goals" 3. A significantly improved UI/UX*
 
 ## Development ##
 
@@ -227,10 +226,10 @@ Comprehensive load, integration, acceptance, and unit tests are a good indicatio
 
 All of the above of course assumes not just a high level of automation but _complete_ automation. To comprehensively test entire architectures with dynamically generated scenarios and interaction simulations, it must be possible to instrument and script the entire set of services. Often, this means that services are built "API first" to accomodate testing infrastructure in the way that object-oriented systems tended to be built "interface first" in the 90's and early 2000's when TDD and unit testing really took developer mindshare. Though some projects we deliver continue to leave provisioning of hardware to the sysadmin team, absolutely everything else (orchestration, down) must be completely automated and scriptable or high-functioning testing strategies are impossible. The yin and yang in this situation is again reflective of bad modeling corrected by TDD and unit testing: If we try to write a test and get hung up on a manual process, the first thing we'll do is automate it.
 
-See: "Scope of Work" 3. Develop and deploy the TM3 software
-See: "Scope of Work" 4. Developer and user documentation
-See: "Scope of Work" 5. Tests
-See: "How to Participate" 7. Testing (not user testing)
+*See: "Scope of Work" 3. Develop and deploy the TM3 software*  
+*See: "Scope of Work" 4. Developer and user documentation*  
+*See: "Scope of Work" 5. Tests*  
+*See: "How to Participate" 7. Testing (not user testing)*
 
 ### APIs ###
 
@@ -252,8 +251,8 @@ In our experience, one major quality of well-designed APIs is a clear and explic
 
 It has only been implied until this point, but to make the point absolutely explicit: We will create APIs early with clear definitions, with the intention of facilitating both testing and integration with other HOT software products.
 
-See: "Goals" 5. API
-See: "Scope of Work" 5. Tests
+*See: "Goals" 5. API*  
+*See: "Scope of Work" 5. Tests*
 
 ### Stack ###
 
@@ -277,11 +276,11 @@ Regardless of language and stack, our infrastructure, automation, and deployment
 
 Unit, integration, functional, and acceptance testing is a part of the development process and a story isn't complete (or even deployable) until it is fully covered by automated tests. Simulation testing is a bit different and does not necessarily happen in lock step with development. User testing obviously cannot happen until a story is deployed to a testing or staging environment. This is generally also true of cafe testing, to avoid having new users test software that hasn't been proved deployable on the true infrastructure.
 
-See: "How to Participate" 5. Proposed software stack
-See: "How to Participate" 7. Testing
-See: "Evaluation of Proposals" 4. Proposed design and stack
-See: "Evaluation of Proposals" 6. Community engagement strategy
-See: "Make Shiny or Make New?"
+*See: "How to Participate" 5. Proposed software stack*  
+*See: "How to Participate" 7. Testing*  
+*See: "Evaluation of Proposals" 4. Proposed design and stack*  
+*See: "Evaluation of Proposals" 6. Community engagement strategy*  
+*See: "Make Shiny or Make New?"*
 
 ## Who is nilenso? ##
 
@@ -307,20 +306,20 @@ We have presented on the Experimentation Platform architecture at Functional Con
 
 https://www.youtube.com/watch?v=YjfXhhxw9Bs
 
-EP also involves nontrivial database clustering techniques, which have evolved with the lifespan of the project. Synchronous replication, failover to standby databases, ZFS snapshots, custom PostgreSQL MVCC AUTOVACUUM configurations, WAL streaming, realtime (non-star-schema) reporting replicas, db and I/O monitoring, partitioning, logical replication, load balancing, and multi-mode failure detection all must be understood by every member of our team working on database clusters.
+EP also involves nontrivial database clustering techniques, which have evolved with the lifespan of the project. Synchronous replication, failover to standby databases, ZFS snapshots, custom PostgreSQL MVCC AUTOVACUUM configurations, WAL streaming, realtime (non-star-schema) reporting replicas, DB and I/O monitoring, partitioning, logical replication, load balancing, and multi-mode failure detection all must be understood by every member of our team working on database clusters.
 
-We have presented on building a PostgreSQL db cluster at Rootconf 2016:
+We have presented on building a PostgreSQL DB cluster at Rootconf 2016:
 
 https://www.youtube.com/watch?v=sGJDg5ba0iI
 
-We have contributed substantially to monitoring infrastructure in many recent software projects. This includes system-level, JVM-level, application-level, and db-level monitoring on all of our projects. We have been allowed to release some of the db and db monitoring work as open source. All of these repositorires are focused on PostgreSQL:
+We have contributed substantially to monitoring infrastructure in many recent software projects. This includes system-level, JVM-level, application-level, and DB-level monitoring on all of our projects. We have been allowed to release some of the DB and DB monitoring work as open source. All of these repositorires are focused on PostgreSQL:
 
-https://github.com/nilenso/honeysql-postgres (not monitoring specific)
-https://github.com/staples-sparx/Wonko
-https://github.com/staples-sparx/wonko-client
-https://github.com/staples-sparx/pg-cluster-setup
-https://github.com/staples-sparx/repmgr-to-zk
-https://github.com/nilenso/postgresql-monitoring
+- https://github.com/nilenso/honeysql-postgres (not monitoring specific)
+- https://github.com/staples-sparx/Wonko
+- https://github.com/staples-sparx/wonko-client
+- https://github.com/staples-sparx/pg-cluster-setup
+- https://github.com/staples-sparx/repmgr-to-zk
+- https://github.com/nilenso/postgresql-monitoring
 
 Unfortunately, although we have implemented internationalization (i18n) and built or extended translation tools on a number of projects, very little of this work is open source.
 
@@ -330,9 +329,23 @@ This was not our first Clojure rewrite, however. We also rewrote Staples' config
 
 We don't believe there is one perfect solution to writing correct software. We value strict type systems (like Haskell's), heavy external testing, test-driven development, generative testing, and mathematical proof differently based on the needs of each project. Correct, thoroughly tested software always makes project delivery faster, whatever the path taken.
 
-Developers from nilenso have run training and courses in React, Haskell, and Clojure. We also speak regularly at conferences and the talks we haven't mentioned can be found here:
+Developers from nilenso have also run training and courses in React, Haskell, and Clojure.
+
+Our small design team lead by Noopur (@9porcupine on Twitter) and Varun (@irrational_pai) has also produced a lot of impactful work in a short span of time. They are currently working with Samanvay Foundation; designing a mobile application that helps ground-forces in rural areas quickly diagnose (with the help of an on-board medical professional) basic health issues and audit all the patient information. All their work has been open source since day one:
+
+- http://samanvayfoundation.org
+- https://github.com/OpenCHS
+- https://goo.gl/dfSOAs (designs are in-progress)  
+    
+Noopur also happens to be a proper mapping enthusiast. Apart from participating in the local mapping parties, she's contributed a tourist map of Uttarakhand on Wikipedia and helped build an interactive AQI map on top of OSM, after the recent pollution level spike in Delhi:
+
+- https://en.wikipedia.org/wiki/File:Schematic_Tourist_Map_of_Uttarakhand.jpg
+- http://ocsidlab.github.io/earthmap/#4/21.15/79.08
+
+Our designers and developers speak regularly at conferences and the talks we haven't mentioned can be found here:
 
 http://nilenso.com/talks.html
+
 
 ### Our Future ###
 
