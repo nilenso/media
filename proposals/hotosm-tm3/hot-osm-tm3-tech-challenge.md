@@ -2,23 +2,23 @@
 
 # Application: Nilenso Software LLP (nilenso), a limited liability partnership firm #
 
-1 Introduction
-2 About Us
-    2-1 Our Team
-    2-2 Our Experience in Development
-    2-3 Our Experience in Design
-    2-4 Process / Collaboration / Communication
-        2-4-1 Inception
-3 Implementation
-        3-1 Design
-        3-2 Development
-            3-2-1 Tech Stack
-            3-2-2 Documentation
-            3-2-3 APIs
-4 Timelines
-5 Proposed Feature Additions
-6 Appendix
-    6-1 Sample Stories
+- 1 Introduction
+- 2 About Us
+    - 2-1 Our Team
+    - 2-2 Our Experience in Development
+    - 2-3 Our Experience in Design
+    - 2-4 Process / Collaboration / Communication
+       - 2-4-1 Inception
+- 3 Implementation
+       - 3-1 Design
+       - 3-2 Development
+           - 3-2-1 Tech Stack
+           - 3-2-2 Documentation
+           - 3-2-3 APIs
+- 4 Timelines
+- 5 Proposed Feature Additions
+- 6 Appendix
+   - 6-1 Sample Stories
     
 
 ## 1 Introduction ##
@@ -99,6 +99,8 @@ Specifically for TSM#, we would ideally suggest identifying an individual or gro
 
 A group approval and prioritization process is possible if it is executed in real time, and we would strongly recommend one such process which we have used to great success on many projects: a project Inception.
 
+[1] We are intimately familiar with most of the project management tools out there: Pivotal Tracker, Mingle, JIRA, Trello, paper-stickies-on-a-wall, and of course, Github.
+
 #### 2-4-1 Inception ####
 
 An Inception is a high-intensity kickoff to a project, which captures a shared understanding of the high level goals, their priorities, their budgets, and their limitations. The remainder and majority of the Inception then attempts to capture features (or "user stories", preferably, as these frame each feature in terms of how it benefits the end user), estimate them if necessary, and prioritize them. Whether stories are individually estimated or not, they are then packed into a few sample weeks of the project to rough out the expected pace of development. With this initial projection, 4 months worth of TM3 stories can be laid out in priority order and we will know roughly how much the team feels they can accomplish in that period.
@@ -106,9 +108,6 @@ An Inception is a high-intensity kickoff to a project, which captures a shared u
 Stories can be reprioritized as the project progresses and the initial projection will be updated every week with the team's actual rate of progress. The project's scope is adjusted every week accordingly.
 
 During the project, new feature requests can come from the stakeholders through the various channels into a structured approval and prioritization process. If all cards/stories are ordered by priority from the beginning, it will be easy for the team to collectively prioritize (or for an authority to individually prioritize) individual stories against that total ordering.
-
-
-[1] We are intimately familiar with most of the project management tools out there: Pivotal Tracker, Mingle, JIRA, Trello, paper-stickies-on-a-wall, and of course, Github.
 
 
 ## 3 Implementation ##
