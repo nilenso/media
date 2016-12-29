@@ -126,11 +126,15 @@ Designers will own the conducting of user experience testing, whether that happe
 #### 3-2-1 Tech Stack ####
 [Explain why Clojure is better: performant, scalable, easy to pick up..]
 
+Regardless of language and stack, our infrastructure, automation, and deployment approach is always built abstractly on top of an OSS toolchain. Last year, for political reasons, we had to move all of our services for one client from AWS to a "private cloud". Had we built anything AWS-dependent, this process would have been impossible. Monitoring is essential. We run own our software in production from our first deployment, and we try to make that first deployment happen as early in our involvement as possible. Operations ("devops", these days) is a group effort but we are often even the first or second point of contact for services we build exclusively.
+
 #### 3-2-2 Documentation, Automation, Testing, Deployment ####
 
 All of our software is thoroughly documented. We not only create user documentation (which is then validated by users as each individual new feature is continuously delivered into production) and developer documentation in the form of in-repository documents, in-line comments (where the domain, abstractions, or algorithms may be confusing), and thorough test suites. We also strive for self-documenting code, verbose and meaningful commit messages on atomic (transactional) commits, short-lived branches, a master branch which is always green and deployable, and a continuous integration (CI) system which not only alerts developers to broken builds but provides proactive insight into deployment and environmental failures. 
 
 Major architectural decisions will be captured within the version control system as Architectural Decision Records (ADRs: http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions) in an immutable, linear fashion. Every software project should contain a README which serves as the _only_ point of entry required for a user, sysadmin, or new developer. Where documentation is not possible (for passwords, keys, and other secrets) the team members responsible are called out explicitly in either documentation -- preferably within the README itself -- or through automation tools at the point where interjection is necessary. A new user (playing a "sysadmin" role) should be able to install any piece of software with a single package or script for installation. With respect to operations in canonical environments (say, http://hotosm.org) this automation should include provisioning and orchestration.
+
+Unit, integration, functional, and acceptance testing is a part of the development process and a story isn't complete (or even deployable) until it is fully covered by automated tests. Simulation testing is a bit different and does not necessarily happen in lock step with development. User testing obviously cannot happen until a story is deployed to a testing or staging environment. This is generally also true of cafe testing, to avoid having new users test software that hasn't been proved deployable on the true infrastructure.
 
 Comprehensive load, integration, acceptance, and unit tests are a good indication of a healthy software project. In recent years, we've started to grow away from these practices to some degree. Load testing can often be completely automated and with small, simple, custom tools load testing can become a part of CI or even Contiuous Deployment (CD). Integration tests should not be a one-way street and within an integrated service architecture, client-driven service contracts provide integration tests which not only ensure narrowly-defined API correctness but facilitate communication and provide early alerts to both parties when API contracts are accidentally violated. Complex systems, such as the Data Science Experimentation Platform (EP) we have built for Staples for over 3 years, can be integration tested with much higher fidelity using simulation-based testing. Simulation tests combine the power of generative testing, explicit system state transitions, and system-wide integration testing. Less expensive than full-blown simulation testing is component-level generative testing using tools like Clojure's `test.check` to replace hand-written unit tests with dynamic and automatically generated tests. Unit tests and TDD still serve to refine component design and test very specific edge cases. You can watch Nivedita and Srihari discuss the EP architecture and simulation testing strategy in their Functional Conf 2015 talk, here: https://www.youtube.com/watch?v=YjfXhhxw9Bs
 
@@ -183,7 +187,7 @@ Between the Github issues and the ToR, an excellent list of suggestions is alrea
 
 # 6 Appendix #
 
-## Sample Stories ##
+## 6-1 Sample Stories ##
 
 The sample story list is as follows. Non-functional requirements are prefixed with "[NFR]".
 
