@@ -81,8 +81,16 @@ Our small design team lead by Noopur (@9porcupine on Twitter) and Varun (@irrati
 - http://samanvayfoundation.org
 - https://github.com/OpenCHS
 - https://goo.gl/dfSOAs (designs are in-progress)  
+
+They have experience conducting research to understand the needs of the user as well as their behaviour in the form of:
+- Contextual inquiry: with a focused set of users, by giving them specific tasks to perform, observing their behaviour and talking to them further about their actions during the exercise, in order to better understand their mental model.
+- Task Analysis: of major tasks, along with the intent to understand and further reduce complexity in workflows.
+- We have built personas, performed focus group discussions and interviews to understand our target audience better. 
+- There are also certain tools such as http://www.inspectlet.com/ and https://www.hotjar.com/. These record user interactions with online applications in a non-intrusive manner, and can be used for better testing on web.
+
+They are also familiar with user testing methodologies (either prior to launch of a new product or to test acceptance of new features) by creating mockups and prototypes using prototyping tools.
     
-Noopur also happens to be a proper mapping enthusiast. Apart from participating in the local mapping parties, she's contributed a tourist map of Uttarakhand on Wikipedia and helped build an interactive AQI map on top of OSM, after the recent pollution level spike in Delhi:
+In addition, Noopur happens to be a proper mapping enthusiast. Apart from participating in the local mapping parties, she's contributed a tourist map of Uttarakhand on Wikipedia and helped build an interactive AQI map on top of OSM, after the recent pollution level spike in Delhi:
 - https://en.wikipedia.org/wiki/File:Schematic_Tourist_Map_of_Uttarakhand.jpg
 - http://ocsidlab.github.io/earthmap/#4/21.15/79.08
 
