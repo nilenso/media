@@ -15,6 +15,7 @@
            - 3-2-1 Tech Stack
            - 3-2-2 Documentation
            - 3-2-3 APIs
+           - 3-2-4 Reuse of Code
 - 4 Timelines
 - 5 Proposed Feature Additions
 - 6 Appendix
@@ -28,7 +29,7 @@ Throughout this application, we hope to address all questions and concerns outli
 
 ## 2 About Us ##
 
-nilenso is a boutique software consultancy based primarily in Bangalore (India). In our 3-year history, we have built large machine learning, streaming data, experimentation, and mapping/transportation systems. You can read more about our recent work (a bit dated) at nilenso.com/recent-tech.html. We continue to run the largest of these systems in production for our clients today.
+nilenso is a boutique software consultancy based primarily in Bangalore (India). In our 3-year history, we have built large machine learning, streaming data, experimentation, and mapping/transportation systems. You can read more about our recent work (a bit dated) at http://nilenso.com/recent-tech.html. We continue to run the largest of these systems in production for our clients today.
 
 Our designers and developers speak regularly at conferences and the talks we haven't mentioned can be found here: http://nilenso.com/talks.html
 
@@ -154,6 +155,10 @@ As mentioned above with regard to integration and simulation testing, it is ofte
 In our experience, one major quality of well-designed APIs is a clear and explicit awareness of where and how state transitions occur. Objects and data structure instances are inherently state machines. Entire systems are no different, though it is extremely difficult (and inefficient) to make an entire system immutable, which means state transitions across systems are mutative and it is all the more important to capture state transitions for every API call which writes to a service.
 
 It has only been implied until this point, but to make the point absolutely explicit: We will create APIs early with clear definitions, with the intention of facilitating both testing and integration with other HOT software products.
+
+### 3-2-4 Reuse of Code ###
+
+Reuse" for us is much more about clean design -- well-defined service boundaries, appropriate library usage, and logical abstration -- than it is an goal unto itself. Software and team performance both are consequences of a clean design, not the other way around.
 
 
 ## 4 Timelines ##
