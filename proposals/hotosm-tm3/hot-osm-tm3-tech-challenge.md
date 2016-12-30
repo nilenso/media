@@ -30,9 +30,13 @@ Throughout this application, we hope to address all questions and concerns outli
 
 ## 2 About Us ##
 
-Nilenso is a boutique software consultancy based primarily in Bangalore (India). In our 3-year history, we have built large machine learning, streaming data, experimentation, and mapping/transportation systems. You can read more about our recent work at http://nilenso.com/recent-tech.html. We continue to run the largest of these systems in production for our clients today.
+Nilenso is a boutique software consultancy based primarily in Bangalore (India). In our 3-year history, we have built large machine learning, analytics, streaming data, experimentation, and mapping/transportation systems. We continue to run the largest of these systems in production for our clients today. You can read more about our recent work at:
 
-Our designers and developers speak regularly at conferences and the talks we haven't mentioned can be found here: http://nilenso.com/talks.html
+> http://nilenso.com/recent-tech.html.
+
+Our designers and developers speak regularly at conferences and the talks we haven't mentioned can be found here:
+
+> http://nilenso.com/talks.html
 
 ### 2-1 Our Team ###
 
@@ -164,7 +168,7 @@ Monitoring is essential for every project. We run own our software in production
 
 #### 3-2-2 Documentation, Automation, Testing, Deployment ####
 
-All of our software is thoroughly documented. We not only create user documentation (which is then validated by users as each individual new feature is continuously delivered into production) and developer documentation in the form of in-repository documents, in-line comments (where the domain, abstractions, or algorithms may be confusing), and thorough test suites. We also strive for self-documenting code, verbose and meaningful commit messages on atomic (transactional) commits, short-lived branches, a master branch which is always green and deployable, and a continuous integration (CI) system which not only alerts developers to broken builds but provides proactive insight into deployment and environmental failures. This is done by creating a CI environment which is nearer the production environment than the development environment, where this makes sense.
+All of our software is thoroughly documented. We not only create user documentation (which is then validated by users as each individual new feature is continuously delivered into production) and developer documentation in the form of in-repository documents, in-line comments (where the domain, abstractions, or algorithms may be confusing), and thorough test suites. We also strive for self-documenting code, verbose and meaningful commit messages on atomic (transactional) commits, short-lived branches, a master branch which is always green and deployable, and a continuous integration (CI) system which not only alerts developers to broken builds but provides proactive insight into deployment and environmental failures. This is done by creating a CI environment which is nearer the production environment than the development environment, where this makes sense. The more of this documentation which can live in version control (we prefer Git), the better.
 
 Major architectural decisions will be captured within the version control system as Architectural Decision Records (ADRs)[1] in an immutable, linear fashion. Every software project should contain a README which serves as the _only_ point of entry required for a user, sysadmin, or new developer. Where documentation is not possible (for passwords, keys, and other secrets) the team members responsible are called out explicitly in either documentation -- preferably within the README itself -- or through automation tools at the point where interjection is necessary. A new user (playing a "sysadmin" role) should be able to install any piece of software with a single package or script for installation. With respect to operations in canonical environments (say, http://hotosm.org) this automation should include provisioning and orchestration.
 
@@ -187,11 +191,11 @@ For over two years, the majority of nilenso's software delivery has been on syst
 
 We see there are five major APIs pending in the existing TM2 software [1]:
 
-1. task details
-2. validate/invalidate
-3. lock/unlock a task
-4. create task by position
-5. create task by geography
+1. Task Details
+2. Validate/Invalidate
+3. Lock/Unlock a task
+4. Create task by position
+5. Create task by geography
 
 None of these implementations looks particularly difficult and if we were to extend the TM2 codebase as-is, implementing draft versions of these APIs may be a good way to familiarize ourselves with the TM2 build/deploy process and overall design.
 
@@ -201,7 +205,7 @@ In our experience, one major quality of well-designed APIs is a clear and explic
 
 It has only been implied until this point, but to make the point absolutely explicit: We will create APIs early with clear definitions, with the intention of facilitating both testing and integration with other HOT software products. Goal 5 from the TM3TC will be addressed continuously throughout development.
 
-[1] https://github.com/hotosm/osm-tasking-manager2/wiki/API#tasks
+> [1] https://github.com/hotosm/osm-tasking-manager2/wiki/API#tasks
 
 ### 3-2-4 Reuse of Code ###
 
@@ -217,20 +221,29 @@ In the appendix, we provide a sample set of stories and a general outline of maj
 
 ## 5 Proposed Feature Additions ##
 
-[we could look at the ToR and pick up more of these]
-
 Between the Github issues and the ToR, an excellent list of suggestions is already available. It appears there are a few areas which would be quite impactful:
 
-1. Exposing all TM3 behaviour by auth-based APIs, first and foremost, will allow all participants to to manage projects & groups and execute tile-level work from outside of TM3 and within their preferred OSM editing environment. Though elided from the cards in Appendix 6-1, new authenticated mutative APIs will require significant work from the development team in tools like JOSM to ensure a full spike through the system, from the user's tool, through TM3's APIs, into project data. The best user interface feels like none at all.
+1. **Expose all TM3 behaviour by auth-based APIs.** If possible, users should not need to leave their preferred OSM editing environment (JOSM, iD) to complete their work on tiles and contribute to larger projects. Though elided from the cards in Appendix 6-1, new authenticated mutative APIs will involve contributing code directly to tools like JOSM to ensure a full spike through the system, from the user's tool, through TM3's APIs, into project data. The best user interface feels like none at all.
 
-[The above paragraph feels like it has too many words and not enough meat.]
+2. **Report User- and Project-level statistics.** This may take the form of a complete Project Manager dashboard or these metrics could be integrated into the existing Project Manager and Validator workflows. For example, visual indicators (our designers can come up with specifics) could identify inexperienced vs. experienced Mappers to Project Managers to help guide them toward tiles of appropriate difficulty. When this information was presented to Validators, it would help them gauge what granularity of validation was required for a tile.
 
-2. User- and Project-level analytics/reporting for Project Managers and Validators will help greatly in informing their workflow and making management of projects more efficient both by improving meaningful (informed) communication with Mappers and helping to smooth the Validation process. The Github issues list contains much low-hanging fruit in this regard and the community's pain points should be our starting position for quick development.
+3. **Add powerful Project/Group creation and administration.** The most direct and TM3-specific feature-set will be interfaces for project/group creation and administration. Though much of the Mapper- and Validator-facing functionality will hopefully move to tools on the edge of HOT/OSM architecture via TM3 APIs, projects and groups of projects are concepts which are rooted in the Task Manager and the unified UI is likely to continue as a feature of the web app. While the primary goal of the user experience for Mappers will be ease and elimination of friction, the goal for Administrators and Project Managers will be power and flexibility. Administrators are not new to OSM and do not require "conversion" to the process; the PM interface of TM3 may forsake time-consuming investment in slick UIs and an easy user experience for richer, heavily-documented features.
 
-[Above: Kinda vague.]
+4. **Simplify validation.** Experienced Validators often validate across a holistic map, rather than tile-by-tile. When doing this, the Validator UIs should allow them to select tiles they have reviewed in bulk before marking them "validated", rather than forcing repetetive behaviour. Not only will this make the Validator workflow faster, it will help retain Validators by avoiding tedium.
 
-3. The most direct and TM3-specific feature-set will be interfaces for project/group creation and administration. Though much of the Mapper- and Validator-facing functionality will hopefully move to tools on the edge of HOT/OSM architecture via TM3 APIs, projects and groups of projects are concepts which are rooted in the Task Manager and the unified UI is likely to continue as a feature of the web app. While the primary goal of the user experience for Mappers will be ease and elimination of friction, the goal for Administrators and Project Managers will be power and flexibility. Administrators are not new to OSM and do not require "conversion" to the process; the PM interface of TM3 may forsake time-consuming investment in slick UIs and an easy user experience for richer, heavily-documented features.
+5. **Provide chat / messaging everywhere.** This way, Validators can guide Mappers directly. This provides a middle-ground between "accept" and "reject" for a Validator deciding if a tile is done correctly, and allows them to provide this feedback earlier. Receiving a "reject" status after putting effort into a tile is demotivating, particularly for inexperienced Mappers.
 
+6. **Explain tile skills to potential Mappers.** Every tile is a puppy at the pound, waiting for a new owner. The difficult ones require someone with experience and patience. The gentle, easy ones are best saved for someone whose confidence will be boosted by early success. Since most work in HOT is self-selected by Mappers, the best solution to this matching problem is to provide Mappers with as much information as possible. Tags should be searchable/filterable and Mappers should be able to self-identify their skill level (the way one does at a ski hill: Beginner, Moderate, Aggressive) so a helpful list of potential work can be presented to them. The flip side of this user interface is, of course, an easy way for Project Managers to tag and flag available tiles.
+
+7. **Include demos with corresponding tasks.** If a particular tile requires a specific skill (as laid out by the TODO/checklist), the creator of the tile can also include an embedded/linked demo or instruction to help guide new Mappers. The available list of embedded/linked help could be prepopulated with common activities (and their pitfalls) so tile creators could add them easily or even automatically. Project Managers and Administrators could edit this prepopulated list. Examples of instructions and demos include:
+
+ - http://learnosm.org
+ - https://youtu.be/Ir-3K0pjwOI?t=6m36s
+ - https://www.mapbox.com/blog/tags/openstreetmap-101/
+
+8. **Make better use of Project list screen space.** Sometimes small, inexpensive changes provide huge returns. The Project list screen consumes the right-hand 50% for an introduction to the Tasking Manager, OSM, and HOT. After scrolling past this first screen, this screen real estate is lost.
+
+![Visual explanation of projects screen real estate](hot-tm2-projects-list.png "Visual explanation of projects screen real estate")
 
 # 6 Appendix #
 
