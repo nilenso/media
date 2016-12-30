@@ -7,8 +7,9 @@
     - 2-1 Our Team
     - 2-2 Our Experience in Development
     - 2-3 Our Experience in Design
-    - 2-4 Process / Collaboration / Communication
-       - 2-4-1 Inception
+    - 2-4 Our Experience in Project Management
+    - 2-5 Process / Collaboration / Communication
+       - 2-5-1 Inception
 - 3 Implementation
        - 3-1 Design
        - 3-2 Development
@@ -31,8 +32,6 @@ Throughout this application, we hope to address all questions and concerns outli
 
 Nilenso is a boutique software consultancy based primarily in Bangalore (India). In our 3-year history, we have built large machine learning, streaming data, experimentation, and mapping/transportation systems. You can read more about our recent work at http://nilenso.com/recent-tech.html. We continue to run the largest of these systems in production for our clients today.
 
-[ I removed "a bit dated" under the assumption I will fix recent-tech.html tomorrow. ]
-
 Our designers and developers speak regularly at conferences and the talks we haven't mentioned can be found here: http://nilenso.com/talks.html
 
 ### 2-1 Our Team ###
@@ -43,9 +42,7 @@ Our industry experience spans a wide range of verticals: from defense and polici
 
 Members of our design team are familiar with the OSM ecosystem, participate in HOT, and are dedicated tree-mappers of Bangalore. They understand and have experience working with open data systems. (Details are provided in later sections of this document.)
 
-Our project managers have led teams of dozens of developers, locally and across the globe. We have both built software teams by managing hiring and staffing decisions and consulted to enhance existing teams or recover failing teams.
-
-[ Need to think about the above paragraph a bit more... we need something PM-specific in there, though. ]
+Our project managers have led teams of dozens of developers, locally and across the globe. We have both built software teams by managing hiring and staffing decisions and consulted to enhance existing teams or recover failing teams. PMs at nilenso have an engineering background but realize "projects" are not limited to software repositories or consulting contracts. The word encompasses any significant cooperative activity in which human beings engage.
 
 If we are awarded this project, we intend to staff people from each of these disciplines on TM3.
 
@@ -78,15 +75,13 @@ Unfortunately, although we have implemented internationalization (i18n) and buil
 
 Similarly proprietary is our most recent legacy replacement work on the driver allocation service for an Indonesian Uber competitor. We rewrote this service in Clojure with an extensive generative testing suite (and minimal unit tests for single-value edge cases). Thanks to generative testing and developer discipline, the service was released with zero production issues and completely replaced the legacy software on its first day in production.
 
-[ Are we not allowed to mention Go-Jek anywhere? I guess "Uber competitor" probably works just as well for people who don't know GJ anyway. ]
-
 This was not our first Clojure rewrite, however. We also rewrote Staples SparX's configuration management, legacy data feed integration, and reporting tools in Clojure. This work involved a different style of testing. First, these services were built with large and comprehensive unit test suites for all known use cases. Then the new services were delivered alongside the legacy (Ruby) services in all environments and validated for multiple months. Once the Clojure services produced results consistent with the legacy services (as confirmed by automated validation software provided by us to the QA team), 3rd party services were redirected to new APIs and the legacy services were turned off. This process was slow but not expensive and finished without a single interruption to existing clients.
 
 Developers from nilenso have also run training and courses in ReactJS, Haskell, and Clojure.
 
 ### 2-3 Our Experience in Design ###
 
-Our small design team lead by Noopur (@9porcupine on Twitter) and Varun (@irrational_pai) has also produced a lot of impactful work in a short span of time. They are currently working with Samanvay Foundation; designing a mobile application that helps ground-forces in rural areas quickly diagnose (with the help of an on-board medical professional) basic health issues and audit all the patient information. All their work has been open source since day one:
+Our small design team lead by Noopur (@9porcupine on Slack/Twitter) and Varun (@irrational_pai) has also produced a lot of impactful work in a short span of time. They are currently working with Samanvay Foundation; designing a mobile application that helps ground-forces in rural areas quickly diagnose (with the help of an on-board medical professional) basic health issues and audit all the patient information. All their work has been open source since day one:
 
 - http://samanvayfoundation.org
 - https://github.com/OpenCHS
@@ -106,7 +101,23 @@ In addition, Noopur happens to be a proper mapping enthusiast. Apart from partic
 - https://en.wikipedia.org/wiki/File:Schematic_Tourist_Map_of_Uttarakhand.jpg
 - http://ocsidlab.github.io/earthmap/#4/21.15/79.08
 
-### 2-4 Process / Collaboration / Communication ###
+### 2-4 Our Experience in Project Management ###
+
+Deepa (@deepa/@deepa_v) and Steven (@steven/@deobald) are our two project managers. Project Management has meant many different things on our many projects. Since we are uncertain which variables will weigh most heavily on the HOT TM3 project, we will provide a few examples.
+
+Our first, and possibly most substantial project, is nilenso itself. Deepa joined us as an Executive over one year ago, balancing our budget, forcing every implicit decision out into the open, deftly facilitating conversation where others' expertise was most valuable and asking incisive questions everywhere else. She has now overseen a number of projects at nilenso, both consulting and internal.
+
+Our most recent project together also operates under this extended definition: We volunteer with a local orphanage which is overseen by a resident pastor. When the pastor needed help evaluating a business model he was planning to use to fund the orphanage, we spoke to him at length, gathered all the requisite data, and helped him conclude that his business plan was untenable. After helping him avoid massive financial loss, we worked with him to brainstorm alternatives and find immediately actionable activities to pursue his goals.
+
+Most projects, of any shape, run much like a software project -- or vice-versa. Whichever way ones views it, all projects have key shared characteristics, though they always have their own quirks. The earlier one unearths these quirks and the risks they represent, the sooner the team can address them.
+
+In two projects, for a financial services firm and a university parking authority respectively, the most valuable activity of the project was creating a project glossary that disambiguated terminology for team members, new and old, internal and external. HOT is already aware of some cases of this issue (such as "task" vs. "tile" vs. "square") and by making the lexicon activity explicit, we can help uncover many more such examples.
+
+On a recent e-commerce reporting project, our greatest challenge was one particular individual. A member of the client team, he would deploy hotfixes to environments in inconsistent ways, release untested and un-rollback-able code, and frequently break existing functionality due to a lack of communication. Here, our strategy was coaching: Explain the difficulties he was causing the entire team, both for operations and development, without blaming him. As with any form of education, the goal in such situations is to correct behaviour, not reprimand an individual.
+
+For two other clients, our greatest challenge has been communication. Two different services for the first client required diametrically opposed communication styles: one team would have a video call with the client in California once a month; the project was otherwise self-directed and coordinated with the odd Slack message or email. The other required daily calls and sometimes multiple calls per day. The second client's situation was completely different: since they are in Bangalore, we had to decide whether to invite their developers to our office or work out of theirs. There is no one answer for any of these situations. Sometimes, the role of the PM is to step in and negotiate communication directly. Sometimes it is a question of staffing, depending on the comfort and flexibility of individual team members. With remote teams, it is always a work in progress. Communication is where we spend most of our time facilitating projects, so we will cover that in more detail below.
+
+### 2-5 Process / Collaboration / Communication ###
 
 Our work has moved us around the country and around the globe, operating in and across many different timezones, with many different project management styles, in a variety of toolchains[1].
 
@@ -116,15 +127,13 @@ We believe that open lines of communication and planning/projection which employ
 
 Because of nilenso's offshore and distributed history, we are very familiar with asynchronous communication channels, discussing issues and ideas over a multitude of channels.
 
-Specifically for TSM3, we would ideally suggest identifying an individual or group of individuals who would assay the role of approver / facilitator / gatekeeper, in other works someone who would take responsility for owning prioritisation and approval.
-
-[ Are we comfortable saying the above person is simply Blake, at this point? ]
+Specifically for TSM3, we would ideally suggest identifying an individual or group of individuals who would assay the role of approver / facilitator / gatekeeper. In other words, someone who would take responsility for owning prioritisation and approval. From conversations on HOTOSM Slack, it appears the key person here is Blake Girardot, with some engagement from other folks in the community.
 
 A group approval and prioritization process is possible if it is executed in real time, and we would strongly recommend one such process which we have used to great success on many projects: a project Inception.
 
 [1] We are intimately familiar with most of the project management tools out there: Pivotal Tracker, Mingle, JIRA, Trello, paper-stickies-on-a-wall, and of course, Github.
 
-#### 2-4-1 Inception ####
+#### 2-5-1 Inception ####
 
 An Inception is a high-intensity kickoff to a project, which captures a shared understanding of the high level goals, their priorities, their budgets, and their limitations. The remainder and majority of the Inception then attempts to capture features (or "user stories", preferably, as these frame each feature in terms of how it benefits the end user), estimate them if necessary, and prioritize them. Whether stories are individually estimated or not, they are then packed into a few sample weeks of the project to rough out the expected pace of development. With this initial projection, 4 months worth of TM3 stories can be laid out in priority order and we will know roughly how much the team feels they can accomplish in that period.
 
