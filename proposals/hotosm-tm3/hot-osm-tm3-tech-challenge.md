@@ -88,7 +88,7 @@ Developers from nilenso have also run training and courses in ReactJS, Haskell, 
 
 ### 2-3 Our Experience in Design ###
 
-Our small design team lead by Noopur (@9porcupine on Slack/Twitter) and Varun (@irrational_pai) has also produced a lot of impactful work in a short span of time. They are currently working with Samanvay Foundation; designing a mobile application that helps ground-forces in rural areas quickly diagnose (with the help of an on-board medical professional) basic health issues and audit all the patient information. All their work has been open source since day one:
+Our small design team led by Noopur (@9porcupine on Slack/Twitter) and Varun (@irrational_pai) has also produced a lot of impactful work in a short span of time. They are currently working with Samanvay Foundation; designing a mobile application that helps ground-forces in rural areas quickly diagnose (with the help of an on-board medical professional) basic health issues and audit all the patient information. All their work has been open source since day one:
 
 > - http://samanvayfoundation.org
 > - https://github.com/OpenCHS
@@ -160,9 +160,9 @@ During the project, new feature requests can come from the stakeholders through 
 
 The nilenso Design team will participate in the development of TM3 with the aim of answering all 4 major user-facing goals laid out in the TM3TC, but Goal 3 is of utmost importance: "a significantly improved UI/UX" means progressively working toward the core of the Task Manager by first eliminating any pain experienced by users.
 
-Our designers will be key in ensuring the development team is building what users need and what the community wants. They will participate in discussions about improving experiences, like those mentioned above for Mappers, for all HOT roles. The proposal and approval process will involve designers early on, from Inception to the fleshing out of each user story. During the Inception, designers will facilitate discussions around a cohesive, overarching design. When defining each user story, designers will describe the specifics of all physical aspects of the software: appearance, interaction, and time.
+Designers will be key in ensuring the software team is building what users need and what the community wants. We will participate in discussions about improving experiences, like those mentioned above for Mappers, for all HOT roles. The proposal and approval process will involve Design early on, from Inception to the fleshing out of each user story. During the Inception, we will facilitate discussions around a cohesive, overarching design. When defining each user story, designers will describe the specifics of all physical aspects of the software: appearance, interaction, and time.
 
-Designers will own the conducting of user experience testing, whether that happens in the HOT testing environment online or in offline testing such as cafe tests for new users who are completely unfamiliar with HOT, OSM, and their respective software ecosystems.
+The Design team will own the conducting of user experience testing, whether that happens in the HOT testing environment online or in offline testing such as cafe tests for new users who are completely unfamiliar with HOT, OSM, and their respective software ecosystems.
 
 ### 3-2 Development ###
 
@@ -234,9 +234,42 @@ It has only been implied until this point, but to make the point absolutely expl
 
 ## 4 Timelines ##
 
-[Prioritizing stories and NFRs (collectively, "cards") will be a collaborative effort with key stakeholders. If high-level feature groups interleave priorities, "milestones" may simply be markers showing overall progress. Only if priorities and groups of features line up will thematic milestones emerge; we would recommend against forcing the concept of milestones into the delivery schedule as they only provide observers with emotional satisfaction but do nothing to structure a project more effectively. Prefer continuous delivery.]
+Prioritizing user stories and non-functional requirements (collectively, "cards") will be a collaborative effort with key stakeholders. If high-level feature groups interleave priorities, "milestones" may simply be markers showing overall progress. Only if priorities and groups of features line up will thematic milestones emerge; we would recommend against forcing the concept of milestones into the delivery schedule as they only provide observers with emotional satisfaction but do nothing to structure a project more effectively. We prefer continuous delivery.
 
-In the appendix, we provide a sample set of stories and a [general outline of major milestones] after that. It should be noted that this list is in no way exhaustive and does not assume build-out of TM2 or a from-scratch server-side rewrite. Therefore, a reader may notice some stories which describe functionality TM2 already provides.
+With that caveat in place, the following timeline provides a rough milestone-based outline of what the project may look like. The actual order of development and delivery will depend on weekly Iteration Planning Meetings (IPMs) led by the project manager to discuss feedback and prioritize stories / features through the duration of the project.
+
+### Month #1 ###
+
+- Identify key stakeholders/contributors, set up daily/weekly online meetings
+- Inception phase 1: stories for rewrite
+- Begin API+app Clojure rewrite to make system modular, exposing APIs for each behaviour
+- Inception phase 2: stories for new features
+- Design team begins redesign of pain points
+
+### Month #2 ###
+
+- Deploy the rewrite in sandbox and begin testing
+- Design team focuses on (new) Mapper workflows and ease of use
+- Messaging / chat application for Mappers and Validators
+- Simplify Validator workflows (multi-tile validation, feedback suggestions, priority lists)
+
+### Month #3 ###
+
+- Design team focuses on power user (Validator & PM) UIs and features
+- Build PM dashboard / control panel
+- Incorporate new designs across tools (both TM3 and 3rd party) and build front-ends
+- Build analytics tools for Validators and PMs
+
+### Month #4 ###
+
+- Build auto-suggestion UIs which integrate OSMA
+- Simulation / Perf testing suites
+- Finish pending documentation
+- Handoff
+
+In the appendix, we provide a sample set of stories and sample story-based timeline after that. Though this list is in no way exhaustive, this sample timeline is much more realistic in terms of granularity used for planning.
+
+It should be noted that the sample story list does not assume enhancement of TM2 or a from-scratch server-side rewrite, including sample cards from both options. Therefore, a reader may notice some stories which describe functionality TM2 already provides.
 
 
 ## 5 Proposed Feature Additions ##
