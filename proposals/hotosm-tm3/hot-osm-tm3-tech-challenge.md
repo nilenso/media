@@ -21,7 +21,7 @@
 5. Proposed Feature Additions
 6. Our Future
 7. Appendix
-    - 7-1 Team Availability
+    - 7-1 Team Staffing Plan
     - 7-2 Sample Stories
     - 7-3 Sample Timeline
 
@@ -135,7 +135,11 @@ We believe that open lines of communication and planning/projection which employ
 
 Because of nilenso's offshore and distributed history, we are very familiar with asynchronous communication channels, discussing issues and ideas over a multitude of channels.
 
-Specifically for TSM3, we would ideally suggest identifying an individual or group of individuals who would assay the role of approver / facilitator / gatekeeper. In other words, someone who would take responsility for owning prioritisation and approval. From conversations on HOTOSM Slack, it appears the key person here is Blake Girardot, with some engagement from other folks in the community.
+Specifically for TSM3, we would ideally suggest identifying an individual or group of individuals who would assay the role of approver / facilitator / gatekeeper. In other words, someone who would take responsility for owning prioritisation and approval. From conversations on HOTOSM Slack, it appears the key person here is Blake Girardot, with some engagement from other community stakeholders.
+
+Another important aspect of collaboration will be that of nilenso with any other community contributors. As TM3TC encourages individual community contributors to apply, we similarly want to encourage a mixed-mode award of the contract. We would be more than happy to work with a contributor(s) who has more experience with HOT or OSM in general, either as an active community member or active contributor to HOT tools.
+
+While we are applying for the entire Scope of Work (SoW), we happily acknowledge that this may not be possible or optimal.
 
 A group approval and prioritization process is possible if it is executed in real time, and we would strongly recommend one such process which we have used to great success on many projects: a project Inception.
 
@@ -273,12 +277,34 @@ Task Manager 3 is a wonderful opportunity. Free maps operate at a very high leve
 
 ## 7 Appendix ##
 
-### 7-1 Team Availability ###
+### 7-1 Team Staffing Plan ###
 
-week 1: steven, deepa, sandy, designer — inception and design kickoff
-week 2: design & dev on rewrite
-week 3: udit joins?
-week 5: kitty joins?
+To accomodate the 4-month delivery timeline starting on January 6th of 2017, we propose the following staggered roll-on/roll-off plan:
+
+January
+* Week 1: Proposals are evaluated and perhaps nilenso's is chosen
+* Week 2: Steven, Deepa, Sandy, and Noopur run a project Inception and design kickoff
+* Week 3: Design and development continue with Sandy and Noopur
+* Week 4: Udit joins Sandy as the second developer
+
+February
+* Week 1: Akshay joins Sandy and Udit
+
+March
+* Team continues as above
+
+April
+* Team continues as above
+* Development team may reduce from 3 to 2, depending on progress
+
+May
+* Week 1: First developer rolls off, if not in April
+* Week 2: Second developer & Noopur roll off
+* Week 3: Last developer rolls off
+
+The reason for the staggered roll-on of Udit and Akshay is due to their current commitments. We will staff them on TM3 earlier, if possible. At present, these are the earliest dates we can guarantee.
+
+Because the Task Manager is a community-driven product, the weeks in May, after the official April 30th release of TM3, would be used to smoothly transition the nilenso team out of daily development. This includes bringing volunteer contributors up to speed, fixing bugs identified by users in late April, and finish any outstanding documentation. We would remain available to contribute and answer questions through various channels after this, of course.
 
 ### 7-2 Sample Stories ###
 
