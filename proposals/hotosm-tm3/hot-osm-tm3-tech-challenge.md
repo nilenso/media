@@ -315,7 +315,7 @@ Because the Task Manager is a community-driven product, the weeks in May (after 
 
 ### 7-2 Sample Stories ###
 
-The sample story list is as follows. Non-functional requirements are prefixed with _[NFR]_.
+A realistic but non-exhaustive sample story list follows. Non-functional requirements are prefixed with _[NFR]_.
 
 > _NB: Since one of the Github issues listed is "Consistency in terminology: tasks,
 > tiles, and squares" (https://github.com/hotosm/osm-tasking-manager2/issues/912),
@@ -382,10 +382,164 @@ The sample story list is as follows. Non-functional requirements are prefixed wi
 
 ### 7-3 Sample Timeline ###
 
-[REPLACE THIS / ADD FAKE TIMELINE]
-
 The cards in the above list are not of a consistent size. "TM3 should provide an API for custom analytics queries", for example, is marked "[EPIC]" because it is substantially larger than all the other cards in the list. Before delivering such a card, it would need to be broken down into relatively similar-sized cards (to each other and to all other cards in the list). If the team finds it difficult to apportion cards in roughly similar sizes, cards may be given relative estimates, in abstract points: 1, 2, and 3. "1" describes a nearly-trivial task. "2" is the preferred difficulty for most cards. "3" represents work which cannot be subdivided into cards of size 1 or 2.
 
-For this exercise, let's assume we were able to apportion cards of roughly equivalent size for all 58 cards above. The aforementioned API epic, "Validator can mark a tile validated in JOSM", "TM3 should support 100,000 simultaneous users", and "[NFR] TM3 must support i18n" are all obviously larger cards. Let's assume these 4 cards are broken down into 16 smaller cards we consider roughly equivalent to the rest of the list. If we provide the prioritized list to the software team, they can then plug cards into the first few weeks of development to estimate their week-on-week accomplishments. Say the first week fits 5 cards, the second week 7, and the third week 6. The sizing of effort in this exercise is fine-grained enough to be possible for a human being to estimate but coarse-grained enough to be meaningful on the 4-month project timeline. Our 70 cards will take 12 weeks to complete, leaving 4 weeks buffer for scope creep, underestimation, manual QA, and inefficiencies in the overall feedback process.
+For this exercise, let's assume we were able to apportion cards of roughly equivalent size for all 58 cards above. The aforementioned API epic, "Validator can mark a tile validated in JOSM", "TM3 should support 100,000 simultaneous users", and "[NFR] TM3 must support i18n" are all obviously larger cards. Let's assume these 4 cards are broken down into 16 smaller cards we consider roughly equivalent to the rest of the list. If we provide the prioritized list to the software team, they can then plug cards into the first few weeks of development to estimate their week-on-week accomplishments. Say the first week fits 5 cards, the second week 7, and the third week 6. The sizing of effort in this exercise is fine-grained enough to be possible for a human being to estimate but coarse-grained enough to be meaningful on the 4-month project timeline. Our 70 cards will take 12 weeks to complete, leaving 4 weeks buffer for scope creep, underestimation, manual QA, and unanticipated communication/feedback inefficiencies.
 
-Obviously the real Inception exercise will be much more involved and collaborative. We hope this provides some insight as to how we would go about it, however.
+The timeline from our sample inception might then looks like this:
+
+#### January ####
+
+Week 2
+
+* [NFR] Finish pending TM3 API endpoints for existing features
+* [x4 / NFR] TM3 must support i18n
+* Mapper can self-assign a tile to herself
+
+Week 3
+
+* PM can mark a Mapper with a "Validator" role for a project
+* [NFR] Mutating API calls must be authenticated
+* [x4] Validator can mark a tile validated in JOSM
+
+Week 4
+
+* [NFR] Any user can submit a translation or update to a translation for review
+* PM can assign a Mapper to a tile
+* PM can clone a project to create a new project with defaults
+* PM can mark a project completed
+* Mapper can stop working on a tile to unlock it without marking it "done"
+* PM can assign a difficulty to a tile
+
+#### February ####
+
+Week 1
+
+* PM can set expiration period on a tile
+* Mapper can mark a tile as "too cloudy to complete"
+* Mapper can mark a tile as "imagery insufficient to complete"
+* Mapper can optionally add an email id to her profile
+* Validator feedback is sent to Mapper's email, if available
+* Validator can send Mapper quick feedback from a predefined set of common issues
+
+Week 2
+
+* Validator can see a prioritized list of tiles requring validation
+* Mapper can provide in-app feedback about aspects of mapping they find confusing
+* Mapper can make a generic request for help to a Validator
+* PM/Validator can see # of days of active mapping for a Mapper
+* PM/Validator can see # of changesets for a Mapper
+* PM/Validator can see # of complete tiles for a Mapper
+
+Week 3
+
+* Mapper/Validator can request access to a private project
+* PM/Validator can observe changes made by a Mapper in real time
+* PM/Validator can see days since account activation for a Mapper
+* PM can see a list of Mappers for a project
+* [NFR] Any API user can read a live data stream of activity from TM3
+* PM can view a summary of projects & statuses by geographical area
+
+Week 4
+
+* Mapper receives a "Welcome to HOT mapping" email upon first login
+* PM can create a project group
+* PM can add/remove projects to/from a project group
+* PM can see current and historical project groups
+* PM can mark a project group completed
+
+#### March ####
+
+Week 1
+
+* Validator can ask a question of a Mapper for tile she is validating
+* Mapper can see a prioritized list of task squares available to work on
+* Mapper can view a TODO/checklist for her current tile
+* Mapper must review & certify TODO/checklist complete to mark tile as "done"
+* Any User can subscribe to notifications for all comments made on a tile
+
+Week 2
+
+* Mapper receives a buffer around tile area when beginning work on a new tile
+* PM can view an aerial map of project space by geography
+* PM can view a map displaying active and historical projects
+* PM can see nearby/intersecting projects on the project creation screen
+* PM can see nearby/intersecting projects on the project summary screen
+* Validating a tile acknowledges the Validator for that task
+
+Week 3
+
+* PM can adjust tile size to accommodate varying complexity/difficulty
+* Validator sees error-prone tiles highlighted by OSMA in list of tiles requiring validation
+* PM will see auto suggestions from OSMA when assigning difficulty to a tile
+* Validator is notified when a Mapper is identified by OSMA as needing help
+* Validator can query list of hints (from OSMA) in TM3
+* Mapper will be automatically notified when OSMA anticipates a mistake
+
+Week 4
+
+* [x4 / EPIC] TM3 should provide an API for custom analytics queries
+* Any User can see aggregate analytics on tiles for all of OSM
+* Any User can see aggregate analytics on tiles for a user
+
+#### April ####
+
+Week 1
+
+* [x4] TM3 should support 100,000 simultaneous users
+* Any User can see aggregate analytics on tiles for a project
+* Any User can see aggregate analytics on tiles for a project group
+
+Week 2
+
+* Development buffer / performance & simulation testing
+
+Week 3
+
+* Development buffer / performance & simulation testing
+
+Week 4
+
+* Production hardening for April 30th offical release
+
+#### May ####
+
+Week 1
+
+* Bug fixes
+* Documentation
+
+Week 2
+
+* Staggered roll-off
+* Handoff from nilenso to community
+* Collaborative development with community members
+
+Week 3
+
+* Final handoff
+
+### Sample Timeline Explanation ###
+
+Without stakeholders, relative priorities are guesswork on our part. However, we have hinted at a few realistic scenarios:
+
+* If the system is _not_ rewritten as an API-backed Clojure application, the very first task we are likely to pick up would be finishing the implementation of incomplete API endpoints.
+* Cross-cutting NFRs are likely to be played early on. Internationalization, backing all behaviour with APIs, and authentication for APIs are good examples.
+* Beyond bootstrapping cards like cross-cutting NFRs, the first stories played are likely to be simple and foundational features:
+    * Mapper can self-assign a tile to herself
+    * PM can mark a Mapper with a "Validator" role for a project
+    * [x4] Validator can mark a tile validated in JOSM
+    * PM can assign a Mapper to a tile
+* Conversely, complex features or features which depend on data created by the use of other features are prioritized farther down the list:
+    * PM can adjust tile size to accommodate varying complexity/difficulty
+    * PM will see auto suggestions from OSMA when assigning difficulty to a tile
+    * Mapper will be automatically notified when OSMA anticipates a mistake
+* We have intentionally deprioritized features which appear valuable but not essential ("nice to have"):
+    * Mapper/Validator can request access to a private project
+    * PM/Validator can observe changes made by a Mapper in real time
+    * PM/Validator can see days since account activation for a Mapper
+    * PM can see a list of Mappers for a project
+
+An experienced and involved community of stakeholders will always know more than we do and working through this sample exercise has made us excited to learn the real priorities of work items for TM3.
+
+The real Inception exercise will be much more involved and collaborative. We hope this Sample Inception provides some insight as to how we would go about it, however.
