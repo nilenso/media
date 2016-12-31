@@ -265,6 +265,7 @@ Between the Github issues and the ToR, an excellent list of suggestions is alrea
 
 ![Visual explanation of projects screen real estate](hot-tm2-projects-list.png "Visual explanation of projects screen real estate")
 
+\newpage
 
 ## 6 Our Future ##
 
@@ -279,32 +280,38 @@ Task Manager 3 is a wonderful opportunity. Free maps operate at a very high leve
 
 ### 7-1 Team Staffing Plan ###
 
-To accomodate the 4-month delivery timeline starting on January 6th of 2017, we propose the following staggered roll-on/roll-off plan:
+To accomodate the 4-month delivery timeline starting on January 6th of 2017, we propose a staggered roll-on/roll-off plan.
 
-January
-* Week 1: Proposals are evaluated and perhaps nilenso's is chosen
-* Week 2: Steven, Deepa, Sandy, and Noopur run a project Inception and design kickoff
-* Week 3: Design and development continue with Sandy and Noopur
-* Week 4: Udit joins Sandy as the second developer
+The staggered roll-on of Udit and Akshay accommodates for their current commitments. We will staff them on TM3 earlier, if possible, but at present these are the earliest dates we can guarantee.
 
-February
-* Week 1: Akshay joins Sandy and Udit
+Because the Task Manager is a community-driven product, the weeks in May (after the official April 30th release of TM3) would be used to smoothly transition the nilenso team out of daily development. This includes bringing volunteer contributors up to speed, fixing bugs identified by users in late April, and finish any outstanding documentation. We would remain available to contribute and answer questions through various channels after this, of course.
 
-March
-* Team continues as above
+#### January ####
 
-April
-* Team continues as above
-* Development team may reduce from 3 to 2, depending on progress
+- Week 1: Proposals are evaluated and perhaps nilenso's is chosen
+- Week 2: Steven, Deepa, Sandy, and Noopur run a project Inception and design kickoff
+- Week 3: Design and development continue with Sandy and Noopur
+- Week 4: Udit joins Sandy as the second developer
 
-May
-* Week 1: First developer rolls off, if not in April
-* Week 2: Second developer & Noopur roll off
-* Week 3: Last developer rolls off
+#### February ####
 
-The reason for the staggered roll-on of Udit and Akshay is due to their current commitments. We will staff them on TM3 earlier, if possible. At present, these are the earliest dates we can guarantee.
+- Week 1: Akshay joins Sandy and Udit
 
-Because the Task Manager is a community-driven product, the weeks in May, after the official April 30th release of TM3, would be used to smoothly transition the nilenso team out of daily development. This includes bringing volunteer contributors up to speed, fixing bugs identified by users in late April, and finish any outstanding documentation. We would remain available to contribute and answer questions through various channels after this, of course.
+#### March ####
+
+- Team continues as above
+
+#### April ####
+
+- Team continues as above
+- Development team may reduce from 3 to 2, depending on progress
+
+#### May ####
+
+- Week 1: First developer rolls off, if not in April
+- Week 2: Second developer & Noopur roll off
+- Week 3: Last developer rolls off
+
 
 ### 7-2 Sample Stories ###
 
