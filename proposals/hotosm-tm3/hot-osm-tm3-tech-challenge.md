@@ -182,8 +182,8 @@ Complex systems, such as the Data Science Experimentation Platform (EP) we have 
 
 All of the above of course assumes not just a high level of automation but _complete_ automation. To comprehensively test entire architectures with dynamically generated scenarios and interaction simulations, it must be possible to instrument and script the entire set of services. Often, this means that services are built "API first" to accomodate testing infrastructure in the way that object-oriented systems tended to be built "interface first" in the 1990's and early 2000's when TDD and unit testing really took developer mindshare. Though some projects we deliver continue to leave provisioning of hardware to the sysadmin team, absolutely everything else (orchestration, down) must be completely automated and scriptable or high-functioning testing strategies are impossible. The yin and yang in this situation is again reflective of bad modeling corrected by TDD and unit testing: If we try to write a test and get hung up on a manual process, the first thing we'll do is automate it.
 
-[1] ADRs: http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions
-[2] http://martinfowler.com/articles/consumerDrivenContracts.html
+> [1] ADRs: http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions
+> [2] http://martinfowler.com/articles/consumerDrivenContracts.html
 
 #### 3-2-3 APIs ####
 
@@ -216,7 +216,9 @@ It has only been implied until this point, but to make the point absolutely expl
 
 [Add 4-month timeline with standard disclaimers]
 
-In the appendix, we provide a sample set of stories and a general outline of major milestones after that. It should be noted that this list is in no way exhaustive and does not assume build-out of TM2 or a from-scratch server-side rewrite. Therefore, a reader may notice some stories which describe functionality TM2 already provides.
+[I'm not really sure what to do here. If we come up with any kind of a timeline, it's meaningless because of the next paragraph ("in no way exhuastive")... a disclaimer seems kind of disingenuous, given that we aren't even identifying the full scope of work, much less an estimate of how long it will take. Major milestones, similarly, will be pretty rough without a complete story list. The big difficulty here is doing this with a complete rewrite in mind, since I didn't write cards for every feature of TM2. Perhaps I should have done that. :/ Dang. If we are suggesting Clojure (or Java), a complete rewrite is necessary. This will probably consume at least 25% of their budget (4 weeks), if I had to guess. But that's a wild guess without the specific cards laid out. I'm a little stuck trying to come up with a timeline other than the hypothetical one I had before which made some basic assumptions about the sizes of cards and the developer's anticipated velocity at the Inception. Deepa & Kitty: if you have ideas (a solid idea would be to rough out a quick inception, including real TM2 stories, to fill out the list), I'm happy to let you roll with whatever you feel is best. At worst, let's put the old hypothetical timeline back in to avoid leaving this section blank.]
+
+In the appendix, we provide a sample set of stories [and a general outline of major milestones] after that. It should be noted that this list is in no way exhaustive and does not assume build-out of TM2 or a from-scratch server-side rewrite. Therefore, a reader may notice some stories which describe functionality TM2 already provides.
 
 
 ## 5 Proposed Feature Additions ##
