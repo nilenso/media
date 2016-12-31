@@ -19,9 +19,11 @@
         - 3-2-4 Reuse of Code
 4. Timelines
 5. Proposed Feature Additions
-6. Appendix
-    - 6-1 Sample Stories
-    - 6-2 Sample Timeline
+6. Our Future
+7. Appendix
+    - 7-1 Team Availability
+    - 7-2 Sample Stories
+    - 7-3 Sample Timeline
 
 
 ## 1 Introduction ##
@@ -43,7 +45,7 @@ Our designers and developers speak regularly at conferences, the talks that were
 
 Our team consists of software developers and project managers with decades of experience delivering modular code on lean/agile teams, employing practices which have evolved with the industry over the past two decades.
 
-Our industry experience spans a wide range of verticals: from defense and policing to healthcare, transportation, and climate change. The languages we are familiar with (based on experience within, as well as prior to, nilenso) include Java, Ruby, Python, C#, JavaScript, C/C++, Clojure, Haskell. Collectively, we have made substantial contributions to major open source projects like The GIMP and GNOME.
+Our industry experience spans a wide range of verticals: from defense and policing to healthcare, transportation, and climate change. The languages we are familiar with (based on experience within, as well as prior to, nilenso) include Java, Ruby, Python, C#, JavaScript, C/C++, Clojure, Haskell. Collectively, we have made contributions to major open source projects like The GIMP and GNOME.
 
 Members of our design team are familiar with the OSM ecosystem, participate in HOT, and are dedicated tree-mappers of Bangalore. They understand and have experience working with open data systems. (Details are provided in later sections of this document.)
 
@@ -67,7 +69,7 @@ We have presented on building a PostgreSQL DB cluster at Rootconf 2016:
 
 > https://www.youtube.com/watch?v=sGJDg5ba0iI
 
-We have contributed substantially to monitoring infrastructure in many recent software projects. This includes system-level, JVM-level, application-level, and DB-level monitoring on all of our projects. We have been allowed to release some of the DB and DB monitoring work as open source. All of these repositorires are focused on PostgreSQL:
+We have contributed to monitoring infrastructure in many recent software projects. This includes system-level, JVM-level, application-level, and DB-level monitoring on all of our projects. We have been allowed to release some of the DB and DB monitoring work as open source. All of these repositorires are focused on PostgreSQL:
 
 > - https://github.com/nilenso/honeysql-postgres (not monitoring specific)
 > - https://github.com/staples-sparx/wonko
@@ -97,7 +99,7 @@ They have experience conducting research to understand the needs of the user as 
 - Contextual inquiry: with a focused set of users, by giving them specific tasks to perform, observing their behaviour and talking to them further about their actions during the exercise, in order to better understand their mental model.
 - Task Analysis: of major tasks, along with the intent to understand and further reduce complexity in workflows.
 - Persona creation, as well as focus group discussions and interviews to understand our target audience better.
-- Certain tools such as http://www.inspectlet.com/ and  
+- Certain tools such as http://www.inspectlet.com/ and
 https://www.hotjar.com/ record user interactions in a non-intrusive manner, and can be used for better testing on the web.
 
 Our designers are also familiar with user testing methodologies (either prior to launch of a new product or to test acceptance of new features) by creating mockups and prototypes using prototyping tools.
@@ -196,7 +198,7 @@ Complex systems, such as the Data Science Experimentation Platform (EP) we have 
 
 All of the above of course assumes not just a high level of automation but _complete_ automation. To comprehensively test entire architectures with dynamically generated scenarios and interaction simulations, it must be possible to instrument and script the entire set of services. Often, this means that services are built "API first" to accomodate testing infrastructure in the way that object-oriented systems tended to be built "interface first" in the 1990's and early 2000's when TDD and unit testing really took developer mindshare. Though some projects we deliver continue to leave provisioning of hardware to the sysadmin team, absolutely everything else (orchestration, down) must be completely automated and scriptable or high-functioning testing strategies are impossible. The yin and yang in this situation is again reflective of bad modeling corrected by TDD and unit testing: If we try to write a test and get hung up on a manual process, the first thing we'll do is automate it.
 
-[1] ADRs: https://goo.gl/HFjhsh  
+[1] ADRs: https://goo.gl/HFjhsh
 [2] http://martinfowler.com/articles/consumerDrivenContracts.html
 
 #### 3-2-3 APIs ####
@@ -260,9 +262,25 @@ Between the Github issues and the ToR, an excellent list of suggestions is alrea
 ![Visual explanation of projects screen real estate](hot-tm2-projects-list.png "Visual explanation of projects screen real estate")
 
 
-# 6 Appendix #
+## 6 Our Future ##
 
-## 6-1 Sample Stories ##
+At nilenso, we try to constantly ask ourselves what progress looks like and how we can contribute to the world we inhabit. While each of us may have a preference for a certain domain — the arts, international development, transportation, childhood education — we are all in agreement that technology can have a positive social impact and that we, as a technology co-operative, need to move toward creating that impact with Free Software.
+
+We have had some success in the mission we set for ourselves. We have designed mobile user interfaces for India's rural hospitals with Samanvay. We have built citizen education platforms for fighting climate change with Fact0ry and mobile apps for detecting water quality metrics with Akvo. These are small projects, however, not yet comprising the bulk of what we do.
+
+Task Manager 3 is a wonderful opportunity. Free maps operate at a very high level in humanity's global progress: countless new tools can be built on OpenStreetMap. Individuals and software teams around the globe are completely unfettered when such systems and data exist. HOT pushes this one step further by specifically targeting rapid improvement of maps for the areas which need them most. The Task Manager, by providing coordination and orchestration of teams, will bring efficiency to a global effort that would otherwise be impossible. TM3 is unlike many humanitarian software efforts we have previously evaluated, which don't involve a lot of data, infrastructure, or domain knowledge. Our experience makes us a good match for the management, design, and development challenges TM3 presents and we believe we will make this project a success.
+
+
+## 7 Appendix ##
+
+### 7-1 Team Availability ###
+
+week 1: steven, deepa, sandy, designer — inception and design kickoff
+week 2: design & dev on rewrite
+week 3: udit joins?
+week 5: kitty joins?
+
+### 7-2 Sample Stories ###
 
 The sample story list is as follows. Non-functional requirements are prefixed with _[NFR]_.
 
@@ -329,7 +347,7 @@ The sample story list is as follows. Non-functional requirements are prefixed wi
 * Mapper receives a "Welcome to HOT mapping" email upon first login
 * Mapper receives a buffer around tile area when beginning work on a new tile
 
-## 6-2 Sample Timeline ##
+### 7-3 Sample Timeline ###
 
 [REPLACE THIS / ADD FAKE TIMELINE]
 
