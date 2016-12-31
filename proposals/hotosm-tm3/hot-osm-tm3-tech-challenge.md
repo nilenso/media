@@ -30,11 +30,11 @@ Throughout this application, we hope to address all questions and concerns outli
 
 ## 2 About Us ##
 
-Nilenso is a boutique software consultancy based primarily in Bangalore (India). In our 3-year history, we have built large machine learning, analytics, streaming data, experimentation, and mapping/transportation systems. We continue to run the largest of these systems in production for our clients today. You can read more about our recent work at:
+nilenso is a boutique software consultancy based primarily in Bangalore (India). In our 3-year history, we have built large machine learning, analytics, streaming data, experimentation, and mapping/transportation systems. We continue to run the largest of these systems in production for our clients today. You can read more about our recent work at:
 
 > http://nilenso.com/recent-tech.html.
 
-Our designers and developers speak regularly at conferences and the talks we haven't mentioned can be found here:
+Our designers and developers speak regularly at conferences, the talks that were recorded over the years can be found here:
 
 > http://nilenso.com/talks.html
 
@@ -54,7 +54,7 @@ If we are awarded this project, we intend to staff people from each of these dis
 
 We have experience that is relevant to HOT, OSM, and the Task Manager Challenge.
 
-We have built services and infrastructure within the Staples SparX machine learning team for over 3 years. Staples' Experimentation Platform (EP), in particular, is entirely designed, built, and operated by nilenso. EP handles many terrabytes of streaming data at a rate of 500 requests per second under a Service Level Agreement (SLA) of <10ms in the 99.9th percentile. Akshay Gupta (@kitallis, on Twitter/IRC/Slack) currently leads the EP team and would be our tech lead for Task Manager 3.
+We have built services and infrastructure within the Staples SparX machine learning team for over 3 years. Staples' Experimentation Platform (EP), in particular, is entirely designed, built, and operated by nilenso. EP handles many terabytes of streaming data at a rate of 500 requests per second under a Service Level Agreement (SLA) of <10ms in the 99.9th percentile. Akshay Gupta (@kitallis, on Twitter/IRC/Slack) currently leads the EP team and would be our tech lead for Task Manager 3.
 
 We have presented on the Experimentation Platform architecture at Functional Conf 2015:
 
@@ -95,10 +95,10 @@ They have experience conducting research to understand the needs of the user as 
 
 - Contextual inquiry: with a focused set of users, by giving them specific tasks to perform, observing their behaviour and talking to them further about their actions during the exercise, in order to better understand their mental model.
 - Task Analysis: of major tasks, along with the intent to understand and further reduce complexity in workflows.
-- We have built personas, performed focus group discussions and interviews to understand our target audience better.
-- There are also certain tools such as http://www.inspectlet.com/ and https://www.hotjar.com/. These record user interactions with online applications in a non-intrusive manner, and can be used for better testing on the web.
+- Persona creation, as well as focus group discussions and interviews to understand our target audience better.
+- Certain tools such as http://www.inspectlet.com/ and https://www.hotjar.com/ record user interactions in a non-intrusive manner, and can be used for better testing on the web.
 
-They are also familiar with user testing methodologies (either prior to launch of a new product or to test acceptance of new features) by creating mockups and prototypes using prototyping tools.
+Our designers are also familiar with user testing methodologies (either prior to launch of a new product or to test acceptance of new features) by creating mockups and prototypes using prototyping tools.
 
 In addition, Noopur happens to be a proper mapping enthusiast. Apart from participating in the local mapping parties, she's contributed a tourist map of Uttarakhand on Wikipedia and helped build an interactive AQI map on top of OSM, after the recent pollution level spike in Delhi:
 
