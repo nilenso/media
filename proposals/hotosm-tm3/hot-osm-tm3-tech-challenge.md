@@ -2,25 +2,25 @@
 
 # Application: Nilenso Software LLP (nilenso), a limited liability partnership firm #
 
-- 1 Introduction
-- 2 About Us
+1. Introduction
+2. About Us
     - 2-1 Our Team
     - 2-2 Our Experience in Development
     - 2-3 Our Experience in Design
     - 2-4 Our Experience in Project Management
     - 2-5 Process / Collaboration / Communication
-       - 2-5-1 Inception
-- 3 Implementation
-       - 3-1 Design
-       - 3-2 Development
-           - 3-2-1 Tech Stack
-           - 3-2-2 Documentation
-           - 3-2-3 APIs
-           - 3-2-4 Reuse of Code
-- 4 Timelines
-- 5 Proposed Feature Additions
-- 6 Appendix
-   - 6-1 Sample Stories
+        - 2-5-1 Inception
+3. Implementation
+    - 3-1 Design
+    - 3-2 Development
+        - 3-2-1 Tech Stack
+        - 3-2-2 Documentation
+        - 3-2-3 APIs
+        - 3-2-4 Reuse of Code
+4. Timelines
+5. Proposed Feature Additions
+6. Appendix
+    - 6-1 Sample Stories
 
 
 ## 1 Introduction ##
@@ -68,12 +68,12 @@ We have presented on building a PostgreSQL DB cluster at Rootconf 2016:
 
 We have contributed substantially to monitoring infrastructure in many recent software projects. This includes system-level, JVM-level, application-level, and DB-level monitoring on all of our projects. We have been allowed to release some of the DB and DB monitoring work as open source. All of these repositorires are focused on PostgreSQL:
 
-- https://github.com/nilenso/honeysql-postgres (not monitoring specific)
-- https://github.com/staples-sparx/wonko
-- https://github.com/staples-sparx/wonko-client
-- https://github.com/staples-sparx/pg-cluster-setup
-- https://github.com/staples-sparx/repmgr-to-zk
-- https://github.com/nilenso/postgresql-monitoring
+> - https://github.com/nilenso/honeysql-postgres (not monitoring specific)
+> - https://github.com/staples-sparx/wonko
+> - https://github.com/staples-sparx/wonko-client
+> - https://github.com/staples-sparx/pg-cluster-setup
+> - https://github.com/staples-sparx/repmgr-to-zk
+> - https://github.com/nilenso/postgresql-monitoring
 
 Unfortunately, although we have implemented internationalization (i18n) and built or extended translation tools on a number of projects, very little of this work is open source.
 
@@ -87,27 +87,28 @@ Developers from nilenso have also run training and courses in ReactJS, Haskell, 
 
 Our small design team lead by Noopur (@9porcupine on Slack/Twitter) and Varun (@irrational_pai) has also produced a lot of impactful work in a short span of time. They are currently working with Samanvay Foundation; designing a mobile application that helps ground-forces in rural areas quickly diagnose (with the help of an on-board medical professional) basic health issues and audit all the patient information. All their work has been open source since day one:
 
-- http://samanvayfoundation.org
-- https://github.com/OpenCHS
-- https://goo.gl/dfSOAs (designs are in-progress)
+> - http://samanvayfoundation.org
+> - https://github.com/OpenCHS
+> - https://goo.gl/dfSOAs (designs are in-progress)
 
 They have experience conducting research to understand the needs of the user as well as their behaviour in the form of:
 
 - Contextual inquiry: with a focused set of users, by giving them specific tasks to perform, observing their behaviour and talking to them further about their actions during the exercise, in order to better understand their mental model.
 - Task Analysis: of major tasks, along with the intent to understand and further reduce complexity in workflows.
 - Persona creation, as well as focus group discussions and interviews to understand our target audience better.
-- Certain tools such as http://www.inspectlet.com/ and https://www.hotjar.com/ record user interactions in a non-intrusive manner, and can be used for better testing on the web.
+- Certain tools such as http://www.inspectlet.com/ and  
+https://www.hotjar.com/ record user interactions in a non-intrusive manner, and can be used for better testing on the web.
 
 Our designers are also familiar with user testing methodologies (either prior to launch of a new product or to test acceptance of new features) by creating mockups and prototypes using prototyping tools.
 
-In addition, Noopur happens to be a proper mapping enthusiast. Apart from participating in the local mapping parties, she's contributed a tourist map of Uttarakhand on Wikipedia and helped build an interactive AQI map on top of OSM, after the recent pollution level spike in Delhi:
+In addition, Noopur is a proper mapping enthusiast. Apart from participating in the local mapping parties, she's contributed a tourist map of Uttarakhand on Wikipedia and helped build an interactive AQI map on top of OSM, after the recent pollution level spike in Delhi:
 
-- https://en.wikipedia.org/wiki/File:Schematic_Tourist_Map_of_Uttarakhand.jpg
-- http://ocsidlab.github.io/earthmap/#4/21.15/79.08
+> - https://goo.gl/824oOI
+> - http://ocsidlab.github.io/earthmap/#4/21.15/79.08
 
 ### 2-4 Our Experience in Project Management ###
 
-Deepa (@deepa/@deepa_v) and Steven (@steven/@deobald) are our two project managers. Project Management has meant many different things on our many projects. Since we are uncertain which variables will weigh most heavily on the HOT TM3 project, we will provide a few examples.
+Deepa (@deepa_v on Twitter, @deepa on Slack) and Steven (@deobald on Twitter, @steven on Slack) are our two project managers. Project Management has meant many different things on our many projects. Since we are uncertain which variables will weigh most heavily on the HOT TM3 project, we will provide a few examples.
 
 Our first, and possibly most substantial project, is nilenso itself. Deepa joined us as an Executive over one year ago, balancing our budget, forcing every implicit decision out into the open, deftly facilitating conversation where others' expertise was most valuable and asking incisive questions everywhere else. She has now overseen a number of projects at nilenso, both consulting and internal.
 
@@ -135,7 +136,7 @@ Specifically for TSM3, we would ideally suggest identifying an individual or gro
 
 A group approval and prioritization process is possible if it is executed in real time, and we would strongly recommend one such process which we have used to great success on many projects: a project Inception.
 
-[1] We are intimately familiar with most of the project management tools out there: Pivotal Tracker, Mingle, JIRA, Trello, paper-stickies-on-a-wall, and of course, Github.
+[1] We are intimately familiar with most of the project management tools out there: _Pivotal Tracker_, _Mingle_, _JIRA_, _Trello_, paper-stickies-on-a-wall, and of course, _Github_.
 
 #### 2-5-1 Inception ####
 
@@ -173,7 +174,7 @@ We propose writing TM3 in Clojure. There are a few major reasons for this:
 
 - We are not Python experts and we would venture a guess that it would take us longer to become fully proficient in the Python ecosystem (tools, libraries, idioms etc.) than it would take us to rewrite the fairly thin 4000 lines of Python in TM2's server-side code. Which means it goes without saying, that it would be a natural part of this rewrite to guide the current set of contributors through the language and set appropriate contribution and language guidelines early on in the project.
 
-However, we'd rather tread carefully and not marry ourselves to this proposition. We caveat our own argument for Clojure by being well aware of the fact that the community is used to contributing in Python, and Clojure is more or less, still a niche. In some of our client projects in the past, we have followed a process of refactoring the existing codebase, redesigning a new one and rewriting it in Clojure. Since we have finite time and budget, it makes sense to refactor (as necessary) and implement the proposed features. If needed, we're also completely open to talking about it outside of this document, since it's better decided as a conversation with the community and the stakeholders.
+However, we'd rather tread carefully and **not** marry ourselves to this proposition. We caveat our own argument for Clojure by being well aware of the fact that the community is used to contributing in Python, and Clojure is more or less, still a niche. In some of our client projects in the past, we have followed a process of refactoring the existing codebase, redesigning a new one and rewriting it in Clojure. Since we have finite time and budget, it makes sense to refactor (as necessary) and implement the proposed features. If needed, we're also completely open to talking about it outside of this document, since it's better decided as a conversation with the community and the stakeholders.
 
 Regardless of language and stack, our infrastructure, automation, and deployment approach is always built on top of an OSS toolchain. Last year, for corporate political reasons, we had to move all of our services for one client from AWS to a "private cloud". Had we built anything AWS-dependent, this process would have been impossible.
 
@@ -195,8 +196,8 @@ Complex systems, such as the Data Science Experimentation Platform (EP) we have 
 
 All of the above of course assumes not just a high level of automation but _complete_ automation. To comprehensively test entire architectures with dynamically generated scenarios and interaction simulations, it must be possible to instrument and script the entire set of services. Often, this means that services are built "API first" to accomodate testing infrastructure in the way that object-oriented systems tended to be built "interface first" in the 1990's and early 2000's when TDD and unit testing really took developer mindshare. Though some projects we deliver continue to leave provisioning of hardware to the sysadmin team, absolutely everything else (orchestration, down) must be completely automated and scriptable or high-functioning testing strategies are impossible. The yin and yang in this situation is again reflective of bad modeling corrected by TDD and unit testing: If we try to write a test and get hung up on a manual process, the first thing we'll do is automate it.
 
-> [1] ADRs: http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions
-> [2] http://martinfowler.com/articles/consumerDrivenContracts.html
+[1] ADRs: https://goo.gl/HFjhsh  
+[2] http://martinfowler.com/articles/consumerDrivenContracts.html
 
 #### 3-2-3 APIs ####
 
@@ -218,7 +219,7 @@ In our experience, one major quality of well-designed APIs is a clear and explic
 
 It has only been implied until this point, but to make the point absolutely explicit: We will create APIs early with clear definitions, with the intention of facilitating both testing and integration with other HOT software products. Goal 5 from the TM3TC will be addressed continuously throughout development.
 
-> [1] https://github.com/hotosm/osm-tasking-manager2/wiki/API#tasks
+[1] https://github.com/hotosm/osm-tasking-manager2/wiki/API#tasks
 
 ### 3-2-4 Reuse of Code ###
 
@@ -252,19 +253,20 @@ Between the Github issues and the ToR, an excellent list of suggestions is alrea
 
 7. **Include demos with corresponding tasks.** If a particular tile requires a specific skill (as laid out by the TODO/checklist), the creator of the tile can also include an embedded/linked demo or instruction to help guide new Mappers. The available list of embedded/linked help could be prepopulated with common activities (and their pitfalls) so tile creators could add them easily or even automatically. Project Managers and Administrators could edit this prepopulated list. Examples of instructions and demos include:
 
- - http://learnosm.org
- - https://youtu.be/Ir-3K0pjwOI?t=6m36s
- - https://www.mapbox.com/blog/tags/openstreetmap-101/
+> - http://learnosm.org
+> - https://youtu.be/Ir-3K0pjwOI?t=6m36s
+> - https://www.mapbox.com/blog/tags/openstreetmap-101/
 
 8. **Make better use of Project list screen space.** Sometimes small, inexpensive changes provide huge returns. The Project list screen consumes the right-hand 50% for an introduction to the Tasking Manager, OSM, and HOT. After scrolling past this first screen, this screen real estate is lost.
 
 ![Visual explanation of projects screen real estate](hot-tm2-projects-list.png "Visual explanation of projects screen real estate")
 
+
 # 6 Appendix #
 
 ## 6-1 Sample Stories ##
 
-The sample story list is as follows. Non-functional requirements are prefixed with "[NFR]".
+The sample story list is as follows. Non-functional requirements are prefixed with _[NFR]_.
 
 > _NB: Since one of the Github issues listed is "Consistency in terminology: tasks,
 > tiles, and squares" (https://github.com/hotosm/osm-tasking-manager2/issues/912),
