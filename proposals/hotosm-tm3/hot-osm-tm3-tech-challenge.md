@@ -537,7 +537,7 @@ Week 3
 
 Week 4
 
-* Production hardening for April 30th offical release
+* Production hardening for April 30th official release
 
 #### May ####
 
