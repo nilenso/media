@@ -1,0 +1,2 @@
+reconnect_attempts=6
+reconnect_interval=10

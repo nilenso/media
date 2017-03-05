@@ -1,0 +1,13 @@
+* gitlab
+
+- heavy writes, locks on db
+- db replication lagged behind
+- rm -rf production db
+- had to recover from staging, got back up [figure 1, graph of db dying and coming back from https://about.gitlab.com/images/db_incident/delete.png]
+
+* postgres cluster
+
+- database cluster is a cluster of databases in a single postgres server on a single machine
+- A PostgreSQL database "cluster" is a postmaster and a group of subsiduary processes, all managing a shared data directory that contains one or more databases
+- compute cluster is the preferred term for this
+- replicas
