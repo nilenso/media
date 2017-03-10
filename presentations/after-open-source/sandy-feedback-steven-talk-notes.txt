@@ -1,0 +1,66 @@
+- overall: "a lot of little things"
+- make applying philosophy elsewhere more explicit
+- be careful not to derail when explaining verbally
+- some thoughts are difficult to express
+- thoughtful visuals
+- keep unfamiliar thoughts short
+
+- why open source
+- datamining? concrete example
+- plumber -> janitor/librarian?
+- what if you had code librarians?
+- attention might slip due to unfamiliarity
+- habitability? -> accessibility?
+- difficult to change programs with manual memory management
+  - punchcard = past, auto concurrency = future
+- the same is true for big monolithic codebases
+- manual driving? -- maybe put this on the curve slide, but remove it from this slide
+- outer habitability -- very future-focused
+- reasons for open source ends at slide 19
+
+- why free software?
+- /r/StallmanWasRight
+- end this section on slide 27(?)
+- slide 28: a school should prepare its citizens to live in a strong, capable, independent, cooperating and free society.
+
+
+-- next two sections are about governance/policy
+- the next few slides feel like a bit of a brain dump
+- slides 35-38 ?? (ideas are more viral than any license)
+  - can evangelize ideas because tech is adjacent to other industries
+- 37-38 in particular feel weird
+
+- 39: strong, capable, independent
+- remove 'in the abstract' and 'in the concrete'
+- datamining is real
+- data is code: (Rich Hickey disagrees) data is not code until you define a language around it
+- in the abstract vs in the concrete seem unrelated
+- in the concrete: say no to software patents, get into politics (?)
+- net neutrality win is something we must continue to fight for
+- maybe add modi poster picture?
+- conclusion should be 'not us vs them, become them'
+
+- capable
+- time is part of the definition of capability
+- define: capable
+- slides 56-57: patents-related? 
+- move earlier software patents slide into here (tshirt flag slide)
+- this is the software patents section
+
+- free
+- might want to explain deepwater horizon situation
+- consider elaborating on patent shittiness
+- seed patents: "biological vendor lock-in"
+
+- cooperating
+- go board
+- keep the quick aside quick
+- cooperative agreement fork:
+  - co-ops + fork?
+  - just fork?
+  - skeleton of nilenso + fork?
+
+- the future
+- remove slide 76: xamarin stuff
+- "everything breathes": things will change, don't get hung up
+- change "nothing is boring" to "everything is interesting"
