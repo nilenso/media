@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2122263"
-     inkscape:cx="416.46846"
+     inkscape:cx="405.33193"
      inkscape:cy="865.71429"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -76,6 +76,8 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.20573807;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 692.28994,210.40633 641.61944,172.6923 Z"
        id="path4258"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
   </g>
 </svg>
