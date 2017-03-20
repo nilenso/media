@@ -79,7 +79,7 @@ This is a direct quote from Georges Perec's "La Vie mode d'emploi". The quote (G
 
 The third matter over aesthetics: "useless, its gratuitousness is the only guarantee of its rigor, the project would destroy itself as and when it would be finished; his perfection would be circular: a succession of events which, merging, would cancel" at the same Bartlebooth creative cycle whose purpose is the destruction of the work on the spot where it was created.
 
-Only the quoted portion has been kept. While a beautiful bit of prose in itself, even in broken English, this quote describes the use of mathematics in the book to define the book's overall structure. The book is part of the Oulipo movement and uses mathematical constraints and recursion. Specifically, the main character's behaviour in teh book is one component of the overarching Knight's Tour which describes each resident of a 10x10 grid of apartments. His aims are never achieved, nor is the Knight's Tour -- it falls short at 99 moves of 100. The character (Bartlebooth) desctroys his own art in an overly complex sequence of carving it into jigsaw puzzles and then eliminating the paint so only the jigsaw shapes remain. This is the "perfect, rigorous, circular cancellation of events."
+Only the quoted portion has been kept. While a beautiful bit of prose in itself, even in broken English, this quote describes the use of mathematics in the book to define the book's overall structure. The book is part of the Oulipo movement and uses mathematical constraints and recursion. Specifically, the main character's behaviour in the book is one component of the overarching Knight's Tour which describes each resident of a 10x10 grid of apartments. His aims are never achieved, nor is the Knight's Tour -- it falls short at 99 moves of 100. The character (Bartlebooth) desctroys his own art in an overly complex sequence of carving it into jigsaw puzzles and then eliminating the paint so only the jigsaw shapes remain. This is the "perfect, rigorous, circular cancellation of events."
 
 It's almost as if Perec is describing the latter chapters of SICP or the original McCarthy whitepaper. Not surprisingly, Donald Knuth describes the book as "perhaps the greatest 20th century novel."
 
@@ -97,7 +97,7 @@ The blurb of French is just to sound pretentious. Farb-rausch is about as preten
 
 ".the .product" was also full of visual OOP self-refrence, as each physical object was bizarrely labelled with its own name (".hund", for example) within the video... which, at first, seems like a glitch or oversight.
 
-Because the Knight's Tour can be interpreted as a compression algorithm, scenester compression demos are a weak reference. "A Poem to a Horse" is another weak referenceto the Knight's Tour. Googling "Farbrausch" alone should get someone within a couple clicks of solving this key to the puzzle.
+Because the Knight's Tour can be interpreted as a compression algorithm, scenester compression demos are a weak reference. "A Poem to a Horse" is another weak reference to the Knight's Tour. Googling "Farbrausch" alone should get someone within a couple clicks of solving this key to the puzzle.
 
 
 Cube Inside Paragraph 2
@@ -109,7 +109,7 @@ The value of formal systems and formal grammars are not lost on Computer Scienti
 
 "In designing his grammar, Pāṇini used the method of "auxiliary symbols", in which new affixes are designated to mark syntactic categories and the control of grammatical derivations. This technique, rediscovered by the logician Emil Post, became a standard method in the design of computer programming languages."
 
-...to think that the process for codifying computer languages came 2400 years ago is kind of nice.
+...to think that the process for codifying computer languages came about 2400 years ago is kind of nice.
 
 To be fair, I think we'd probably also take "Pātāla Vijaya" as a good-job-close-enough key to the second puzzle piece... though that won't really help the person, since they'd be missing out on the reference to the Knight's Tour.
 
@@ -117,7 +117,7 @@ To be fair, I think we'd probably also take "Pātāla Vijaya" as a good-job-clos
 Cube Inside Paragraph 3
 -----------------------
 
-"La Disparition" is another title by Perec, which has been translated to English (and other languages) multiple times under multiple different names. The most popular English translation is "A Void". Our use of "panache" is a hint at the fact that this paragraph references the French quote on the other side of the cube. The quote should be enough to find this key to the puzzle.
+"La Disparition" is another title by Perec, which has been translated to English (and other languages) multiple times under multiple different names. The most popular English translation is "A Void". Our use of "panache" is a hint at the fact that this paragraph references the French quote on the other side of the cube. The quote should be enough to find this key to the puzzle but there are not too many famous literary works which fit the description "mathematically constrained".
 
 
 Cube Inside Paragraph 4
@@ -127,6 +127,6 @@ In the way Perec uses recursion to describe the characters, who themselves descr
 
 The notion of "machine dignity" is that of the 20% (or lower) probability rule for AlphaGo in which it concedes a game if its search tree determines its probability of winning to be 20% or less.
 
-March 13th, 2016 was the 4th game of AlphaGo vs. Lee Sedol. Maki Dai Dai Shogi is a huge version of chess played on a 19x19 grid in ancient Japan, and is the earliest Japenese reference to the game of chess. The "Knight's Move" (Keima) in Go is made along the same 1x2 shape, but on the lines rather than in the squares. Go also has a "Large Knight's Move" (1x3), a "Very Large Knight's Move" (1x4), and a "Very, Very Large Knight's Move" ("maka dai dai") which is where our reference to "Maha Dai Dai Shogi" (Very Very Large Chess) comes from. As a cute bit of "whoa maaaaan, this works on so many levels", a Maka Dai Dai Shogi board is _almost_ the same size as a Go-Ban, but not quite: a Go-Ban is 19x19 lines and a Maka Dai Dai Shogi board is 19x19 squares. To use one for the other ("the battlefield itself") would constitute an off-by-one error. By pointing the player back to "the tactic" we draw them back to looking for the "Knight's Move", which was, in fact, the last significant move made by AlphaGo before Sedol took the lead and won the game. It is almost certainly the last Go game to be one by a human against the most advanced AI opponent, so this is quite a significant move. That game was our last stand and evidence enough that although AI has taken over, we were literally watching it take over in real time. We were straddling the border: humans not entirely defeated, robots not entirely victorious. Yet.
+March 13th, 2016 was the 4th game of AlphaGo vs. Lee Sedol. Maka Dai Dai Shogi is a huge version of chess played on a 19x19 grid in ancient Japan, and is the earliest Japenese reference to the game of chess. The "Knight's Move" (Keima) in Go is made along the same 1x2 shape, but on the lines rather than in the squares. Go also has a "Large Knight's Move" (1x3), a "Very Large Knight's Move" (1x4), and a "Very, Very Large Knight's Move" ("maka dai dai") which is where our reference to "Maha Dai Dai Shogi" (Very Very Large Chess) comes from. As a cute bit of "whoa maaaaan, this works on so many levels", a Maka Dai Dai Shogi board is _almost_ the same size as a Go-Ban, but not quite: a Go-Ban is 19x19 lines and a Maka Dai Dai Shogi board is 19x19 squares. To use one for the other ("the battlefield itself") would constitute an off-by-one error. By pointing the player back to "the tactic" we draw them back to looking for the "Knight's Move", which was, in fact, the last significant move made by AlphaGo before Sedol took the lead and won the game. It is almost certainly the last Go game to be won by a human against the most advanced AI opponent, so this is quite a significant move. That game was our last stand and evidence enough that although AI has taken over, we were literally watching it take over in real time. We were straddling the border: humans not entirely defeated, robots not entirely victorious. Yet.
 
 Between Go, Chess, Clojure, LISP, language, math, logic, and horses... we have plenty in this key to back-reference other aspects of the puzzle.
