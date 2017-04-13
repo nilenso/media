@@ -1,0 +1,22 @@
+
+* BRANCHING
+
+** Distributed version control is an immutable database
+
+- see ./04-branches-immutable-dbs.jpg
+- see https://trunkbaseddevelopment.com/
+- Try both, but only use one per project.
+
+** Horror story: Ryan's 2-week unsync'd, un-roll-backable commit
+
+- time
+- sync
+- rollback (health, safety)
+- API => schema => data (implicit schema) => behaviour (implicit data)
+- commit to master
+- deployment
+- migration
+- testing
+- communication
+
+** Doing it right: What is the reverse of each of the above?

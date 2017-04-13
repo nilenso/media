@@ -1,0 +1,35 @@
+
+* README
+
+- [ ] first install vs. upgrade (deploy vs. redeploy)
+- [ ] README is square one
+
+** deploy
+
+- [ ] 1. dependencies
+- [ ] 2. `make && make install` (admin) vs. `./install` (user)
+- [ ] 2. a) config (by env. see ./02-config-files.jpg)
+- [ ] 2. b) db install - schema (migration 0), migrations, seed data
+
+** redeploy
+
+- [ ] 1. `./upgrade`
+- [ ] 1. a) stop service
+- [ ] 1. b) migrate data
+- [ ] 1. c) install new software
+- [ ] 1. d) restart service
+
+** Deployment models
+
+*** "Proprietary": an admin (you?) deploys an instance of a web service from git to a single location/server (perhaps local cloud) -- all users
+*** "Open Source": admins deploy instances of a web service from git to different locations/servers, different users
+*** Clustered: admins (perhaps you) deploy load-balanced or separate instances of the service to multiple locations
+*** Federated: SendMail, XMPP, etc.
+*** P2P: Serverless (not WS-lambda) leaf node architecture with a seamless user-only deployment
+
+** Destinations (all of which are distributed computing nodes)
+
+*** servers
+*** phones
+*** desktops
+*** specialized hardware (raspberry pi in the forest, bicycle sharing kiosks, etc.)

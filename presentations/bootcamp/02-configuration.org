@@ -1,0 +1,29 @@
+
+* CONFIGURATION
+
+** The Basics
+
+- ./02-config-files.jpg
+- Rails envs are *samples*
+
+** Push vs. Pull
+
+- ./03-config-envs-approach.jpg
+
+** What and is not configuration?
+
+*** This is configuration:
+
+- dev / meta:
+  - db
+  - external services
+  - flags
+  - timeouts
+  - i18n? (debatable but probably not)
+
+*** This is not configuration:
+
+- i18n ...is a category unto itself
+
+- user preferences, even if that user is an "admin" of any sort
+  - on the desktop, preferences may be user-level config (e.g. Slack)

@@ -1,0 +1,13 @@
+
+* REFACTORING
+
+** conflicting interests:
+
+- move code & tests (extract)
+- "yak shave"       (cleanup)
+- build             (new features)
+- test              (harden)
+
+- see ./17-eccentrica-refactor-vectors.jpg
+
+- how? what is safe? when to break the rules?

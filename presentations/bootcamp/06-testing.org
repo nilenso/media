@@ -1,0 +1,31 @@
+
+* TESTING
+
+** Intro
+
+setup + act + assert
+
+** Values and shapes
+
+- models vs. stubs - what is "testing purity"?
+- builders `(create :deposit 20)`
+- deepEqual (by-ref vs. by-value)
+
+** Testing sin
+
+- db access / filesystem
+- async
+- see ./08-testing.jpg
+
+- date/time
+- see ./16-test-clock.jpg
+
+** Testing purity
+
+- "object-oriented programming" is about *messages*
+- see ./08-testing.jpg
+- see ./15-tests-domain-fp-io.jpg
+
+** The testing pyramid
+
+- see ./08-testing.jpg

@@ -1,0 +1,41 @@
+* Deployment Notes
+
+** Next Release
+
+- This release is non rollbackable; making incremental changes to the db would require a
+  significantly larger effort so the extraction of `merchants` from `users` is not hidden
+  behind a feature flag (that would require keeping both schemas live simultaneously).
+- This entire release is depenedent on the corresponding branch from Furtive
+  (`separate-users-and-merchants-in-magrathea`) being released into any environments first. It
+  contains a feature flag to switch between reading from the `users` and `merchants` tables when
+  looking up merchants.
+- HOW TO: Separate merchants from users
+  0. Make sure the corresponding Furtive branch has been released.
+
+  1. before anything else, take a dump of the staging/production/etc database in its current state
+    ...if something goes desperately wrong, roll back to the previous release (2015-11-09-1)
+
+  2. some environments require data cleanup (staging, production, ...others?):
+
+#+begin_src
+./bin/db-cleanup-merchant-data.sh
+#+end_src
+
+  3. requires migrations:
+
+#+begin_src
+migrate-20151016155817-remove-unused-columns-from-users-table.sql
+migrate-20151028112402-remove-more-unused-columns-from-users-table.sql
+migrate-20151029120733-add-admin-and-regular-roles.sql
+migrate-20151029132058-add-merchant-related-columns-to-merchants.sql
+migrate-20151029172539-add-correct-timestamp-columns-to-merchants.sql
+migrate-20151102114849-move-store-rows-from-users-table-to-merchants-table.sql
+migrate-20151102194309-skus-pk-fix.sql # this should be run in the previous release (2015-11-09-1)
+migrate-20151103142444-add-timestamp-columns-to-user-merchant.sql
+migrate-20151103172014-add-cascade-delete-foreign-key-constraint-on-user-merchant.sql
+migrate-20151104102410-add-id-column-to-user-merchant-join-table.sql
+migrate-20151105125824-remove-level-from-users.sql
+migrate-20151105181457-add-merchant-admin-role-to-roles.sql
+#+end_src
+
+  4. Turn on the new feature bit in Furtive (:use-magrathea-merchants-table) and test Furtive.
