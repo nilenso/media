@@ -1,6 +1,9 @@
 
 * TIME
 
+- each consecutive category of time management engulfs all previous categories,
+  from light to heavy
+
 ** Lightweight
 
 - objects (lifecycle), functions/data
@@ -23,4 +26,4 @@
 - schema & data [as it pertains to] git
 - API consumption
 - deployment
-- machine state ("DevOps")
+- machine & network state ("DevOps")
