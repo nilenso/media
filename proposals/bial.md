@@ -75,7 +75,7 @@ We have contributed to monitoring infrastructure in many recent software project
 
 Unfortunately, although we have implemented internationalization (i18n) and built or extended translation tools on a number of projects, very little of this work is open source.  Similarly proprietary is our most recent legacy replacement work on the driver allocation service for an Indonesian Uber competitor. We rewrote this service in Clojure with an extensive generative testing suite (and minimal unit tests for single-value edge cases). Thanks to generative testing and developer discipline, the service was released with zero production issues and completely replaced the legacy software on its first day in production.  
 
-This was not our first Clojure rewrite, however. We also rewrote Staples SparX's configuration management, legacy data feed integration, and reporting tools in Clojure. This work involved a different style of testing. First, these services were built with large and comprehensive unit test suites for all known use cases. Then the new services were delivered alongside the legacy (Ruby) services in all environments and validated for multiple months. Once the Clojure services produced results consistent with the legacy services (as confirmed by automated validation software provided by us to the QA team), 3rd party services were redirected to new APIs and the legacy services were turned off. This process was slow but not expensive and finished without a single interruption to existing clients.  
+We also rewrote Staples SparX's configuration management, legacy data feed integration, and reporting tools in Clojure. This work involved a different style of testing. First, these services were built with large and comprehensive unit test suites for all known use cases. Then the new services were delivered alongside the legacy (Ruby) services in all environments and validated for multiple months. Once the Clojure services produced results consistent with the legacy services (as confirmed by automated validation software provided by us to the QA team), 3rd party services were redirected to new APIs and the legacy services were turned off. This process was slow but not expensive and finished without a single interruption to existing clients.  
 
 Developers from nilenso have also run training and courses in ReactJS, Haskell, and Clojure.  
 
@@ -87,13 +87,13 @@ Our design team led by Noopur and Varun have experience conducting research to u
 - Certain tools such as http://www.inspectlet.com/ and https://www.hotjar.com/ record user interactions in a non-intrusive manner, and can be used for better testing on the web.  Our designers are also familiar with user testing methodologies (either prior to launch of a new product or to test acceptance of new features) by creating mockups and prototypes using prototyping tools. 
 
 ### Our Experience in Project Management ###  
-Deepa (@deepa_v on Twitter, @deepa on Slack) and Steven (@deobald on Twitter, @steven on Slack) are our two project managers. 
+Deepa and Steven are our two project managers. 
 
-Deepa has managed projects at nilenso ([time tracker]) and kosha [link] as well as nilenso as a project. She brings significant business expertise from her previous roles as an investment banker, and entrepreneur.
+Deepa has managed projects at nilenso ([time tracker]) and kosha [link] as well as nilenso as a project. She brings to nilenso and the projects she manages significant business expertise from her previous roles as an investment banker, and entrepreneur.
 
-Steve has led software teams for a decade across the Americas, Europe, and Asia. He has run project Inceptions (discussed in the next section) as short as one day for a small nonprofit and as long six weeks for a data warehousing company looking to redefine its entire vision.  
+Steve has led software teams for a decade across the Americas, Europe, and Asia. He has run project Inceptions as short as one day for a small nonprofit and as long six weeks for a data warehousing company looking to redefine its entire vision.  
 
-We have used our business modelling experience to help a local orphanage with self-sustainability. We have saved weeks of lost time from large projects which simply lacked a clear glossary. We have dealt with issues at all levels and we do not shy away from difficult conversations. 
+
 
 
 
