@@ -1,4 +1,4 @@
-#Proposal for BIAL application##
+# Proposal for BIAL application #
 
 ## Problem Definition ##
 
