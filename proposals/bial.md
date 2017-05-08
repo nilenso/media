@@ -17,8 +17,12 @@ We believe that open lines of communication and planning/projection which employ
 An Inception is a high-intensity kickoff to a project, which captures a shared understanding of the high level goals, their priorities, their budgets, and their limitations. The remainder and majority of the Inception then attempts to capture features (or "user stories", preferably, as these frame each feature in terms of how it benefits the end user), estimate them if necessary, and prioritize them. Whether stories are individually estimated or not, they are then packed into a few sample weeks of the project to rough out the expected pace of development. Stories can be reprioritized as the project progresses and the initial projection will be updated every week with the team's actual rate of progress. The project's scope is adjusted every week accordingly. 
 
 ### Design ###
--- Research
--- Prototyping and Testing
+Our design team led by Noopur and Varun have experience conducting research to understand the needs of the user as well as their behaviour in the form of: 
+ - Contextual inquiry: with a focused set of users, by giving them specific tasks to perform, observing their behaviour and talking to them further about their actions during the exercise, in order to better understand their mental model. 
+- Task Analysis: of major tasks, along with the intent to understand and further reduce complexity in workflows. - Persona creation, as well as focus group discussions and interviews to understand our target audience better. 
+- Certain tools such as http://www.inspectlet.com/ and https://www.hotjar.com/ record user interactions in a non-intrusive manner, and can be used for better testing on the web.  Our designers are also familiar with user testing methodologies (either prior to launch of a new product or to test acceptance of new features) by creating mockups and prototypes using prototyping tools. 
+
+-- Prototyping and Testing / Iterative Approach
 
 ### Tech Stack Considerations ###
 Comparison
@@ -81,10 +85,12 @@ Developers from nilenso have also run training and courses in ReactJS, Haskell, 
 
 ### Our Experience in Design ###  
 
-Our design team led by Noopur and Varun have experience conducting research to understand the needs of the user as well as their behaviour in the form of: 
- - Contextual inquiry: with a focused set of users, by giving them specific tasks to perform, observing their behaviour and talking to them further about their actions during the exercise, in order to better understand their mental model. 
-- Task Analysis: of major tasks, along with the intent to understand and further reduce complexity in workflows. - Persona creation, as well as focus group discussions and interviews to understand our target audience better. 
-- Certain tools such as http://www.inspectlet.com/ and https://www.hotjar.com/ record user interactions in a non-intrusive manner, and can be used for better testing on the web.  Our designers are also familiar with user testing methodologies (either prior to launch of a new product or to test acceptance of new features) by creating mockups and prototypes using prototyping tools. 
+Our small design team is led by Noopur and Varun. Noopur has studied Information and Interface Design at NID, while I have worked as a freelance designer and more recently, as a product designer at Scroll.in and SupportBee. Between them, we have designed web apps as well as iOS and Android mobile applications. They also have experience with user research, prototyping, wireframing, and writing good quality html/css.
+
+They have produced a lot of impactful work in a short span of time. Some of their recent work has been open sourced:  
+> - http://samanvayfoundation.org 
+> - https://github.com/OpenCHS 
+
 
 ### Our Experience in Project Management ###  
 Deepa and Steven are our two project managers. 
