@@ -58,6 +58,7 @@ Proposed features (please note this is an indicative sample set, a comprehensive
 - "Spotlight" style search [Appendix]
 - Improving the search based on past user queries
 - In-app vs google places vs additional search [Appendix 2: Benefits -- Intent based search, Discoverability -- improve accessibility]
+- WiFi without signin to allow app download
 
 ### Proposed UX improvements: Near-Term ###
 - Allow iOS users to swipe back to go to the previous screen (accepted UX behaviour in iOS)
@@ -67,8 +68,10 @@ Proposed features (please note this is an indicative sample set, a comprehensive
 - Flight Check-in
 - Booking a bus from and to the airport (including payment)
 - Booking a cab from and to the airport (including payment)
-- B2B: allow service providers to update their profiles, which will appear in the app (and search) once vetted
+- B2B: provide flight status across multiple flights to transport and hospitality industry partners
+- B2B: allow service providers at the airport to update their profiles, which will appear in the app (and search) once vetted
 - B2B: allow service providers to A/B test their offers across various categories of users
+- Update on waiting times (Predictive modeling for traffic flow)
 
 ### Long-Term Vision ###
 - Developing a plug-and-play portal for the entire airport ecosystem, including employees, airlines, service providers located at and away from, the airport
