@@ -13,7 +13,7 @@ Please note: The feature has not been fully built. It is intended to give you an
 
 ## Approach ##
 
-### Development ###
+[### Development ###]
 
 ### Design ###
 Our design team led by Noopur and Varun have experience conducting research to understand the needs of the user as well as their behaviour in the form of: 
@@ -91,9 +91,18 @@ In the future, the team can be augmented based on requirements as well as availa
 
 
 ## Prototype ##
-For the prototype, we chose to build a Search functionality over the various sections of the application.
+For the prototype, we chose to:
+- Redesign the Flight Tracking functionality.
+- Build a Search functionality over the various sections of the application.
 
-### Advantages afforded by the search functionality ###
+### Advantages afforded by the Tracking functionality redesign
+- Allow tracking of multiple flights, so different people from different cities can be easily tracked. This would be especially useful to individuals tracking the arrival of their family members (for instance during festivals, or an event such as a wedding) and service providers such as hotels who can aggregate pickups. 
+- Introduce a widget on the homescreen for easy access, so the user would not need to look for this information each time.
+- Optionally allow the app to give you notifications on a locked screen. This could be very helpful in ensuring that a passenger waiting for the departure of their flight never misses it.
+
+[Links to previous version, and the redesigned version]
+
+### Advantages afforded by the Search functionality ###
 - Ease of use for new users: Currently, the application expects users to navigate through the various categories provided on the home screen (Eat, Facilities) to find what they are looking for. New users who are not already familiar with the layout of the app may find this design difficult to use. Search functionality that cuts across categories offers a powerful advantage to the existing traditional layout.
 - Speed of use: This overarching Search functionality allows users who are already familiar with the app to quickly find what they are looking for, and reduce the number of clicks they need to make.
 - Intuitive design: The Search allows users to search by words (example: Filter Coffee), rather than click through the various options to find a restaurant that serves filter coffee.
