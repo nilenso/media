@@ -97,11 +97,11 @@ Proposed features (please note this is an indicative sample set, a comprehensive
 
 ## Staffing and Rates ##
 
-To start with, we propose a blended rate of $80/hr per person for a team consisting of the following members:
+To start with, we propose a blended rate of $480/day per person. We propose a team consisting of the following members:
 
-- 1 full-time designer (100% of the time)
-- 1 full-time developer (100% of the time)
-- 1 part-time architect [too much? -sd] (25% of the week)
+- 1 full-time designer (100% of the week)
+- 1 full-time developer (100% of the week)
+- 1 part-time architect (25% of the week)
 
 Business Analyst(s) / Project Manager(s) who will not be billed explicitly (their time is accounted for in the blended rate).
 
