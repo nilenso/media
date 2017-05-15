@@ -23,7 +23,7 @@ Please note: The proposed features mentioned in this document are intended to gi
 
 Our development style is familiar to most of our potential clients. Test-Driven Development (TDD), continuous integration/deployment, and pair programming are hallmarks of any competent software engineering firm in 2017. Developers at nilenso strive to excel beyond this, however.
 
-Over the past 3 years, we have built distributed systems which handle many terrabytes of data per month, we have tested these systems using progressive testing strategies such as simulation and generative testing, and we have adopted the highest-level languages available for commercial software development today as our preferred environments: Clojure and Haskell. We are not wedded to any of our techniques or tools, instead looking to improve our effectiveness by incrementally adopting new technology if it proves better than what came before it, and as it stabilizes in the market.
+Over the past 3 years, we have built distributed systems which handle many terabytes of data per month, we have tested these systems using progressive testing strategies such as simulation and generative testing, and we have adopted the highest-level languages available for commercial software development today as our preferred environments: Clojure and Haskell. We are not wedded to any of our techniques or tools, instead looking to improve our effectiveness by incrementally adopting new technology if it proves better than what came before it, and as it stabilizes in the market.
 
 ### Design ###
 
