@@ -78,8 +78,11 @@ Proposed features (please note this is an indicative sample set, a comprehensive
 
 ### Proposed UX improvements: Near-Term ###
 
-- Allow iOS users to swipe back to go to the previous screen (accepted UX behaviour in iOS)
-- Allow users to track more than one flight
+- "Spotlight" style search as explained in the previous section
+- Tracking of multiple flights
+- Widget on the homescreen regarding flights being tracked
+- Optionally providing notifications regarding flights being tracked, even on locked screens
+- Allowing iOS users to swipe back to go to the previous screen (accepted / expected UX behaviour in iOS)
 
 ### Proposed Sample Features: Medium-Term ###
 
