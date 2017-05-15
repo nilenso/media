@@ -56,3 +56,12 @@
   2) documentation
   3) automation
   4) eliminate process altogether (zero work, not ad-hoc work)
+
+** guidelines
+
+1) README: central starting point
+   1a) meta-projects and meta-readme (wiki)
+2) publish everything
+3) list stakeholders
+4) capture a TODO list: project wall  | Executive
+5) capture HOW-TOs:     documentation | Operations

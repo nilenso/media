@@ -5,6 +5,9 @@
 
 - ./02-config-files.jpg
 - Rails envs are *samples*
+- file-based or token-based
+  - token-based: heroku
+  - token-based: cascading (priority) config trees
 
 ** Push vs. Pull
 
