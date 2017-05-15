@@ -82,7 +82,7 @@ Proposed features (please note this is an indicative sample set, a comprehensive
 - Tracking of multiple flights
 - Widget on the homescreen regarding flights being tracked
 - Optionally providing notifications regarding flights being tracked, even on locked screens
-- Allowing iOS users to swipe back to go to the previous screen (accepted / expected UX behaviour in iOS)
+- Simplifying the navigation and aligning it to the behavioural standards of each platform (Example: allowing iOS users to swipe back to go to the previous screen, as per accepted / expected UX behaviour in iOS).
 
 ### Proposed Sample Features: Medium-Term ###
 
@@ -160,7 +160,7 @@ Our team consists of software developers and project managers with decades of ex
 
 ### Our Experience in Design ###  
 
-Our small design team is led by Noopur and Varun. Noopur has studied Information and Interface Design at NID, while I have worked as a freelance designer and more recently, as a product designer at Scroll.in and SupportBee. Between them, they have designed web apps as well as iOS and Android mobile applications. They also have experience with user research, prototyping, wireframing, and writing good quality html/css.
+Our small design team is led by Noopur and Varun. Noopur has studied Information and Interface Design at NID, while Varun has worked as a freelance designer and more recently, as a product designer at Scroll.in and SupportBee. Between them, they have designed web apps as well as iOS and Android mobile applications. They also have experience with user research, prototyping, wireframing, and writing good quality html/css.
 
 They have produced a lot of impactful work in a short span of time. Some of their recent work has been open sourced: 
 
