@@ -1,0 +1,109 @@
+* Practical Generative Testing Patterns
+** Elevator Pitch [300 chars]
+Generative tests are great! But if we're being honest, we probably
+don't write them often enough. Why not?
+
+They can be harder to write, read, and maintain. They slow down our CI
+times, or worse, break the build for weird, and unrealistic corner
+cases just when we're about to deploy.
+
+How do we make them intuitive, efficient, and debuggable? How do we
+find meaningful "properties" at unit, integration, and system levels
+in our complex, and stateful applications?
+
+I'll discuss some important patterns that can help us leverage
+generative tests to their fullest potential.
+
+** Elevator Pitch [actually 300 chars]
+Generative tests are great! But we don't write them often enough. Why
+not?
+
+As unit tests, they can be harder to write and read. As acceptance
+tests for stateful systems, they can be brittle, slow, and
+unjustifiable.
+
+I'll discuss some important patterns to leverage generative tests to
+their potential.
+
+** Description
+Here is a rough outline:
+
+*** Intro [2m]
+  - About me, nilenso
+  - About this talk, outline
+
+*** Why? 2 brief case studies (based on 2 case studies) [10m]
+  - Where people normally write gen.tests and where they don't
+  - Pros: coverage, reliability
+  - Cons: brittle, imperative, slow
+  - Brief case studies:
+    - Testing a large scale experimentation platform built for Staples
+    - Testing a distributed payments platform with over a 100 API endpoints
+
+*** Tools of choice, and their evolution [5m]
+    - clojure.test, and data.generators
+    - Datomic, Simulant, and Causatum
+    - Spec, test.check, and datascript
+
+*** What doesn't work? [Antipatterns] [5m]
+  - Evolving test suite independently
+  - Imperative description of functionality
+  - The other extreme: so declarative we grew a lisp within a lisp
+  - Exclusively stress tests, or smoke tests
+
+*** What works [Patterns] [20m]
+  - Terminology: state, action, flow, simulation
+  - Generally applicable algebric properties: equality, associativity, commutativity
+  - Generally applicable system properties: availability, idempotence
+
+**** Patterns to reduce costs, and improve maintainability
+    - A great DSL to describe real flows. DAGs, and Probability matrices.
+    - Declarative specification of known failures and errors
+    - Derive parameter specification from service's API catalog
+    - Realistic seed data, for deterministic results
+    - Sensible default settings for axes of testing
+    - Responses as params for subsequent requests
+
+**** Patterns to improve leverage
+    - State machines as properties
+    - Readable test reports
+    - Step-by-step diagnosis of failures
+    - Reproducibility: tests as portable data
+
+** Notes
+*** Why I thought this talk would be a good idea
+
+At the conj (2017), many people I met said they did use generative
+tests. But when we talked about it more, I found most people have
+difficulty coming up with good properties to assert. Or didn't know
+how to write generative tests for stateful systems.
+
+Generative tests are commonplace in clojure. But there isn't much out
+there in terms of usage patterns, or how to make them more efficient.
+
+This talk mostly builds on two large projects, that I mention in the outline:
+ - Testing a large scale experimentation platform built for Staples
+ - Testing a distributed payments platform with over a 100 API endpoints
+
+*** Previous talks for reference
+|----------------------+-------------------------------------------------+---------------------------------------------|
+| Euroclojure 2016     | Making Machines that Make Music                 | https://www.youtube.com/watch?v=ZvSSeuzN_b4 |
+| Fragments 2017       | REPL driven mobile development                  | https://www.youtube.com/watch?v=toGEegAzrZA |
+| Functional Conf 2015 | Building an Experimentation Platform in Clojure | https://www.youtube.com/watch?v=YjfXhhxw9Bs |
+| Rootconf 2015        | On the building of a Postgres cluster           | https://www.youtube.com/watch?v=sGJDg5ba0iI |
+|----------------------+-------------------------------------------------+---------------------------------------------|
+
+** Bio
+Srihari is a FOSS enthusiast. He has contributed to Gimp, Eclipse,
+Diaspora and is excited about opportunities to give back. He has been
+writing Clojure for over 5 years now, and over this time, he has
+engineered low latency systems, large analytics platforms, monitoring
+solutions, distributed payment platforms and multiple simulation
+testing systems.
+
+He is passionate about fostering the Clojure community, conducts
+workshops, and organizes IN/Clojure. He also works on computational
+music synthesis and generation as a hobby.
+
+He is a partner at nilenso, a hippie tree hugging bicycle riding
+software cooperative based in Bangalore.
