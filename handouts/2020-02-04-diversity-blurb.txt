@@ -9,7 +9,7 @@ To that end, nilenso runs ClojureBridge: free Clojure workshops for underreprese
 
 We know we won't overturn the structures of discrimination tomorrow. This is a lifelong job. A significant part of the job is _listening_. If we can do better, tell us how.
 
-If you want to see how we work on the inside, join us.
+If you really want to help us learn and grow, join us. ♥
 
 --
 
