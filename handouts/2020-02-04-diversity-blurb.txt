@@ -1,0 +1,22 @@
+
+There is no such thing as a meritocracy. An unchecked imbalance of power will crystallize to become a structure. Power is weaponized in the duality of privilege and discrimination but all three are invisible. If deep, structural power imbalances exist we have gone off course. We have gone off course.
+
+Structural casteism exists, obviously. The adjective is redundant. [1] Structural racism exists, insidiously. We segregate with the tone of our voice, body language, and unwritten rules that dictate who belongs (and who does not). [2,3] Structural sexism exists, inside your house. How to see a structure built over thousands of years, woven into the fabric of society? [4] To course correct is to make this structure visible.
+
+It is not our intention to pontificate. Sermons help no one but we must identify the problem if we hope to discover solutions. We have made efforts. Small things matter --- if we can keep spare toothbrushes in office bathrooms we can surely keep clearly-labeled pads and tampons beside them. So we do. And we can surely have an open and honest conversation about menstruation. So we did. And there is no civilized way to break taboos without a strong menstrual leave policy. So we have one. [5] We have symmetrical maternity and paternity leave because everyone belongs to a family. But these small things should be policies at _every company_. We need more than fairness --- we need equity.
+
+To that end, nilenso runs ClojureBridge: free Clojure workshops for underrepresented groups. We sponsor conference attendance for women and non-binary participants. We work with aligned clients who are also chipping away at these structures --- network effects amplify our efforts. We have changed our hiring policy. For years, nilenso did not hire college grads but we now have a college recruitment program for female and non-binary students. We are still (and will always be) hiring senior developers from any background. But we must create and expand opportunities for underrepresented groups.
+
+We know we won't overturn the structures of discrimination tomorrow. This is a lifelong job. A significant part of the job is _listening_. If we can do better, tell us how.
+
+If you want to see how we work on the inside, join us.
+
+--
+
+References
+
+[1] Early Indians
+[2] Why I'm No Longer Talking to White People About Race
+[3] White Fragility
+[4] Sapiens?
+[5] https://blog.nilenso.com/blog/2016/05/16/i-have-cramps/
