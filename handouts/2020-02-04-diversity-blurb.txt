@@ -9,6 +9,8 @@ It is not our intention to pontificate. Sermons help no one but we must identify
 
 To that end, nilenso runs ClojureBridge: free Clojure workshops for underrepresented groups. We sponsor conference attendance for women and non-binary participants. We work with aligned clients who are also chipping away at these structures --- network effects amplify our efforts. We have changed our hiring policy. For years, nilenso did not actively hire college grads but we now have a college recruitment program for female and non-binary students. We are still (and will always be) hiring senior developers from any background. But we must create and expand opportunities for underrepresented groups.
 
+At the risk of self-conceit, we want to create opportunities for more people to join nilenso because we think nilenso is a pretty cool company. As an employee-owned co-operative, we aren't fueled by the pedestrian dreams of venture capitalists. We help Go-Jek drivers execute over 3 million orders per day and we build open source healthcare services with Simple.org because these projects are exciting. The software we build improves millions of lives. We want to continue to improve the world around us, with you.
+
 We know we won't overturn the structures of discrimination tomorrow. This is a lifelong job. A significant part of the job is _listening_. If we can do better, tell us how.
 
 If you really want to help us learn and grow, join us. ♥
