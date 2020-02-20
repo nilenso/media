@@ -1,0 +1,26 @@
+# Anecdotes
+- The very first memory of the project is when we got on a call with Neehar about the product and scrambled over a weekend to get a prototype out. We had divided into two teams, Abhinav and I worked on a golang prototype, Neena and Kiran worked on an elixir prototype. We went ahead with Elixir for this project because the golang prototype was pretty verbose.
+
+- Another interesting fact from the early days of the project was our 3-way pairing setup. It wasn't the most effective way to work on the project, with more often than not the 3rd person working on their own. But sometimes we would devolve into a mob-programming session, with the 3rd person looking up code docs/examples on the fly.
+
+- From the get-go the project was supposed to cater to a large number of live audience, thus we had to research on live streaming protocols, their latency and scalability; communication channels to the client mobile devices etc. It was a good learning experience; we would read up on a topic and evaluate if it was the right fit for our use case.
+
+- To test the scalability of the system we wrote a load-testing suite which would emulate client connections. That tool was pretty helpful to figure out bottlenecks in the system architecture early on. The test suite has continued to evolve with the code base to support different use case scenarios. It is still in use to test system for regressions in performance.
+
+- I vividly remember the day when we got the entire system to run end-to-end. We had installed the demo mobile app in our phones and were running the quiz from a staging box. The app was streaming an audio stream from our machine. So after publishing the question, summary etc we would say "question" out loud, that will get echoed in all the mobile apps. With the benefit of hindsight we should have pushed for a wider demo at this point itself. This happened around June (?). Till this point the direction was that the product should scale, we can even run it via command line if need be.
+
+- Some time from now till August was spent in building features that were never used. For instance, we built a feedback feature that will allow the participant to have a picture in picture feed after the event. This never saw the light of the day.
+
+- All of this changed with the departure of both Abhinavs. We had a new product manager in the team and the focus was to get the product out to the masses. This is when the team's priority changed to build tools to support the Director / Presenter on the product. We were finally making progress from an MVP to a product. This is also when we discovered weird set of networking issues.
+  - We had been developing the Director/Presenter view with web-sockets. But the web-socket connection would disconnect at random. To fix this we moved from web-sockets to long polling. Later on we figured that this was a bug which will surface only when multiple instances of the event would running
+  - Another issue was with the Insider network itself. Their router was compromised and would inject JavaScript into webpages for bitcoin mining.
+
+- iirc from mid-November onwards we started having daily internal events runs with the Insider employees. We were gearing up for our first public beta launch at Christmas. The internal events helped us iron out the product with much needed features and fixes. The first public beta was a success, but it had less footfall because it wasn't advertised at all. The second beta run was advertised and to cope with the increased load we had tweaked the configuration. But this also led to us failing in production. The config change to increase the concurrency inadvertently led to a bug. Shreyas called the failure an egg to the face, since the investors were also invited to see the event.
+
+- After the Christmas debacle folks working on the project were invited to Bombay to work under the same roof. The idea was to rapidly develop a new format for the events: Poll. Along with this we also needed to fix/identify the bugs that were present in the existing system. This proved quite beneficial for the project and the team dynamics as well. We pulled in a lot of long nights to get the `Poll` version of the event out.
+
+- During the Bombay trip we also had a lot of friendly banter with the mobile team.
+
+- The poll events were a success and due to the flexibility of the format Insider was able to plug this into a bunch of their events. For instance they had a live comedy show with the audience scoring the artists, another was a live horror story recital with the audience determining the direction of the story. This was fun. In the background we were gently chipping away at the old quiz format. The idea was that there should only be one flexible format, which can handle different evaluation strategies.
+
+- We did achieve moving all evaluation strategy under a single event, so that any kind of event could be run in a flexible manner. The goal post then moved to integration with PayTm. Moving the app to be a web view on the PayTM application. This is also when the engagement between nilenso and insider ended.

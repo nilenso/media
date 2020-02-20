@@ -1,0 +1,8 @@
+
+# Case Study: Insider.in
+
+PayTM Insider is India's largest online ticketing and events company. Insider approached nilenso in early 2018 with a concept for an entirely new business model. Millions of fans already attend Insider's live events. Insider wanted to bring those events online. Could nilenso help them host online events -- with software hosting all those millions of fans _at once_?
+
+It wasn't a foregone conclusion that we could build such a system. We certainly had never built one like it before. Even software like Twitch.tv, dedicated to streaming video to simultaneous users, lives in the realm of "millions of simultaneous users". We were intrigued.
+
+The software industry frequently reaches for descriptions like "challenging work" and "world-class developers"... frequently enough that these words have become meaningless. There exists a dichotomy in the world of software consulting that we often fumble to clearly describe. On one hand, some custom software lives in the world of the _bespoke_. A good tailor does not reinvent the craft of tailoring every time he cuts a new suit. Similarly, the three million apps on the Stores for iOS and Android largely don't represent revolutions in Computer Science. Humanity isn't the proud custodian of billions of web apps because they each represent a brainchild of software engineering's avant-garde. Software in the 21st Century is wildly democratic, which is wonderful because a developer doesn't have the energy to rediscover the very definition of a mobile app every time she writes one. On the other hand, however, there exist software projects which are truly experimental and genuinely difficult. This is one such project.
