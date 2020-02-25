@@ -18,19 +18,73 @@ The project began with the disarmingly simple problem statement: "Stream interac
 
 ## The Solution
 
-Building on the Erlang runtime meant distributed systems were baked into every component and, while the team was very experienced with distributed systems [1] and the Patterns of Enterprise Application Architecture [2], our past toolkits rarely _enforced_ message-passing distributed architectures; it was a choice we made. However, BEAM (and therefore, Elixir) declare, existentially, that message-passing and process boundaries (and thus their inverse: process size), are the primary considerations of system design. To build a functional system on BEAM at all, you must build a distributed system. Over the first few weeks of the project, the team deeply embedded themselves in the Erlang runtime paradigm --- learning, experimenting, and exploring along the way. The team had chosen Elixir precisely for its runtime and when it was time to load test the system, the distributed-system-up-front model had already proven itself.
+Building on the Erlang runtime meant distributed systems were baked into every component and, while the team was very experienced with distributed systems [1] and the Patterns of Enterprise Application Architecture [2], our past toolkits rarely _enforced_ message-passing distributed architectures; it was a choice we made. However, BEAM (and therefore, Elixir) declare, existentially, that message-passing and process boundaries (and their inverse: process size), are the primary considerations of system design. To build a functional system on BEAM at all, you must build a distributed system. Over the first few weeks of the project, the team deeply embedded themselves in the Erlang runtime paradigm --- learning, experimenting, and exploring along the way. The team had chosen Elixir precisely for its runtime and when it was time to load test the system, the distributed-system-up-front model had already proven itself.
 
 Load testing is an exercise delineated by orders of magnitude. It becomes a non-trivial task when simulating concurrent users ordering in the hundreds of thousands. The team nicknamed these thousands of gossamer androids "The Mob"... built to swarm _ngage_ with parallel but uncoordinated activity in hopes of breaking the system in the safety of a sandbox. The Mob[ile] Simulator (_mobsim_ was a double entendre, since the anticipated million users were to connect exclusively through mobile devices) would continuously test _ngage_, looking for weaknesses in its distributed design, in turn helping the team carve out the all-important process boundaries. Neena would eventually transform the lessons from these iterations into his talk, "After The Crash", discussing systems design on the BEAM VM. [3] In his words, "many problems are simply avoided altogether because [Erlang] puts the complexity of scaling distributed systems front-and-centre, even when you run the system on a laptop."
 
-Over the project's 18-month journey, starting with that first furious weekend and ending with the project handover, there were more landmark achievements than the million-concurrent-users requirement alone. A digital event isn't really an "event" if it's not interactive. Insider hadn't hired us to build YouTube. The first incarnation was a massive quiz show, which meant that the hundreds of thousands of participants needed to see the quiz questions at the _exact same time_. Initially, even the synchronization of questions to the video feed created difficulties. Video needed to be transcoded into a variety of formats for different users and, even after a number of transcoding optimizations, video delivered to mobile devices was consistently delayed by almost 10 full seconds. Synchronizing systems by timestamp was nothing new to the nilenso team but it was a new exercise to stamp metadata into streaming video. This self-identified the sync time and compensated for server-side transcoding delays in the mobile clients, ensuring questions always appeared to users at exactly the right time.
+Over the project's 18-month journey, starting with that first furious weekend and
+ending with the project handover, there were more landmark achievements than the
+million-concurrent-users requirement alone. A digital event isn't really an "event"
+if it's not interactive. Insider hadn't hired us to build YouTube. The first
+incarnation was a massive quiz show, which meant that the hundreds of thousands of
+participants needed to see the quiz questions at the _exact same time_. Initially,
+even the synchronization of questions to the video feed created difficulties. Video
+needed to be transcoded into a variety of formats for different users and, even after
+a number of transcoding optimizations, video delivered to mobile devices was
+consistently delayed by almost 10 full seconds. Synchronizing systems by timestamp
+was nothing new to the nilenso team but it was a new exercise to stamp metadata into
+streaming video. This self-identified the sync time and compensated for server-side
+transcoding delays in the mobile clients, ensuring questions always appeared to users
+at exactly the right time.
 
-Often, project landmarks were not of a technical nature at all. The Insider team was incredibly busy with myriad projects at their headquarters in Bombay. Although both teams were operating on India Standard Time, it was often difficult for anyone in Bombay to make time for conversations... and a much bigger struggle to find time for prioritization. The counterintuitive solution was one many of nilenso's clients have chosen in the past: let nilenso drive the project. Insider knows events; nilenso knows software. The nilenso team would construct technical priorities and pursue them, reviewing the pending work with Insider whenever possible.
+The Insider team running an event of course needed plenty of tools. The massive
+multi-user events could be meaningfully compared to Massively Multiplayer Online Games (MMOs) as
+each event was, in many ways, an MMO. But Insider events had the additional complexity
+of central coordination. If you are familiar with _Dungeons & Dragons_, you can think
+of the events team at Insider working together as a collective _Dungeon Master_. In a quiz
+show, for example, the presenter is the face of the show. But there are many other
+folks behind the scenes, managing teleprompters, publishing questions and answers to
+the massive live audience, and coordinating transitions from one question to the
+next. To coordinate this entire effort, nilenso built Insider a dashboard to control
+_ngage_. With this tool in hand, Insider wasn't just streaming mammoth amounts of
+videos and other data to millions of users simultaneously --- they were doing so in a carefully
+coordinated fashion.
+
+Other project landmarks were not of a technical nature at all. The Insider team was
+incredibly busy with myriad projects at their headquarters in Bombay. Although both
+teams were operating on India Standard Time, it was often difficult for anyone in
+Bombay to make time for conversations... and a much bigger struggle to find time for
+prioritization. The counterintuitive solution was one many of nilenso's clients have
+chosen in the past: let nilenso drive the project. Insider knows events; nilenso
+knows software. The nilenso team would construct technical priorities and pursue
+them, reviewing the pending work with Insider whenever possible.
+
+On other occasions, the technical and the non-technical would intersect. When it
+became clear that Insider did not have the time to build video transcoding and streaming into
+_ngage_, the team agreed that nilenso would build that as well. After
+evaluating OBS (Open Broadcaster Software) with a custom plugin, the team ultimately
+settled on a combination of mimoLive and Wowza Cloud. Although more expensive, this
+solution allowed Insider to focus on building its massive, interactive events
+platform rather than reinventing the media streaming wheel.
 
 After months of research, exploration, and iterative development between the nilenso team, Insider's team in Bombay, and the mobile app team from Uncommon (now Able) in Hyderabad, it was time to take _ngage_ out of its sandbox. Battle-hardened after the simulations provided by _mobsim_, it would finally see real phones across India connect to it. All three teams, spread across Bombay, Bangalore, and Hyderabad, would connect and listen to nilenso's tech lead shout "question!" while sending out the synchronized quiz question for everyone to respond. In each office, an echo of "que-ques-qu-question-tion-ion-n!" could be heard tumbling out of all the phones in the room. After everyone was satisfied with the behaviour of the system in the contrived scenario, Insider opened _ngage_ up to the real world with its initial public betas.
 
-Software projects of any complexity rarely make their maiden voyage without a hitch and the early betas were no exception. Beta 1 went smoothly from a technical standpoint, but the all-new format hadn't been marketed heavily enough and the first quiz show didn't draw a big crowd. Insider was determined to see a big turnout for Beta 2 --- advertisements went up, notices went out. And this time, a real crowd showed up. In anticipation, the team adjusted the settings of _ngage_, increasing the number of live processes, to correspond to the anticipated load. Unfortunately, this revealed a bug that _mobsim_ hadn't uncovered yet. Satellite ("worker") Erlang processes are _designed_ to safely handle crashes (hence neena's talk title: "After The Crash") but when too many crashes occur, the supervisor process in charge of restarting the workers can _crash itself_. If these failures cascade, the entire Erlang Supervision Tree [4] can collapse. During the massive Beta 2, this was precisely what happened.
+Software projects of any complexity rarely make their maiden voyage without a hitch
+and the early betas were no exception. Beta 1 went smoothly from a technical
+standpoint, but the all-new format hadn't been marketed heavily enough and the first
+quiz show didn't draw a big crowd. Insider was determined to see a big turnout for
+Beta 2 --- advertisements went up, notices went out. And this time, a real crowd
+showed up. In anticipation, the team adjusted the settings of _ngage_, increasing the
+number of live processes, to correspond to the anticipated load. Unfortunately, this
+revealed a bug that _mobsim_ hadn't uncovered yet. Satellite ("worker") Erlang
+processes are _designed_ to safely handle crashes (hence the title of neena's talk:
+"After The Crash") but when too many crashes occur, the supervisor process in charge
+of restarting the workers can _crash itself_. If these failures cascade, the entire
+Erlang Supervision Tree [4] can collapse. During the massive Beta 2, this was
+precisely what happened.
 
-Humbled, the team packed their bags and headed to Bombay. When the going gets tough, there's nothing quite like colocation in a single office. With everyone under one roof and communication between all three teams flowing effortlessly, _ngage_ learned to handle millions of concurrent users and _mobsim_ became the platform on which it learned. Within weeks, the initial question-answer "quiz" format was exchanged for a more flexible vote-based "poll" format. Insider successfully ran new betas including a live comedy compeition, scored by the audience, and a live choose-your-own-adventure horror story, guided by audience choices. The Insider project, which was to become known as _Insider Gameshows_, was a success.
+Humbled, the team packed their bags and headed to Bombay. When the going gets tough,
+there's nothing quite like colocation in a single office. [5] With everyone under one roof and communication between all three teams flowing effortlessly, _ngage_ learned to handle millions of concurrent users and _mobsim_ became the platform on which it learned. Within weeks, the initial question-answer "quiz" format was exchanged for a more flexible vote-based "poll" format. Insider successfully ran new betas including a live comedy compeition, scored by the audience, and a live choose-your-own-adventure horror story, guided by audience choices. The Insider project, which was to become known as _Insider Gameshows_, was a success.
 
 
 ## Outcomes
@@ -50,3 +104,4 @@ The software industry frequently reaches for descriptions like "challenging work
 [2] "Patterns of Enterprise Application Architecture" - https://dl.acm.org/doi/book/10.5555/579257
 [3] "After The Crash" - https://www.youtube.com/watch?v=9nbPZOHBsK4
 [4] "Erlang Supervision Principles" - http://erlang.org/documentation/doc-4.9.1/doc/design_principles/sup_princ.html
+[5] "Lean Software Development" - https://www.amazon.com/exec/obidos/ASIN/0321150783/poppendieckco-20
