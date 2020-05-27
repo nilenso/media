@@ -27,28 +27,46 @@ Mojo turned to Steven:
 
 Steven answered with a blank stare.
 
-"Gandalf?" Mojo offered. "Fellowship of the Ring? I just re-read the books. That's sort of... the highest problem statement philosophically possible, isn't it?"
+"Tolkien." Mojo offered. "Fellowship of the Ring? I just re-read the books. That's sort of... the highest problem statement philosophically possible, isn't it?"
 
 It was common to bump up against such peculiar insights when pairing with Mojo. The Java code in front of him was rarely the most intriguing thing on Mojo's mind during any given workday. At the time, it didn't feel as though this particular insight was going to define the operation of an entire company.
 
-Over a decade later, nilenso was bootstrapped, profitable, and settling in for an identity crisis. An employee-owned worker co-operative has the roles and responsibilities one expects from any corporation: profit centres, administration, executive functions, purchasing. Those roles are not necessarily mapped one-role-for-one-person as they are in large, traditional organizations. [^reinventing-organizations]. But there is one role everyone shares to some degree: founder. Whether someone has been a part of nilenso for ten years or ten days, that someone is beginning something _today._ And that thing, whatever it is, is the foundation for _tomorrow._ That means that every member gets to participate in answering the company's existential questions, for better or for worse.
+Over a decade later, nilenso was bootstrapped, profitable, and settling in for an identity crisis. An employee-owned worker co-operative has the roles and responsibilities one expects from any corporation: profit centres, administration, executive functions, purchasing. Those roles are not necessarily mapped one-role-for-one-person as they are in large, traditional organizations. [^reinventing-organizations] But there is one role everyone shares to some degree: founder. Whether someone has been a part of nilenso for ten years or ten days, that someone is beginning something _today._ And that thing, whatever it is, is the foundation for _tomorrow._ That means that every member gets to participate in answering the company's existential questions, for better or for worse.
 
 Why does nilenso exist? **To make money so everyone can pay down their mortgages, obviously. But also to make software.** Why make software? **Because we are good at it and because it's fun.** Why is it fun? **Because it is satisfying to solve problems.** Why is it satisfying to solve problems? **Because, if we care about it, there is meaning in the problem --- and meaning in its solution.**
 
-Why is there meaning in a problem?
+Why is there meaning in a problem? Why do you care about it?
 
 Ay, there's the rub.
 
 To ask such questions is to ask a fundamental question of our own existence. Why bother getting up in the morning? Why put on pants? Why am I writing this _particular_ line of JavaScript today? What is the meaning of life?
 
-In the early days with Simple, finding meaning in the problem was not difficult. Let's build something useful and fun, beautiful and free. Let's build something that changes lives for the better. Like Firefox.
+What exactly is it that makes a task, a project, a job worthwhile? And how do we reconcile the gap between the work we find meaningful with the work that generates revenue? No one's mortgage is paid down in the currency of goodwill.
 
-This question of purpose doesn't simply vanish when a potential solution is offered. As we will see, the question itself grows and changes as new answers emerge. As Simple grew, nilenso had a front row seat to this growth and change.
+In the early days with Simple, finding meaning in the problem was not difficult because it was nilenso's first project to fully reconcile this gap. Simple is useful and fun, beautiful and free, well-funded and stable. Simple changes lives for the better. Like Firefox.
+
+But this question of purpose doesn't simply vanish when a potential solution is offered. As we will see, the question itself grows and changes as new answers emerge. As Simple grew, nilenso had a front row seat to this growth and change.
 
 > "All we have to decide is what to do with the time that is given us," said Gandalf. "There are other forces at work in this world..."
 
 
 ## The Solution
+
+### Kickoff
+
+May tipped over into June and the Bangalore spring melted into summer as our friends poured from one month into the next. A team was assembled. _Obvious,_ another Bangalore consultancy, was responsible for Simple's mobile app. The central service was built by nilenso, where Srihari Sriraman and Govind Krishna Joshi staffed themselves on the project as developers and Deepa and Steven similarly self-staffed as project managers. Project management was across teams, working between the nilenso team who would build the central service, the team from _Resolve,_ and the team from _Obvious._ 
+
+As Bangalore melted into puddle marking the very centre of South India, a web of teams and roles took shape in the centre of that puddle. Daily stand-up meetings marked the end of every day (India time) with the teams from nilenso and Obvious sharing their progress with Daniel and _Resolve's_ Director of Engineering, Tim Cheadle. The team was small, distributed, and fast. Communication between designers, mobile app developers, and service developers was immediately productive and the two teams in Bangalore shared an office space as regularly as they could. From one day to the next, entire designs would be considered, attempted, tested, thrown out, and redone. Discussions were open and earnest about exactly what the collective team was trying to build. Even though the MVP was built to validate ideas, it was not an experiment --- with clear goals there were clear rights and wrongs in implementation. With just a handful of weeks available, the team desperately wanted to build The Right Thing. [^hackers]
+
+The Right Thing, of course, is a moving target. What is right in June 2018 certainly won't be right in April of 2019 and the exercise was one of brainstorming, identifying risks, narrowing scope, and executing... all as quickly as possible. For Simple, the twin tasks of brainstorming and identifying risks melded into one long, iterative activity of imagination and research.
+
+Some risks to the project's success were obvious. The initial deployments were to go to nurses in remote parts of rural Punjab, with the intention of distributing the app to every state in India --- and even more remote locations --- if it proved a success. The team needed imagery to create scenarios for users. How remote is "remote", really? India's vast landscape is dotted with cellular towers and dozens of new towers go up every day. What image could possibly exemplify the extremes the Simple software would be subjected to?
+
+Images of the Spiti Valley resemble the sort of ultra-high-resolution photographs one might find in the foyer of Goldman Sachs. Spiti Valley is extreme. High in the Himalayas, Spiti can claim not only the title of mountain valley but also that of a desert. It is breathtakingly beautiful --- and definitely remote. But it is not uninhabited. Those same foyer photos almost always include monasteries, villages, bridges, and flags. Whenever a design choice required thinking about a remote location where nurses might lack internet access for days, the team would recall the Spiti Valley vignette: a desert valley 13,000 feet above sea level with an unmistakable human presence.
+
+With such imagery at hand, the team unanimously agreed the software must be designed "offline first." [^govind-offline-first] Other decisions were less obvious. The first MVP deployment would happen across five clinics in rural Punjab. But would the Punjabi nurses in these clinics insist on a user interface entirely in Punjabi? Would Hindi suffice? Would some nurses be more accustomed to an English keyboard, even if their phones were set to a Punjabi locale? The only way to really get answers to such questions was to fly to Punjab and ask the nurses yourself. The team built the first MVP with both Punjabi and English support.
+
+### Bathinda
 
 
 
@@ -56,3 +74,16 @@ This question of purpose doesn't simply vanish when a potential solution is offe
 
 [^pairing]: https://martinfowler.com/articles/on-pair-programming.html#KnowledgeSharing
 [^reinventing-organizations]: https://www.reinventingorganizations.com
+[^hackers]: https://en.wikipedia.org/wiki/Hackers:_Heroes_of_the_Computer_Revolution
+[^govind-offline-first]: https://medium.com/simple-dot-org/offline-first-apps-are-appropriate-for-many-clinical-environments-cddf5a73bb61
+
+
+
+
+
+
+
+
+
+
+
