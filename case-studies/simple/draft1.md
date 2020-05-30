@@ -66,7 +66,19 @@ Images of the Spiti Valley resemble the sort of ultra-high-resolution, floor-to-
 
 With such imagery at hand, the team unanimously agreed the software must be designed "offline first." [^govind-offline-first] Other decisions were less obvious. The first MVP deployment would happen across five clinics in rural Punjab. But would the Punjabi nurses in these clinics insist on a user interface entirely in Punjabi? Would Hindi suffice? Would some nurses be more accustomed to an English keyboard, even if their phones were set to a Punjabi locale? The only way to get definitive answers to such questions was to fly to Punjab and ask the nurses yourself, so the team built the first MVP with both Punjabi and English support.
 
-### Bathinda
+### Bathinda, City of Lakes, Punjab
+
+Most software projects do not contain a scene like that of the competitive black-hat intern interview from the movie _The Social Network._ True, it's doubtful that scene actually even occurred in the early days of Facebook. Most projects don't even contain a scene that would fit well in a techno-guitar-backed montage of the project's heroes hacking into the night fuelled by Red Bull and coffee.
+
+And neither did Simple.
+
+However, after three heavy months of back-and-forth design and code between the members of the small teams, there was one last bout of late-night hacking. The nurses and their managers (Cardiovascular Health Officers or CVHOs) would see the app for the first time tomorrow and everyone was clustered in the lobby of the hotel, squashing the last bugs and putting the last bit of polish on the alpha version of the app. Instead of a high-intensity guitar riff to back up their hacking, however, our heroes had to settle for the hotel's lobby track: _The Kungs'_ "This Girl". On endless repeat. Go ahead and take a break to find the song on YouTube. We'll wait here for you.
+
+"Can you _please_ change the music to something else? Or turn it off?" begged Govind of the hotel staff. "Sorry, Sir. It is policy."
+
+And so it was. Our heroes hacked into the night, their excitement to deliver a polished MVP to the nurses of Bathinda acting as armour to defend them from the stinging species of elevator music earworms which were crawling all over them at 3:00 AM. "You'll never buy my loooove!"
+
+---
 
 
 
