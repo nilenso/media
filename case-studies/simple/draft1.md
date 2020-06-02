@@ -54,7 +54,7 @@ But this question of purpose doesn't simply vanish when a potential solution is 
 
 ### Kickoff
 
-May tipped over into June and the Bangalore spring melted into summer as our friends poured from one month into the next. A team was assembled. _Obvious,_ another Bangalore consultancy, was responsible for Simple's mobile app. The central service was built by nilenso, where Srihari Sriraman and Govind Krishna Joshi staffed themselves on the project as developers and Deepa and Steven similarly self-staffed as project managers. Project management was across teams, working between the team from nilenso, the team from _Resolve,_ and the team from _Obvious._ 
+May tipped over into June and a completely melted Bangalore spring was poured onto summer. A team was assembled. _Obvious,_ another Bangalore consultancy, was responsible for Simple's mobile app. The central service was built by nilenso, where Srihari Sriraman and Govind Krishna Joshi staffed themselves on the project as developers and Deepa and Steven similarly self-staffed as project managers. Project management was across teams, working between the team from nilenso, the team from _Resolve,_ and the team from _Obvious._ 
 
 As Bangalore melted into a puddle marking the very centre of South India, a web of teams and roles took shape in the centre of that puddle. Daily stand-up meetings marked the end of every day (India time) with the teams from nilenso and Obvious sharing their progress with Daniel and _Resolve's_ Director of Engineering, Tim Cheadle. The team was small, distributed, and fast. Communication between designers, mobile app developers, and service developers was immediately productive and the two teams in Bangalore shared an office space as regularly as they could. From one day to the next, entire designs would be considered, attempted, tested, thrown out, redone. Discussions were open and earnest about exactly what the collective team was trying to build. Even though the MVP was built to validate ideas, it was not an experiment --- with clear goals in place already the product had clear rights and wrongs in implementation. With just a handful of weeks available, the team desperately wanted to build The Right Thing. [^hackers]
 
@@ -68,17 +68,41 @@ With such imagery at hand, the team unanimously agreed the software must be desi
 
 ### Bathinda, City of Lakes, Punjab
 
-Most software projects do not contain a scene like that of the competitive black-hat intern interview from the movie _The Social Network._ True, it's doubtful that scene actually even occurred in the early days of Facebook. Most projects don't even contain a scene that would fit well in a techno-guitar-backed montage of the project's heroes hacking into the night fuelled by Red Bull and coffee.
+Most software projects do not contain a scene like that of the competitive black-hat intern interview from the movie _The Social Network._ True, it's doubtful that scene actually occurred even in the early days of Facebook. Most projects don't contain a single scene that would fit well in a techno-guitar-backed montage of the project's heroes hacking into the night fuelled by Red Bull and coffee.
 
 And neither did Simple.
 
-However, after three heavy months of back-and-forth design and code between the members of the small teams, there was one last bout of late-night hacking. The nurses and their managers (Cardiovascular Health Officers or CVHOs) would see the app for the first time tomorrow and everyone was clustered in the lobby of the hotel, squashing the last bugs and putting the last bit of polish on the alpha version of the app. Instead of a high-intensity guitar riff to back up their hacking, however, our heroes had to settle for the hotel's lobby track: _The Kungs'_ "This Girl". On endless repeat. Go ahead and take a break to find the song on YouTube. We'll wait here for you.
+However, after three heavy months of back-and-forth design and code between the members of the small teams, there was one last bout of late-night hacking. The nurses and their managers (Cardiovascular Health Officers or CVHOs) would see the app for the first time tomorrow and everyone was clustered in the lobby of the hotel, squashing the last bugs and putting the last bit of polish on the alpha version of the app. Instead of a high-intensity guitar riff to back up their hacking, however, our heroes had to settle for the hotel's lobby track: _The Kungs'_ "This Girl". [^kungs] On endless repeat. Go ahead and take a break to find the song on YouTube. We'll wait here for you.
 
-"Can you _please_ change the music to something else? Or turn it off?" begged Govind of the hotel staff. "Sorry, Sir. It is policy."
+"Can you _please_ change the music to something else? Or turn it off?" begged Govind of the hotel staff. "Sorry, Sir. It is hotel policy." The grey in the eyes of the hotel's receptionist indicated that his will to bend that policy had already been crushed by countless hours of French elevator music.
 
-And so it was. Our heroes hacked into the night, their excitement to deliver a polished MVP to the nurses of Bathinda acting as armour to defend them from the stinging species of elevator music earworms which were crawling all over them at 3:00 AM. "You'll never buy my loooove!"
+And so it was. Our heroes hacked into the night, their excitement to deliver a polished MVP to the nurses of Bathinda acting as armour to defend them from the stinging species of earworms which were crawling all over them at 3:00 AM. "You'll never buy my loooove...!"
 
 ---
+
+A few hours of sleep later, the entire Simple team downed their last cups of tea, piled into cabs, and headed to the first health clinic. Daniel and the rest of the design team had visited Bathinda once before but for the development teams this would be their first face-to-face interaction with real users. None of them knew exactly what to expect.
+
+As the team walked into the first clinic, everyone was struck by how busy it was. Everyone's attention was instantly drawn to the eye of the storm: the nurse. This was to become the first of many such experiences with the software team repeatedly awestruck by the nurses' abilities and patience.
+
+Within minutes, the team had validated their first major design choice: offline first. An online first mobile app can slow down or stall while it waits for the server to reply from across the chasm of the internet. The Simple app would have no such luxuries. Deepa would later describe the nurses as "super hard-working" and "superhuman." They were in constant motion.
+
+"There’s a long line of patients waiting outside their cabin," Deepa said, painting the scene. "They’re measuring a patient’s weight, BP, speaking to them, asking them about their day, their symptoms, whether or not they’ve been taking their meds, and recording all of this info in a register. Some of that information needs to go into _another_ register. In the meantime another patient who had been to see the doctor returns: they quickly update their info. Then they’re called away to attend to something for 10 minutes. It’s non-stop. And through all of this they’re polite, yet firm, and are making no mistakes. It's pretty amazing."
+
+No, the nurses could not wait for an app. The Simple app's nearest competitor was a piece of paper: If the nurse could write down a patient's results faster than they could enter it into Simple, the app had failed them. Not only could the app never wait for the network, it could absolutely never crash or hang --- not even for a second.
+
+Govind sat down to speak to a nurse during a break set aside to discuss the app. He was a bit surprised to see her pull a new iPhone out of her pocket and set it on the desk. Android has 95% of India's mobile marketshare. iOS has less than 4%. Statistically speaking, building Simple for Android felt like more of an inevitability than a design choice.
+
+She took a sample Android phone the team brought with them and began to treat Govind as she would treat any other patient. She wrapped the cuff of the blood pressure monitor around his arm and inflated it. As she opened the app to enter his BP reading, she exclaimed, "Oh! This is in Punjabi. That's not what I was expecting. Can you change the interface to English for me?" TODO: hindi
+
+Govind switched the phone's locale to English and handed it back to her so she could finish trying the app while the designers watched and took notes. As she put the blood pressure monitor away, she turned to them. "You know, it is very nice of you all to build this app... I'm just not sure I trust it yet. I will use it because it is mandated but I will keep entering my patients' data into the paper register as well. These records are very important. It is hard for me to entrust my patient's lives to software that didn't even exist six months ago." TODO: hindi / govind
+
+The lessons in the other facilities were similar. The nurses were polite but cautious of Simple's promises. They were unflagging as a constant stream of patients poured through the clinic. And they remained full of surprises.
+
+"An robh thu ann an Alba? Tha e brèagha." ("Have you been to Scotland? It's beautiful.") one nurse asked with a calm smile as Srihari and Govind quizzed her about her time in Scotland, where she took her nursing degree.
+
+The calm demeanour of the nurses was put to the test around noon of the last day of the field visit. Srihari looked up from his laptop as he heard shouting from one end of the hospital. A man came tearing through the hospital hallway with two policemen in close pursuit, in one end of the hospital and out the other. A few patients looked up. The nurses barely blinked. The police had their job to attend to --- and the nurses had theirs.
+
+### Rollout
 
 
 
@@ -88,6 +112,7 @@ And so it was. Our heroes hacked into the night, their excitement to deliver a p
 [^reinventing-organizations]: https://www.reinventingorganizations.com
 [^hackers]: https://en.wikipedia.org/wiki/Hackers:_Heroes_of_the_Computer_Revolution
 [^govind-offline-first]: https://medium.com/simple-dot-org/offline-first-apps-are-appropriate-for-many-clinical-environments-cddf5a73bb61
+[^kungs]: https://www.youtube.com/watch?v=2Y6Nne8RvaA
 
 
 
