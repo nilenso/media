@@ -76,7 +76,7 @@ However, after three heavy months of back-and-forth design and code between the 
 
 "Can you _please_ change the music to something else? Or turn it off?" begged Govind of the hotel staff. "Sorry, Sir. It is hotel policy." The grey in the eyes of the hotel's receptionist indicated that his will to bend that policy had already been crushed by countless hours of French elevator music.
 
-And so it was. Our heroes hacked into the night, their excitement to deliver a polished MVP to the nurses of Bathinda acting as armour to defend them from the stinging species of earworms which were crawling all over them at 3:00 AM. "You'll never buy my loooove...!"
+And so it was. Our heroes hacked into the night, their excitement to deliver a polished MVP to the nurses of Bathinda acting as armour to defend them from the stinging species of earworms which were crawling all over them by 3:00 AM. "You'll never buy my loooove...!"
 
 ---
 
@@ -90,9 +90,9 @@ Within minutes, the team had validated their first major design choice: offline 
 
 No, the nurses could not wait for an app. The Simple app's nearest competitor was a piece of paper: If the nurse could write down a patient's results faster than they could enter it into Simple, the app had failed them. Not only could the app never wait for the network, it could absolutely never crash or hang --- not even for a second.
 
-Govind sat down to speak to a nurse during a break set aside to discuss the app. He was a bit surprised to see her pull a new iPhone out of her pocket and set it on the desk. Android has 95% of India's mobile marketshare. iOS has less than 4%. Statistically speaking, building Simple for Android felt like more of an inevitability than a design choice.
+Govind sat down to speak to a nurse during a break set aside to test the app. He was a bit surprised to see her pull a new iPhone out of her pocket and set it on the desk. Android has 95% of India's mobile marketshare. iOS has less than 4%. Statistically speaking, building Simple for Android felt like more of an inevitability than a design choice.
 
-She took a sample Android phone the team brought with them and began to treat Govind as she would treat any other patient. She wrapped the cuff of the blood pressure monitor around his arm and inflated it. As she opened the app to enter his BP reading, she exclaimed, "Oh! This is in Punjabi. That's not what I was expecting. Can you change the interface to English for me?" TODO: hindi
+She took a sample Android phone the team brought with them and began to examine Govind as she would treat any other patient. She wrapped the cuff of the blood pressure monitor around his arm and inflated it. As she opened the app to enter his BP reading, she exclaimed, "Oh! This is in Punjabi. That's not what I was expecting. Can you change the interface to English for me?" TODO: hindi
 
 Govind switched the phone's locale to English and handed it back to her so she could finish trying the app while the designers watched and took notes. As she put the blood pressure monitor away, she turned to them. "You know, it is very nice of you all to build this app... I'm just not sure I trust it yet. I will use it because it is mandated but I will keep entering my patients' data into the paper register as well. These records are very important. It is hard for me to entrust my patient's lives to software that didn't even exist six months ago." TODO: hindi / govind
 
