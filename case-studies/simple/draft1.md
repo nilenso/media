@@ -68,13 +68,13 @@ Most software projects do not contain a scene like that of the competitive black
 
 And neither did Simple.
 
-However, after three heavy months of back-and-forth design and code between the members of the small teams, there was one last bout of late-night hacking. The nurses and their managers (Cardiovascular Health Officers or CVHOs) would see the app for the first time tomorrow and the team was clustered in the lobby of their Bathinda hotel, squashing the last bugs and putting the last bit of polish on the alpha version of the app. Instead of a high-intensity guitar riff to back up their hacking, however, our heroes had to settle for the hotel's lobby track: _The Kungs'_ "This Girl". [^kungs] On endless repeat. Go ahead and take a break to find the song on YouTube. We'll wait here for you.
+However, after three heavy months of back-and-forth design and code between the members of the small teams, there was one last bout of late-night hacking. It was May of 2018. The nurses and their managers (Cardiovascular Health Officers or CVHOs) would see the app for the first time tomorrow and the team was clustered in the lobby of their Bathinda hotel, squashing the last bugs and putting the last bit of polish on the alpha version of the app. Instead of a high-intensity guitar riff to back up their hacking, however, our heroes had to settle for the hotel's lobby track: _The Kungs'_ "This Girl". [^kungs] On endless repeat. Go ahead and take a break to find the song on YouTube. We'll wait here for you.
 
 "Can you _please_ change the music to something else? Or turn it off?" begged Govind of the hotel staff. "Sorry, Sir. It is hotel policy." The grey in the eyes of the hotel's receptionist indicated that his will to bend that policy had already been crushed by countless hours of French elevator music.
 
 And so it was. Our heroes hacked into the night, their excitement to deliver a polished MVP to the nurses of Bathinda acting as armour to defend them from the stinging species of earworms which were crawling all over them by 3:00 AM. "You'll never buy my loooove...!"
 
----
+--- 
 
 A few hours of sleep later, the entire Simple team downed their last cups of tea and Nescafe, piled into cabs, and headed to the first health clinic. Daniel and the rest of the design team had visited Bathinda once before but for the development teams this would be their first face-to-face interaction with real users. None of them knew exactly what to expect.
 
@@ -100,7 +100,17 @@ The calm demeanour of the nurses was put to the test around noon of the last day
 
 ### Rollout
 
+No software project is without its difficulties and it could even be said that building high-quality software is mostly about identifying and overcoming those difficulties. Much as nurses triage patients in their clinics, every software team needs to repeatedly zoom out to see the entire picture, reevaluate and reprioritize, and then zoom back in to battle with the next task. Many of these challenges facing the Simple team were known up-front. Clinic protocols already had a new, paper-based system for capturing blood pressure, known as "Red Cards". Uniquely identifying users was going to be a huge challenge — how many Gurpreet Singhs live in a single district in Punjab? And perhaps most importantly, once the nurses had a straight-forward system for entering all this data, would the patients even show up for them to record it?
 
+Each difficulty was intercepted in turn. The question of what to do about Red Cards was obvious. The Red Cards themselves weren't really a difficulty, per se. They actually captured the very data the Simple app was to capture, ahead of its release. From a purely data perspective this was wonderful. Simple or no Simple, data was being captured in a systematic way which conformed to international protocol. Once Simple was ready for release, it just needed a way to assimilate this data.
+
+From a software architecture perspective, Red Cards were an ephemeral data store. It doesn't really matter whether the storehouse of your data is an aging MySQL database or paper cards in a filing cabinet. If the goal is to switch gears and move to a new data store then the problem is a data migration problem. The Simple team viewed the Red Cards through precisely this lens: They exist, they are useful, but they are temporary. Unlike the rest of Simple, the data migration process from Red Cards into the Simple database need not be beautiful, meticulously designed, or environmentally robust. It was decided that the best approach to Red Cards was to make everything about their cataloguing as uncomplicated as possible.
+
+It is often tempting for software companies to follow the lead of car and watch manufacturers, insisting that they are somehow creating luxurious works of art... the very union of form and function. Such self-deception carries the bad taste of basic dishonesty. A car is a box which moves people from A to B. A watch is a device which displays any one of 1440 numbers, each one representative of a corresponding Earth Day Minute. Let us then indulge the good taste of clarity and describe the solution to the Red Cards as it was: boring, straightforward, simple. It was decided that, although the Red Cards themselves must remain in the clinics, the data entry for said cards need not be carried out in the clinics. (Why force yourself to do online data entry in Spiti Valley if you don't have to?) The data entry clerk would take a photo of each Red Card using a standard mobile phone, head back to the city where electricity and internet access were not subject to the vagaries of countryside infrastructure, and use a regular computer to access the very basic web app built by nilenso to enter each card into the Simple database.
+
+--- 
+
+The solution to the problem of uniquely identifying patients was less obvious. "Do The Simplest Thing That Could Possibly Work" doesn't apply to a problem space if we look across the globe and see the governments of most nations struggling with it.
 
 ## Outcomes
 
