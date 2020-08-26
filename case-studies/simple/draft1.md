@@ -134,6 +134,31 @@ Meanwhile, it was becoming painfully apparent that a patient reminder system was
 
 The hypertension patients needed friends. Someone to coax them back into the clinic. "This is important, remember? We want you to come here so you stay healthy." First came automated text message reminders. In India, this is already extremely common so there was little surprise to patients. An Indian broadband company will text you to remind you to pay your bill. An Indian bank will drop you an SMS whenever there's a transaction on your account. This was hardly any different. Even more convincing than an SMS was a phone call from a real human being. This left the nilenso team to come up with a phone masking technique, similar to those used in taxi-hailing apps like Uber. If your cab driver doesn't want you to know her personal phone number, your nurse _definitely_ doesn't want you knowing hers. It doesn't take much imagination to see how a nurse's number out in the wild quickly transforms them into a 24/7 personal healthcare service.
 
+Akshay Gupta, who had recently joined his nilenso colleagues on the Simple team at this point, describes the phone masking system: "It's a bit fun, really. Because the entire system has to assume 'offline-first' in every scenario, phone masks can't rely on anything digital. The way we got around that was to provide the nurse with a way to call the patient's number through a central number. The patient's number is actually encoded in that initial phone call using DTMF codes and that call is then routed accordingly to the patient from a number which is not the nurse's." The hack was somewhat reminiscent of the phone phreaking of the 1970s, a technique that perhaps would have amused the original phone hackers like John "Captain Crunch" Draper. [^john-draper]
+
+---
+
+The 2019 monsoon was upon India and Akshay was on his way to Punjab for a field visit. It was his first time seeing the clinics in person and he wasn't entirely sure what to expect. Superhuman nurses? Would the police chase a criminal through the hospital again?
+
+He was awestruck. "These places are so remote that the word 'remote' doesn't do them justice," he said. "We would often drive around for what felt like an eternity to find these clinics. When we finally found them, my first impulse was to add them to Google Maps and OpenStreetMap so other people could find them. It was so satisfying when we would actually locate the facility... and then it was always surprising to see just how many people were inside."
+
+"These are USADs," said Akshay. "Urban Slum Area Dispensary. Some of them are just a box. Often we would go inside to find fifty to a hundred patients inside... an area smaller than my house. And yet, there is the nurse. Calm. Relaxed. Effective. I think they have to remain mentally resolute just to stay sane."
+
+And so the stories were true. The superhuman nurse, with her seemingly infinite patience and a resolve undaunted by the daily obstacles present in a clinic where most of us wouldn't survive a single workday. No matter who you are, she's here to help you.
+
+"My Mom used to work as a doctor in one of these remote village dispensaries when I was a kid," said Akshay. "The clinic was sort of forked off from a hospital where she'd worked and she went along. It was very much like these dispensaries. After the day's dispensary work, she would teach English to the local kids for an hour before coming home to the city." He paused. "Yeah. It was just like this."
+
+Every day, the team's field visit to the clinic would begin at 4:30 AM. Wake up, drink tea, get ready, leave by 6:00 AM, arrive by 7:00 AM. One day, despite a forecast for clear skies, it rained. On the drive to the clinic Akshay looked out the window at Punjab's fields stretching to the horizon, sparkling emerald and jade under fresh rain, smiling back at him. The clinic was silent. Patients don't come during a monsoon rain. There was a small ruckus when a snake slithered into the quiet clinic and the staff struggled to get rid of it. Deepa, Akshay, the designers, the nurses, the doctors --- everyone sat together having tea and biscuits, enjoying the company of the others until the skies cleared at 10:00 AM and the day's first patients began to trickle in.
+
+> Sometimes, when I turn the water on to wash my face in the morning and warm water comes out just like magic, I silently praise those who made it possible: the plumbers. When I’m in that mode I’m often overwhelmed by the number of opportunities I have to feel grateful to civil servants, nurses, teachers, lawyers, police officers, firefighters, electricians, accountants, and receptionists. These are the people building societies. These are the invisible people working in a web of related services that make up society’s institutions. These are the people we should celebrate when things are going well.
+--- Hans Rosling [^factfulness]
+
+It is easy for the software industry to accidentally become mired in self-importance. In a world so in love with wealth and fame we become the victims of our successes. Our companies are no longer productive contributors to the economy. Instead, they are "unicorns". We are no longer servants of society. Instead, we proclaim ourselves "rockstars". Perhaps we could all benefit from a few hours in a quiet clinic, learning from the nurses.
+
+### From Diabetes to Covid-19
+
+TODO
+
 ## Outcomes
 
 [^pairing]: https://martinfowler.com/articles/on-pair-programming.html#KnowledgeSharing
@@ -145,8 +170,8 @@ The hypertension patients needed friends. Someone to coax them back into the cli
 [^simplest-thing]: http://wiki.c2.com/?DoTheSimplestThingThatCouldPossiblyWork
 [^simple-experiments]: https://github.com/simpledotorg/simple-experiments
 [^path]: https://path.org
-
-
+[^john-draper]: https://en.wikipedia.org/wiki/John_Draper
+[^factfulness]: https://www.gapminder.org/factfulness-book/
 
 
 
