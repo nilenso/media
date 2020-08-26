@@ -1,6 +1,8 @@
 
 # Case Story: Simple.org
 
+## (Based on real events.)
+
 Simple.org is a story about scale. On the one hand, the tagline "the fast, free app for clinicians to manage their patients with high blood pressure" describes a small mobile app with a singular purpose. On the other hand, Simple's mission is to save the millions of lives currently lost every year to heart attack and stroke. That's a mission which implies huge networks and thousands of moving parts. Can one little app save millions of lives? Certainly not on its own.
 
 ## The Problem
@@ -88,7 +90,7 @@ No, the nurses could not wait for an app. The Simple app's nearest competitor wa
 
 Govind sat down to speak to a nurse during a break set aside to test the app. He was a bit surprised to see her pull a new iPhone out of her pocket and set it on the desk. Android has 95% of India's mobile marketshare. iOS has less than 4%. Statistically speaking, building Simple for Android felt like more of an inevitability than a design choice.
 
-She took a sample Android phone the team brought with them and began to examine Govind as she would treat any other patient. She wrapped the cuff of the blood pressure monitor around his arm and inflated it. As she opened the app to enter his BP reading, she exclaimed, "Oh! This is in Punjabi. That's not what I was expecting. Can you change the interface to English for me?" TODO: hindi
+She took a sample Android phone the team brought with them and began to examine Govind as she would treat any other patient. She wrapped the cuff of the blood pressure monitor around his arm and inflated it. As she opened the app to enter his BP reading, she exclaimed, "Oh! This is in Punjabi. That's not what I was expecting. Can you change the interface to English for me?" TODO: Hindi
 
 Govind switched the phone's locale to English and handed it back to her so she could finish trying the app while the designers watched and took notes. As she put the blood pressure monitor away, she turned to them. "You know, it is very nice of you all to build this app... I'm just not sure I trust it yet. I will use it because it is mandated but I will keep entering my patients' data into the paper register as well. These records are very important. It is hard for me to entrust my patient's lives to software that didn't even exist six months ago." TODO: hindi / govind
 
@@ -110,7 +112,21 @@ It is often tempting for software companies to follow the lead of car and watch 
 
 --- 
 
-The solution to the problem of uniquely identifying patients was less obvious. "Do The Simplest Thing That Could Possibly Work" [^simplest-thing] doesn't apply to a problem space if we look across the globe and see the governments of most nations struggling with it.
+The solution to the problem of uniquely identifying patients was less obvious. "Do The Simplest Thing That Could Possibly Work" [^simplest-thing] doesn't apply to a problem space if we look across the globe and see the governments of most nations struggling with it. Many solutions were considered, from fall-through aggregates of all possible data the system might identify patients with (name, phone number, clinic, driver's license number, aadhaar number, etc.) to the possibility of assigning unique numbers to patients and making either the patient or the clinic responsible for tracking them. It was obviously foolhardy to pursue a "perfect" solution, since other identification systems have empirically demonstrated that no such solution exists. But empirical evidence could be used to design a solution to this problem, a solution which was both easy to understand and fault-tolerant. The way to gather empirical evidence is, of course, to experiment.
+
+The difficulty with experimentation in software is cost. Writing software costs money and writing disposable software costs just as much money, assuming you want it to actually work. There are many alternative approaches to building real software and giving it to users to try: paper prototypes and "fake" software with a Wizard of Oz behind the scenes, making things appear real. But with the problem space of identity management, the Simple team wanted to give the nurses _real_ software so they could collectively evaluate what worked in _reality._ Thankfully, nilenso had experience building software quickly (but effectively) using unconventional tools.
+
+Enter the ReactNative prototype, otherwise known as the Simple Experiments Platform. [^simple-experiments] The nilenso team was able to build a fully-functional mobile app using a very uncommon intersection of technologies: ClojureScript (Clojure compiled to JavaScript), re-frame, reagent, and ReactNative. Nurses could click through a real app on a real phone using real data. As a result, they could tell the design team what was working and what wasn't.
+
+Thanks to the powerful but lightweight Simple Experiments, the team came to the realization that forcing the Simple app to work with existing data would not be sufficient. The design team came up with the "BP Passport", a simple piece of paper the patient could use to identify herself to the nurse but also keep track of her own blood pressure data over time. Despite the name, the BP Passport was not another precious identity card patients needed to carry around with them. Instead, the BP Passport was designed to be a no-nonsense paper card which could be lost or damaged without any fuss. If a patient came to the clinic with a lost or damaged Passport, the nurse would simply issue the patient a new Passport. If a clinic ran out of the colour passports printed on high-quality card stock, the nurses could even print out their own BP Passports in a pinch. It was important that the BP Passports were _not_ special: they should be just special enough that the patient keeps it safe but not so special that there is any friction in replacement. Daniel described it like a programmable hotel key. "In the 80s, if you lost your hotel key you had to pay a deposit because a hardware key is special and annoying to replace. These days, you just go to reception, provide some proof that you're in Room 602, and they program you a new key in seconds. The BP Passport needs to behave like that."
+
+---
+
+As 2018 was drawing to a close, it felt as though the team had already accomplished an incredible amount. After successfully deploying to the initial clinics, new facilities were on-boarded, five at a time. As the worldwide team behind Simple repeatedly demonstrated to the nurses that they were deeply committed to this project, the nurses shifted from skeptical to cautiously optimistic about the promise of Simple. It became apparent that, yes, on the ground the system needed to provide the nurses with better tools for reminding patients of their appointments. And at the national scale, an increasing number of institutions were beginning to pay attention.
+
+### A Rainy Visit
+
+
 
 ## Outcomes
 
@@ -121,7 +137,7 @@ The solution to the problem of uniquely identifying patients was less obvious. "
 [^social-network]: https://www.youtube.com/watch?v=iFW7Lo6mk5I
 [^kungs]: https://www.youtube.com/watch?v=2Y6Nne8RvaA
 [^simplest-thing]: http://wiki.c2.com/?DoTheSimplestThingThatCouldPossiblyWork
-
+[^simple-experiments]: https://github.com/simpledotorg/simple-experiments
 
 
 
