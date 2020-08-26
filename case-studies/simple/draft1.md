@@ -110,7 +110,7 @@ It is often tempting for software companies to follow the lead of car and watch 
 
 --- 
 
-The solution to the problem of uniquely identifying patients was less obvious. "Do The Simplest Thing That Could Possibly Work" doesn't apply to a problem space if we look across the globe and see the governments of most nations struggling with it.
+The solution to the problem of uniquely identifying patients was less obvious. "Do The Simplest Thing That Could Possibly Work" [^simplest-thing] doesn't apply to a problem space if we look across the globe and see the governments of most nations struggling with it.
 
 ## Outcomes
 
@@ -120,7 +120,7 @@ The solution to the problem of uniquely identifying patients was less obvious. "
 [^govind-offline-first]: https://medium.com/simple-dot-org/offline-first-apps-are-appropriate-for-many-clinical-environments-cddf5a73bb61
 [^social-network]: https://www.youtube.com/watch?v=iFW7Lo6mk5I
 [^kungs]: https://www.youtube.com/watch?v=2Y6Nne8RvaA
-
+[^simplest-thing]: http://wiki.c2.com/?DoTheSimplestThingThatCouldPossiblyWork
 
 
 
