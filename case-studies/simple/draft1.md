@@ -166,12 +166,24 @@ It is often difficult, as a producer of software, to accurately express the cost
 
 With the design, development, and release of the Diabetes Module, the new year of 2020 blew in like a whirlwind. The project was still as exciting as it had been on the day Daniel had first showed up in the nilenso office, a Firefox sticker perfectly positioned over the Apple logo of his MacBook Air. By now, Tim Cheadle had made enough trips to visit the team in India that he lamented the two-hour cross-city drive in Bangalore traffic required to attend meetings in the suburb of Whitefield. Tim also lusted after Karnataka-style filter coffee from the small darshini around the corner from the nilenso office. "He's a local now," smiled Govind. And after nearly two years on the project, the team finally got a chance to meet Tom Frieden, president and CEO of _Resolve._ "The guy was a machine." Govind recounted. Tom flew into Bangalore, engaged in meetings from the moment he landed until the moment he left. Like children's author "Lemony Snicket" (Daniel Handler) he carried a small notebook with him wherever he went. But instead of writing down hilarious quotes overheard on the train, Tom was intensely and attentively documenting his conversations. There was a quiet intensity to Tom that reminded Govind of the nurses. There is value in excitement but there is more value in tenacity, whether it comes from offices in New York and Bangalore or dispensaries in rural Punjab.
 
-Tenacity would be required. 2020 brought with it a massive data centre migration and the first release of Simple outside of India: Bangladesh. Shortly after Simple was released in Bangladesh, news broke of a new strain of Coronavirus with devastating effects on the Chinese city of Wuhan. Within weeks, India was under strict national lock-down. No one, in a country of 1.3 billion, was permitted to leave their house.
+Tenacity would be required. 2020 brought with it a massive data centre migration and the first release of Simple outside of India: Bangladesh. Shortly after Simple was released in Bangladesh, news broke of a new strain of Coronavirus with devastating effects on the Chinese city of Wuhan. Within weeks, India was under strict national lock-down. No one, in a country of 1.3 billion, was permitted to leave their house. The nilenso office, like every other office in Bangalore, locked its doors and sent everyone home.
 
 ## Outcomes
 
-- Ethiopia, calendar, hosting
-- assumptions quote
+Author and historian Yuval Noah Harari has warned that the real dangers present in a global pandemic like COVID-19 are "our own inner demons: our own hatred, greed, and ignorance" [^harari-covid-interview] which prevent us from cooperating on a global scale. At the scale of our species.
+
+> [I]f the epidemic results in closer global cooperation, it will be a victory not only against the Coronavirus, but against all future pathogens. 
+
+--- Yuval Noah Harari [^harari-covid-leadership]
+
+"The nurses still go to the clinics," said Akshay. "Yes, people are getting COVID... but they still get sick with everything that made them sick before, including hypertension and Diabetes. The nurses are the front line in every fight."
+
+If the historians are warning us that this is a turning point, a juncture in the history of our species to be carefully examined by future historians on the basis of how well we learned to cooperate, we must take this opportunity to reevaluate our heroes, our idols, and our leaders. Those proving themselves most valuable to our species are not those who have accumulated the most wealth, fame, and power. They are not the billionaires, celebrities, or politicians who normally attract our attention --- positive or negative. Today, our heroes are Hans Rosling's "invisible people": civil servants, plumbers, nurses. If they were invisible before, they certainly aren't now.
+
+The Simple project marches on as it prepares to deploy into Ethiopia. Sending SMS notifications to remind patients of appointments will be an interesting challenge, thanks to the complexities of the Ethiopian Calendar. [^ethiopian-calendar] There are no reliable cloud providers in Ethiopia in 2020 so the team has agreed to package the Simple software onto hardware that will be shipped across the globe to be installed in Ethiopian offices. Akshay laughed as he described the Ethiopian deployment. "We really can't make any assumptions in this project. If we make an assumption, it will be completely invalidated by our next deployment."
+
+Simple operates on every scale. From the cooperation of the human species, to the world's most powerful governments, to international nonprofits, to Nilenso Software --- a small employee-owned cooperative tucked away on a quiet Bangalore side street, to a single nurse essential to a health clinic in rural Bangladesh. To earn the title of "cooperative" in this Russian doll of human endeavour is to see that a software company doesn't exist to breed rockstars. It exists to serve.
+
 
 [^pairing]: https://martinfowler.com/articles/on-pair-programming.html#KnowledgeSharing
 [^reinventing-organizations]: https://www.reinventingorganizations.com
@@ -185,7 +197,9 @@ Tenacity would be required. 2020 brought with it a massive data centre migration
 [^john-draper]: https://en.wikipedia.org/wiki/John_Draper
 [^factfulness]: https://www.gapminder.org/factfulness-book/
 [^simple-made-easy]: https://www.infoq.com/presentations/Simple-Made-Easy/
-
+[^harari-covid-interview]: https://www.dw.com/en/virus-itself-is-not-the-biggest-danger-says-yuval-noah-harari/a-53195552
+[^harari-covid-leadership]: https://time.com/5803225/yuval-noah-harari-coronavirus-humanity-leadership/
+[^ethiopian-calendar]: https://www.timeanddate.com/calendar/ethiopia-calendar.html
 
 
 
