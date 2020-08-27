@@ -156,11 +156,22 @@ Every day, the team's field visit to the clinic would begin at 4:30 AM. Wake up,
 
 It is easy for the software industry to accidentally become mired in self-importance. In this world so in love with wealth and fame we become the victims of our successes. Our companies are no longer productive contributors to the economy. Instead, they are "unicorns". We are no longer servants of society. Instead, we proclaim ourselves "rockstars". Perhaps we could all benefit from a few hours in a quiet clinic on a rainy day, learning what it really means to serve humanity from the nurses inside.
 
-### From Diabetes to Covid-19
+### From Diabetes to COVID-19
 
-TODO
+The word "simple", as linguistics nerds will tell you, is not a synonym for "easy". [^simple-made-easy] The word, in its strictest sense, means for something to be uncomplicated. Not tied up. Not intertwined. Simplicity is an admirable goal in systems design but it is not the nature of the universe around us, diseases included. As Simple continued to grow, it would come face-to-face with this reality.
+
+Diabetes and hypertension are strongly correlated. The Simple rollout in Punjab was a huge success... but Punjab only accounts for 2% of India's total population. There were still many more people to help. Many Indian states, as they expressed their interest, insisted that Simple should also help patients deal with Diabetes.
+
+It is often difficult, as a producer of software, to accurately express the costs of added complexity to any given system. Truth be told, often the developers and architects themselves do not know the costs for certain. Incorporating an entirely new disease into Simple would be non-trivial, even from a technical standpoint. But what about the other states --- other nations? --- who had no interest in these features focused on Diabetes? It was decided that, in the interest of creating reusable open source software, other diseases would operate as "modules" and a Diabetes Module was added. Simple was definitely headed toward deployments in other countries. If those countries did not want these additional modules, they could simply leave them out. Simple could remain simple.
+
+With the design, development, and release of the Diabetes Module, the new year of 2020 blew in like a whirlwind. The project was still as exciting as it had been on the day Daniel had first showed up in the nilenso office, a Firefox sticker perfectly positioned over the Apple logo of his MacBook Air. By now, Tim Cheadle had made enough trips to visit the team in India that he lamented the two-hour cross-city drive in Bangalore traffic required to attend meetings in the suburb of Whitefield. Tim also lusted after Karnataka-style filter coffee from the small darshini around the corner from the nilenso office. "He's a local now," smiled Govind. And after nearly two years on the project, the team finally got a chance to meet Tom Frieden, president and CEO of _Resolve._ "The guy was a machine." Govind recounted. Tom flew into Bangalore, engaged in meetings from the moment he landed until the moment he left. Like children's author "Lemony Snicket" (Daniel Handler) he carried a small notebook with him wherever he went. But instead of writing down hilarious quotes overheard on the train, Tom was intensely and attentively documenting his conversations. There was a quiet intensity to Tom that reminded Govind of the nurses. There is value in excitement but there is more value in tenacity, whether it comes from offices in New York and Bangalore or dispensaries in rural Punjab.
+
+Tenacity would be required. 2020 brought with it a massive data centre migration and the first release of Simple outside of India: Bangladesh. Shortly after Simple was released in Bangladesh, news broke of a new strain of Coronavirus with devastating effects on the Chinese city of Wuhan. Within weeks, India was under strict national lock-down. No one, in a country of 1.3 billion, was permitted to leave their house.
 
 ## Outcomes
+
+- Ethiopia, calendar, hosting
+- assumptions quote
 
 [^pairing]: https://martinfowler.com/articles/on-pair-programming.html#KnowledgeSharing
 [^reinventing-organizations]: https://www.reinventingorganizations.com
@@ -173,7 +184,7 @@ TODO
 [^path]: https://path.org
 [^john-draper]: https://en.wikipedia.org/wiki/John_Draper
 [^factfulness]: https://www.gapminder.org/factfulness-book/
-
+[^simple-made-easy]: https://www.infoq.com/presentations/Simple-Made-Easy/
 
 
 
