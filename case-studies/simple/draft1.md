@@ -182,8 +182,9 @@ If the historians are warning us that this is a turning point, a juncture in the
 
 The Simple project marches on as it prepares to deploy into Ethiopia. Sending SMS notifications to remind patients of appointments will be an interesting challenge, thanks to the complexities of the Ethiopian Calendar. [^ethiopian-calendar] There are no reliable cloud providers in Ethiopia in 2020 so the team has agreed to package the Simple software onto hardware that will be shipped across the globe to be installed in Ethiopian offices. Akshay laughed as he described the Ethiopian deployment. "We really can't make any assumptions in this project. If we make an assumption, it will be completely invalidated by our next deployment."
 
-Simple operates on every scale. From the cooperation of the human species, to the world's most powerful governments, to international nonprofits, to Nilenso Software --- a small employee-owned cooperative tucked away on a quiet Bangalore side street, to a single nurse essential to a health clinic in rural Bangladesh. To earn the title of "cooperative" in this Russian doll of human endeavour is to see that a software company doesn't exist to breed rockstars. It exists to serve.
+Simple operates on every scale. From the cooperation of the human species, to the world's most powerful governments, to international nonprofits, to Nilenso Software --- a small employee-owned cooperative tucked away on a quiet Bangalore side street, to a single nurse essential to a health clinic in rural Bangladesh. To earn the title of "cooperative" in this Russian doll of human endeavour, a software company must exist for a reason other than to breed rockstars. It must exist to serve, as the nurses do.
 
+---
 
 [^pairing]: https://martinfowler.com/articles/on-pair-programming.html#KnowledgeSharing
 [^reinventing-organizations]: https://www.reinventingorganizations.com
