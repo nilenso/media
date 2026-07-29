@@ -1,0 +1,46 @@
+name: Build handouts
+
+on:
+  push:
+    paths:
+      - "handouts/ai-glossary/**"
+      - "justfile"
+      - ".github/workflows/build-handouts.yml"
+  pull_request:
+    paths:
+      - "handouts/ai-glossary/**"
+      - "justfile"
+      - ".github/workflows/build-handouts.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ai-glossary:
+    name: Build AI glossary
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Typst
+        uses: typst-community/setup-typst@v5
+        with:
+          typst-version: 0.15.1
+
+      - name: Install just
+        uses: extractions/setup-just@v4
+        with:
+          just-version: "1.46.0"
+
+      - name: Build AI glossary
+        run: just build-ai-glossary
+
+      - name: Upload AI glossary PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-glossary
+          path: build/handouts/ai-glossary/ai-glossary.pdf
+          if-no-files-found: error
