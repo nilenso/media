@@ -74,8 +74,8 @@
 
 #let sources-list(items) = {
   set text(size: 8pt)
-  set par(leading: 0.48em)
-  items.join([ ◆ ])
+  set par(leading: 0.58em)
+  items.join([#h(4pt)◆#h(4pt)])
 }
 
 // Logical page 1
@@ -309,7 +309,9 @@
     ),
   ))
 
+  #v(16pt)
   #section-title[Sources]
+  #v(4pt)
   #sources-list((
     link("https://ai-execs.com/3b_glossary.html")[Hamel Husain’s Glossary],
     link("https://flueframework.com/docs/")[Flue Framework Docs],
